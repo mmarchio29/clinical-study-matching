@@ -6,6 +6,7 @@ This tool was created to be a better platform/easier way for people to find clin
 ## Installation 
 
 ## Usage 
+This is an interactive tool where you input your age, health status, and location. With this information, you will be matched up to recruiting studies close by!
 
 ## Technologies Used
 
