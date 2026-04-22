@@ -1,0 +1,2552 @@
+{
+  "patient": {
+    "patient_id": "DEMO_001",
+    "age": 58,
+    "sex": "Male",
+    "primary_diagnosis": "Type 2 diabetes mellitus",
+    "lab_values": {
+      "HbA1c": "8.9%",
+      "eGFR": "62 mL/min/1.73m\u00b2",
+      "fasting_glucose": "187 mg/dL",
+      "BMI": "31.2 kg/m\u00b2"
+    },
+    "current_medications": [
+      "Metformin 1000mg BID",
+      "Lisinopril 10mg daily"
+    ],
+    "prior_treatments": [
+      "Metformin (current)",
+      "Glipizide (discontinued \u2014 hypoglycemia)"
+    ],
+    "comorbidities": [
+      "Hypertension",
+      "Mild CKD stage 2"
+    ],
+    "exclusion_flags": {
+      "insulin_use": false,
+      "recent_MI": false,
+      "active_malignancy": false,
+      "pregnancy": false
+    }
+  },
+  "retrieval": {
+    "hypothetical_doc": "- Condition: Type 2 diabetes mellitus  \n- HbA1c: \u22657.0% and \u226410.0%  \n- eGFR: \u226560 mL/min/1.73m\u00b2  \n- BMI: 25-35 kg/m\u00b2  \n- Inclusion: Stable on current diabetes medications  \n- Exclusion: Insulin use, recent myocardial infarction, active malignancy, pregnancy",
+    "query_used": "- Condition: Type 2 diabetes mellitus  \n- HbA1c: \u22657.0% and \u226410.0%  \n- eGFR: \u226560 mL/min/1.73m\u00b2  \n- BMI: 25-35 kg/m\u00b2  \n- Inclusion: Stable on current diabetes medications  \n- Exclusion: Insulin use, recent myocardial infarction, active malignancy, pregnancy",
+    "ann_results": [
+      {
+        "id": "NCT07053306_inclusion",
+        "nct_id": "NCT07053306",
+        "text": "INCLUSION CRITERIA \u2014 SGLT2i, Ketoacidosis, Volume Contraction, and Insulinopenia (NCT07053306):\n* Ages 30-75 years\n* Body Mass Index (BMI) 21-45 kg/m2\n* Hemoglobin A1C (HbA1c) = 7.0-11%\n* Estimated glomerular filtration rate (eGFR) \\> 60 ml/min/1.73m2\n* Blood Pressure (BP) \\< 160/90 mmHg\n* Participants must be in general good health based on medical history, physical exam, screening blood chemistries, complete blood chemistry (CBC), thyroid stimulating hormone/thyroxine (TSH/T4), electrocardiogram (EKG), and urinalysis\n* Stable body weight (\u00b11.5 kg) over the last 3 months and must not participate in an excessively heavy exercise program\n* Patients treated with diet, sulfonylurea (SU), metformin (MET), or SU/MET\n* Statin therapy is permissible if the dose has been stable for at least 3 months",
+        "metadata": {
+          "min_age": "30 Years",
+          "sex": "ALL",
+          "max_age": "75 Years",
+          "sponsor": "The University of Texas Health Science Center at San Antonio",
+          "title": "SGLT2i, Ketoacidosis, Volume Contraction, and Insulinopenia",
+          "nct_id": "NCT07053306",
+          "type": "inclusion",
+          "phases": "PHASE1"
+        },
+        "score": 0.74549400806427,
+        "source": "ann",
+        "rrf_score": 0.016393
+      },
+      {
+        "id": "NCT07322757_inclusion",
+        "nct_id": "NCT07322757",
+        "text": "INCLUSION CRITERIA \u2014 Outcomes-Based Health Program for Type 2 Diabetes (NCT07322757):\n* Type 2 diabetes diagnosed\n* At least one of the following:\n\n  1. diagnosed coronary artery disease,\n  2. diagnosed periferal artery disease,\n  3. diagnosed heart failure,\n  4. diagnosed diabetic renal disease (GFR \\<60 OR uACR \u2265 3 for at least three months),\n  5. diagnosed diabetic retinopathy,\n  6. previous stroke,\n  7. diagnosed atrial fibrillation or atrial flutter,\n  8. age \u2265 55 years and at least two of the following conditions:\n\n     1. smoker\n     2. uses antihypertensive medication or systolic blood pressure \\>140 mmHg or diastolic blood pressure \\> 80 mmHg,\n     3. uses lipid lowering medication or LDL-cholesterol \\> 2.6 or\n     4. BMI \\> 25",
+        "metadata": {
+          "type": "inclusion",
+          "phases": "NA",
+          "sponsor": "Kuopio University Hospital",
+          "title": "Outcomes-Based Health Program for Type 2 Diabetes",
+          "sex": "ALL",
+          "min_age": "35 Years",
+          "nct_id": "NCT07322757",
+          "max_age": "74 Years"
+        },
+        "score": 0.7361283898353577,
+        "source": "ann",
+        "rrf_score": 0.016129
+      },
+      {
+        "id": "NCT07053293_inclusion",
+        "nct_id": "NCT07053293",
+        "text": "INCLUSION CRITERIA \u2014 SGLT2i, Hepatic Glucose Production, and SNS (NCT07053293):\n* Ages 30-75 years\n* Body Mass Index (BMI) 21-45 kg/m2\n* Hemoglobin A1C (HbA1c) = 7.0-11%\n* Estimated glomerular filtration rate (eGFR) \\> 60 ml/min/1.73m2\n* Blood Pressure (BP) \\< 160/90 mmHg\n* Participants must be in general good health based on medical history, physical exam, screening blood chemistries, complete blood chemistry (CBC), thyroid stimulating hormone/thyroxine (TSH/T4), electrocardiogram (EKG), and urinalysis\n* Stable body weight (\u00b11.5 kg) over the last 3 months and must not participate in an excessively heavy exercise program\n* Patients treated with diet, sulfonylurea (SU), metformin (MET), or SU/MET\n* Statin therapy is permissible if the dose has been stable for at least 3 months",
+        "metadata": {
+          "phases": "EARLY_PHASE1",
+          "sponsor": "The University of Texas Health Science Center at San Antonio",
+          "max_age": "75 Years",
+          "min_age": "30 Years",
+          "type": "inclusion",
+          "nct_id": "NCT07053293",
+          "sex": "ALL",
+          "title": "SGLT2i, Hepatic Glucose Production, and SNS"
+        },
+        "score": 0.7343326210975647,
+        "source": "ann",
+        "rrf_score": 0.015873
+      },
+      {
+        "id": "NCT05491005_inclusion",
+        "nct_id": "NCT05491005",
+        "text": "INCLUSION CRITERIA \u2014 The eHealth Diabetes Remission Trial (NCT05491005):\n* Type 2 diabetes with duration 0-6 years\n* BMI 27 kg/m2 and higher\n* HbA1c 43 mmol/mol or higher (48 or higher if without diabetes medication)",
+        "metadata": {
+          "sponsor": "Ume\u00e5 University",
+          "type": "inclusion",
+          "min_age": "20 Years",
+          "sex": "ALL",
+          "nct_id": "NCT05491005",
+          "title": "The eHealth Diabetes Remission Trial",
+          "phases": "NA",
+          "max_age": "70 Years"
+        },
+        "score": 0.7333360910415649,
+        "source": "ann",
+        "rrf_score": 0.015625
+      },
+      {
+        "id": "NCT04943926_exclusion",
+        "nct_id": "NCT04943926",
+        "text": "EXCLUSION CRITERIA \u2014 Dietary Strategies for Remission of Type 2 Diabetes (NCT04943926):\n* Treatment with insulin \\>25 IU\n* HbA1c concentration of 12% or more (\u2265108 mmol/mol)\n* Insulin to C-peptide ratio \\<0.8 (indicative of insulin deficiency)\n* Myocardial infarction within the previous 6 months, and severe or unstable heart failure or other severe diseases including cancer, psychiatric/eating disorders, severe depression and substance abuse",
+        "metadata": {
+          "max_age": "70 Years",
+          "type": "exclusion",
+          "nct_id": "NCT04943926",
+          "sponsor": "University of Bergen",
+          "phases": "NA",
+          "min_age": "24 Years",
+          "title": "Dietary Strategies for Remission of Type 2 Diabetes",
+          "sex": "ALL"
+        },
+        "score": 0.7291683554649353,
+        "source": "ann",
+        "rrf_score": 0.015385
+      },
+      {
+        "id": "NCT07495956_inclusion",
+        "nct_id": "NCT07495956",
+        "text": "INCLUSION CRITERIA \u2014 cfMSC Therapy for Diabetes (NCT07495956):\n1. Ability to understand the study protocol and voluntarily sign the written informed consent form;\n2. A clear diagnosis of type II diabetes mellitus for more than 3 years, with poor blood glucose control under conventional treatment (HbA1c \u2265 7.5% for 3 consecutive months);\n3. Age 18-75 years old, with a body mass index (BMI) of 18.5-35 kg/m\u00b2;\n4. Fasting C-peptide level 0.3-1.5 ng/mL, indicating residual islet function;\n5. Karnofsky performance score (KPS) \u2265 70, with good daily living ability;\n6. Life expectancy \\> 5 years;\n7. Normal liver and kidney functions (bilirubin \\< 1.5\u00d7ULN, ALT/AST \\< 2.5\u00d7ULN, creatinine \\< 1.5\u00d7ULN); normal blood routine (absolute neutrophil count \u2265 1.8\u00d710\\^9/L, platelets \u2265 100\u00d710\\^9/L);\n8. No serious heart, brain, lung and other important organ diseases, and stable vital signs;\n9. Women of childbearing age have a negative pregnancy test within 7 days before enrollment, and all subjects of childbearing age agree to take effective contraceptive measures during the study and within 1 year after the end of the study; Willing to cooperate with the whole course of follow-up and complete all examination and observation indicators.",
+        "metadata": {
+          "phases": "PHASE1, PHASE2",
+          "type": "inclusion",
+          "max_age": "75 Years",
+          "sex": "ALL",
+          "min_age": "18 Years",
+          "title": "cfMSC Therapy for Diabetes",
+          "nct_id": "NCT07495956",
+          "sponsor": "Shenzhen Geno-Immune Medical Institute"
+        },
+        "score": 0.7210597991943359,
+        "source": "ann",
+        "rrf_score": 0.015152
+      },
+      {
+        "id": "NCT05491005_exclusion",
+        "nct_id": "NCT05491005",
+        "text": "EXCLUSION CRITERIA \u2014 The eHealth Diabetes Remission Trial (NCT05491005):\n* Insulin treatment\n* Weight loss more than 5 kg during the past 6 months\n* Diagnosed eating disorder\n* eGFR \\< 30 ml/min/1,73m2\n* Myocardial infarction last six months\n* Severe heart failure (NYHA class III)\n* Ongoing cancer\n* Pregnancy\n* Treatment with antipsychotic drugs",
+        "metadata": {
+          "sex": "ALL",
+          "min_age": "20 Years",
+          "phases": "NA",
+          "sponsor": "Ume\u00e5 University",
+          "title": "The eHealth Diabetes Remission Trial",
+          "max_age": "70 Years",
+          "nct_id": "NCT05491005",
+          "type": "exclusion"
+        },
+        "score": 0.7199233174324036,
+        "source": "ann",
+        "rrf_score": 0.014925
+      },
+      {
+        "id": "NCT05390892_inclusion",
+        "nct_id": "NCT05390892",
+        "text": "INCLUSION CRITERIA \u2014 PREvention of CardIovascular and DiabEtic kidNey Disease in Type 2 Diabetes (NCT05390892):\n* Type 2 diabetes based on clinical diagnosis\n* HbA1c \u22656% measured within 12 months prior to screening\n* Secondary prevention cohort (at least 70% of cohort):\n\n  * Age 40 to 80 years\n  * Evidence of established atherosclerotic cardiovascular disease (ASCVD), as defined by one or more of the following\n  * Coronary heart disease defined by at least one of the following: prior myocardial infarction, prior coronary percutaneous coronary intervention, \u226550% stenosis of a coronary artery documented by invasive or non-invasive imaging (including CT coronary angiography), positive stress test, or coronary artery calcium score \\>400 Agatston units;\n  * Cerebrovascular disease defined by at least one of the following: prior ischemic stroke, prior carotid revascularization procedure, carotid stenosis \u2265 50% documented by X-ray angiography, MR angiography, CT angiography, or Doppler ultrasound;\n  * Symptomatic peripheral artery disease defined by at least one of the following: leg symptoms with an ABI \u2264 0.9, leg symptoms with imaging evidence of a stenosis \u226550% in a peripheral artery documented by X-ray angiography, MR angiography, CT angiography, or Doppler ultrasound, or prior amputation for atherosclerotic disease.\n* Primary prevention cohort (capped at 30% of cohort):\n\n  * Age 60-80 years and at least 1 additional high-risk feature:\n  * Cardiovascular risk factors/high-risk features:\n  * Active smoking (combustible tobacco or marijuana)\n  * HbA1c \u2265 8% measured within 12 months prior to screening. The most recent value available at the time of screening will be used for screening and to determine eligibility.\n  * Stage 3a CKD, eGFR 45-59 ml/min/1.73m2 measured within 12 months prior to screening. The most recent value available at screening will be used for screening and to determine eligibility.\n* Willingness to be randomly assigned to medication class (SGLT2i or GLP-1 RA or both) and fill prescription through personal pharmacy benefit while having other medications adjusted for safety\n* Willingness to avoid starting a therapy in the alternative treatment group (e.g., if randomized to GLP-1 RA, avoid starting an SGLT2i) unless strongly recommended by the participant's usual care provider.\n* If taking one of the study medication classes, willingness to stop SGLT2i or GLP-1 RA and be randomly assigned to one of the two medication classes\n* Willingness to consent to data collection using the electronic health record and sign a medical release to obtain future medical records from other health care facilities",
+        "metadata": {
+          "title": "PREvention of CardIovascular and DiabEtic kidNey Disease in Type 2 Diabetes",
+          "nct_id": "NCT05390892",
+          "type": "inclusion",
+          "sex": "ALL",
+          "max_age": "80 Years",
+          "phases": "PHASE4",
+          "sponsor": "Brigham and Women's Hospital",
+          "min_age": "40 Years"
+        },
+        "score": 0.715477466583252,
+        "source": "ann",
+        "rrf_score": 0.014706
+      },
+      {
+        "id": "NCT05501483_exclusion",
+        "nct_id": "NCT05501483",
+        "text": "EXCLUSION CRITERIA \u2014 Adipose Tissue Heterogeneity and Its Link to Type 2 Diabetes (NCT05501483):\n* HbA1c 65 mmol/mol or higher\n* Established cardiovascular disease and/or heart failure\n* Severe psychiatric condition\n* Active alcoholism\n* Insulin treatment\n* Anticoagulant therapy (vitamin K antagonists or equivalent)\n* Pregnancy, lactation\n* Positive GAD or IA2 antibodies\n* Low C-peptide/glucose ratio (less than 2 measured as pmol/mg per dL)\n* NT-proBNP above the upper normal reference value\n* Kidney disease\n* Liver disease or hepatic values over twice the upper reference value\n* Severe concomitant disease including ongoing cancer",
+        "metadata": {
+          "sponsor": "Karolinska Institutet",
+          "nct_id": "NCT05501483",
+          "sex": "ALL",
+          "phases": "NA",
+          "min_age": "30 Years",
+          "type": "exclusion",
+          "title": "Adipose Tissue Heterogeneity and Its Link to Type 2 Diabetes",
+          "max_age": "70 Years"
+        },
+        "score": 0.715467631816864,
+        "source": "ann",
+        "rrf_score": 0.014493
+      },
+      {
+        "id": "NCT07394114_exclusion",
+        "nct_id": "NCT07394114",
+        "text": "EXCLUSION CRITERIA \u2014 A Study of HDM1005 in Participants With Type 2 Diabetes Not Controlled With Diet and Exercise Alone (NCT07394114):\n1. Other types of diabetes besides T2DM.\n2. Acute complications of diabetes (such as diabetic ketoacidosis, diabetic lactic acidosis, or hyperosmolar non-ketoticcoma) occurred within 24 weeks prior to signing the Informed Consent Form (ICF).\n3. History of a level 3 hypoglycemic episode or a history of asymptomatic hypoglycemic episodes within 24 weeks prior to signing the ICF.\n4. History or family history of medullary thyroid carcinoma (MTC), thyroid C-cell hyperplasia, or multiple endocrine neoplasia type 2 (MEN2).\n5. History of acute or chronic pancreatitis; or presence of risk factors for pancreatitis; or history of symptomatic gallbladder disease requiring treatment per investigator's assessment within 24 weeks prior to signing the ICF.\n6. Investigator determines that the subject has a condition or disease affecting gastric emptying or gastrointestinal nutrient absorption, such as weight-loss surgery or other gastric resections, irritable bowel syndrome, dyspepsia, or gastroparesis.\n7. Use of any antidiabetic medications within 12 weeks prior to signing the ICF; excluding short-term insulin use (cumulative duration \u22647 days) for concomitant illness, stress, or perioperative periods.\n8. Hemoglobin (Hb) \\<100 g/L (female) or \\<110 g/L (male).\n9. FPG \u226513.9 mmol/L.\n10. Aspartate aminotransferase (AST) \\>3\u00d7 upper limit of normal (ULN) and/or alanine aminotransferase (ALT) \\>3\u00d7 ULN.\n11. Total bilirubin \\>1.5\u00d7 ULN.\n12. Fasting triglyceride (TG) \\>5.6 mmol/L (500 mg/dL).",
+        "metadata": {
+          "nct_id": "NCT07394114",
+          "type": "exclusion",
+          "title": "A Study of HDM1005 in Participants With Type 2 Diabetes Not Controlled With Diet and Exercise Alone",
+          "sponsor": "Hangzhou Zhongmei Huadong Pharmaceutical Co., Ltd.",
+          "phases": "PHASE3",
+          "min_age": "18 Years",
+          "sex": "ALL",
+          "max_age": "75 Years"
+        },
+        "score": 0.7146401405334473,
+        "source": "ann",
+        "rrf_score": 0.014286
+      },
+      {
+        "id": "NCT06203860_inclusion",
+        "nct_id": "NCT06203860",
+        "text": "INCLUSION CRITERIA \u2014 The Cardio-Metabolic Clinic (NCT06203860):\nInclusion:\n\n* \\>18 years\n* Capable of giving written informed consent\n* Established diagnosis of T2D\n* Having established heart or vascular disease defined as either:\n* Atherosclerotic disease defined as:\n\n  1. Prior acute coronary syndrome (ACS).\n  2. Chronic coronary syndrome defined as the combination of: Angina pectoris AND coronary atherosclerosis assessed with either Coronary CT angiography (CTA) or Myocardial-scintigraphy (MPI) or Coronary angiography (CAG) AND treatment with statins and/or acetylsalicylic acid.\n  3. Stroke.\n  4. Peripheral arterial disease (PAD) defined as: Claudication intermittence in combination with pathological ABI AND/OR vascular PAD surgery AND/OR ischemic amputation.\n  5. Ischemic heart disease defined by one of the following criteria: a) Myocardial-scintigraphy: \\>10% reversibility OR b) Coronary CT angiography: Coronary Artery Calcium (CAC)-score \\>100.\n* Heart failure (HF): HF with reduced ejection fraction (HFrEF), HF with Mildly reduced ejection fraction (HFmrEF), HF with preserved ejection fraction (HFpEF)\n* Atrial fibrillation and/or flutter, including paroxysmal, persistent and chronic disease\n* Valvular heart disease (which requires control in outpatient clinic of cardiology), such as aortic valve stenosis, mitral valve insufficiency, and patients with aortic dilatation\n* Hypertension treated with at least three antihypertensive drugs\n\nExclusion:\n\n* Life expectancy less than 5 years for any reason\n* Type 1 Diabetes Mellitus\n* Participation in another clinical trial with an investigational product or device that could interfere with the primary and/or secondary endpoints of this study",
+        "metadata": {
+          "type": "inclusion",
+          "max_age": "N/A",
+          "nct_id": "NCT06203860",
+          "min_age": "19 Years",
+          "title": "The Cardio-Metabolic Clinic",
+          "sex": "ALL",
+          "sponsor": "Odense University Hospital",
+          "phases": "NA"
+        },
+        "score": 0.7121515274047852,
+        "source": "ann",
+        "rrf_score": 0.014085
+      },
+      {
+        "id": "NCT06784375_exclusion",
+        "nct_id": "NCT06784375",
+        "text": "EXCLUSION CRITERIA \u2014 Personalized Nutrition for Type 2 Diabetes (NCT06784375):\n* type 1 diabetes mellitus\n* treatment with insulin, sulfonylurea, or meglitinide\n* use of nondiabetic medications that affect blood glucose control (such as corticosteroids)\n* BMI \\<25 kg/m2 or \\<23 kg/m2 for participants who self-identify as Asian\n* weight change \\>5 pounds in the 3 months prior to study enrollment\n* estimated glomerular filtration rate \\<60 ml/minute/1.73 m2\n* pregnancy or immediate plans to become pregnant 8) breastfeeding 9) anemia (which would affect measurement of HbA1c) 10) changes to glucose lowering medications, including change in dose, in the 3 months prior to enrollment 11) presence of any disease that would make adherence to the protocol difficult.\"",
+        "metadata": {
+          "phases": "NA",
+          "nct_id": "NCT06784375",
+          "max_age": "N/A",
+          "min_age": "18 Years",
+          "type": "exclusion",
+          "title": "Personalized Nutrition for Type 2 Diabetes",
+          "sponsor": "University of Minnesota",
+          "sex": "ALL"
+        },
+        "score": 0.7104342579841614,
+        "source": "ann",
+        "rrf_score": 0.013889
+      },
+      {
+        "id": "NCT07394114_inclusion",
+        "nct_id": "NCT07394114",
+        "text": "INCLUSION CRITERIA \u2014 A Study of HDM1005 in Participants With Type 2 Diabetes Not Controlled With Diet and Exercise Alone (NCT07394114):\n1. Confirmed as Type 2 Diabetes Mellitus (T2DM) for at least 12 weeks and have not used any antihyperglycemic medications during for at least 12 weeks prior to screening.\n2. Hemoglobin A1c (HbA1c) \u22657.5% and \u226410.5% at screening; and \u22657.0% and \u226410.5% at randomization.\n3. Body Mass Index (BMI) \u226522.5 kg/m2.",
+        "metadata": {
+          "title": "A Study of HDM1005 in Participants With Type 2 Diabetes Not Controlled With Diet and Exercise Alone",
+          "sponsor": "Hangzhou Zhongmei Huadong Pharmaceutical Co., Ltd.",
+          "nct_id": "NCT07394114",
+          "sex": "ALL",
+          "phases": "PHASE3",
+          "type": "inclusion",
+          "max_age": "75 Years",
+          "min_age": "18 Years"
+        },
+        "score": 0.7099385857582092,
+        "source": "ann",
+        "rrf_score": 0.013699
+      },
+      {
+        "id": "NCT07262788_exclusion",
+        "nct_id": "NCT07262788",
+        "text": "EXCLUSION CRITERIA \u2014 A Feasibility Study of Optimal Non-Pharmacological Lifestyle Modifications in People With Type 2 Diabetes (NCT07262788):\n* Insulin treatment within 6 months prior to screening (any type)\n* Heart failure (ejection fraction \u226440%) and treated with SGLT-2i (current or planned)\n* Cardiovascular disease, including previous heart attack or stroke, for which incretin-based therapy and/or an SGLT-2i has been prescribed.\n* Kidney disease (eGFR \\<60 ml/min/1,73m\u00b2 and/or albuminuria (\u226530 mg/g) for at least three months) and treated with SGLT-2i (current or planned)\n* Physical comorbidity, which precludes the physical activity during intervention\n* Dietary restrictions or allergies making the participant unable to adhere to the dietary interventions\n* Unable to comply with trial procedures and/or interventions\n* Alcohol/drug abuse\n* Planned or present pregnancy/fertility treatment, or lack of contraception during reproductive age\n* Unstable psychiatric disease that is deemed to impede participation in the project\n* Diagnosed with binge eating disorder\n* Participation (present or planned) in other clinical trials including lifestyle or pharmacy trials for any condition\n* If HbA1c \u226560 mmol/mol and the participant is on 2 or more anti-diabetic drugs and has a positive GAD65 and/or stimulated C-peptide \\<800 pM",
+        "metadata": {
+          "title": "A Feasibility Study of Optimal Non-Pharmacological Lifestyle Modifications in People With Type 2 Diabetes",
+          "sex": "ALL",
+          "max_age": "75 Years",
+          "type": "exclusion",
+          "min_age": "18 Years",
+          "sponsor": "Steno Diabetes Center Copenhagen",
+          "nct_id": "NCT07262788",
+          "phases": "NA"
+        },
+        "score": 0.7094852924346924,
+        "source": "ann",
+        "rrf_score": 0.013514
+      },
+      {
+        "id": "NCT06716203_inclusion",
+        "nct_id": "NCT06716203",
+        "text": "INCLUSION CRITERIA \u2014 A Study of BGM0504 in Poorly Controlled Type 2 Diabetes Patients Only Through Diet and Exercise (NCT06716203):\n* \u2611 Have been diagnosed with type 2 diabetes mellitus (T2DM);\n\n  * Have a BMI \u226523 kilograms per meter squared (kg/m\u00b2) at screening;\n  * Be of stable weight (\u00b1 5%) for at least 3 months before screening;\n  * Have HbA1c between \u22657.5% and \u226411.0%\uff1b\n  * Fasting Plasma Glucose (FPG) \u2264 15.0 mmoL/L.",
+        "metadata": {
+          "sponsor": "BrightGene Bio-Medical Technology Co., Ltd.",
+          "phases": "PHASE3",
+          "nct_id": "NCT06716203",
+          "sex": "ALL",
+          "type": "inclusion",
+          "min_age": "18 Years",
+          "title": "A Study of BGM0504 in Poorly Controlled Type 2 Diabetes Patients Only Through Diet and Exercise",
+          "max_age": "75 Years"
+        },
+        "score": 0.7063547372817993,
+        "source": "ann",
+        "rrf_score": 0.013333
+      },
+      {
+        "id": "NCT05390892_exclusion",
+        "nct_id": "NCT05390892",
+        "text": "EXCLUSION CRITERIA \u2014 PREvention of CardIovascular and DiabEtic kidNey Disease in Type 2 Diabetes (NCT05390892):\n* Known or suspected diabetes of other cause (type 1 diabetes, pancreatogenic diabetes, monogenic diabetes, etc.)\n* Any background diabetes medication regimen will be allowed in this pragmatic trial with the following proviso:\n\n  o Participants taking basal-bolus, prandial, or multiple daily injection insulin (MDI) regimens (e.g., short-acting in combination with long-acting insulin, called MDI regimens) are eligible only if the research staff attests that there has been communication with the usual diabetes care provider and that the provider has agreed to manage insulin adjustment with initiation of study medications. If such agreement has not been obtained, participants taking MDI regimens are excluded.\n* History of diabetic ketoacidosis\n* Active diabetic foot ulcer\n* History of pancreatitis\n* Heart failure as a primary reason for hospitalization within the past year\n* Known left ventricular ejection fraction \\<40%\n* Known urinary albumin-to-creatinine ratio \\>200 mg/g at screening\n* Estimated glomerular filtration rate (eGFR) less than 45 ml/min/1.73m2 measured within 12 months prior to screening. The most recent value available at screening will be used for screening and to determine eligibility.\n* Known inability to afford study medication through current insurance coverage.\n* If a woman of child-bearing potential, the patient or partner is unwilling to use birth control\n* Active treatment for cancer, planned treatment for cancer, or recent active cancer with likelihood of recurrence or progression, which, in the opinion of the site investigator, has a likelihood of recurrence that would interfere with study therapy prior to 2028\n\n  * Treated cancer with no evidence of disease, no evidence of disease progression, and no planned change in therapy is allowed. Examples of allowable cancers include:\n  * Breast cancer stable after active treatment, managed with long-term anti-estrogen therapy\n  * Prostate cancer being observed\n  * Stage 0 or 1 tumors status post resection or other definitive treatment\n  * Other similarly stable cancer comorbidities\n* History of solid organ or bone marrow transplant\n* Allergy to SGLT2 inhibitor or GLP-1 receptor agonist",
+        "metadata": {
+          "type": "exclusion",
+          "phases": "PHASE4",
+          "title": "PREvention of CardIovascular and DiabEtic kidNey Disease in Type 2 Diabetes",
+          "max_age": "80 Years",
+          "min_age": "40 Years",
+          "nct_id": "NCT05390892",
+          "sex": "ALL",
+          "sponsor": "Brigham and Women's Hospital"
+        },
+        "score": 0.7056890726089478,
+        "source": "ann",
+        "rrf_score": 0.013158
+      },
+      {
+        "id": "NCT05307731_inclusion",
+        "nct_id": "NCT05307731",
+        "text": "INCLUSION CRITERIA \u2014 Fingolimod for Type 2 Diabetes Mellitus (NCT05307731):\n1. Age: 18-70 years old;\n2. clinically diagnosed type 2 diabetes.\n3. Glycosylated hemoglobin: 6.5% - 9.5%;\n4. No drug treatment or only one oral hypoglycemic drug within 6 months;\n5. Fasting blood glucose: \\< 13.9mmol/l for those without medication, or \\< 13.3mmol/l for those with medication;\n6. if the antidiabetic drugs are taken, the dosage and the drug must be stable in the past 3 months.\n7. Body mass index (BMI) \u2264 45 kg / m2;\n8. Sign informed consent",
+        "metadata": {
+          "max_age": "70 Years",
+          "nct_id": "NCT05307731",
+          "type": "inclusion",
+          "title": "Fingolimod for Type 2 Diabetes Mellitus",
+          "phases": "PHASE4",
+          "sponsor": "General Hospital of Shenyang Military Region",
+          "min_age": "18 Years",
+          "sex": "ALL"
+        },
+        "score": 0.7047127485275269,
+        "source": "ann",
+        "rrf_score": 0.024481
+      },
+      {
+        "id": "NCT04791371_exclusion",
+        "nct_id": "NCT04791371",
+        "text": "EXCLUSION CRITERIA \u2014 Role of Microvascular Insulin Resistance and Cardiorespiratory Fitness Diabetes (NCT04791371):\n* Documented cardiovascular disease\n* Uncontrolled hypertension: disease systolic blood pressure (SBP) \\> 150, diastolic blood pressure (DBP)\\> 110\n* Obstructive pulmonary disease or asthma\n* Peripheral neuropathy\n* Physical impairment that would limit exercise ability\n* Subjects taking beta blockers, calcium channel blockers, insulin, or Thiazolidinediones (TZD)\n* Current or past smoking within the last 1 years\n* Current tobacco use\n* Anemia\n* Control HbA1c \\> 5.7, T2DM HbA1c \\> 9\n* Pregnant, nursing or hormonal therapy (other than contraceptives)\n* Peri or post-menopausal women\n* Type 1 diabetes\n* Hepatic or renal disease.",
+        "metadata": {
+          "title": "Role of Microvascular Insulin Resistance and Cardiorespiratory Fitness Diabetes",
+          "nct_id": "NCT04791371",
+          "min_age": "30 Years",
+          "sponsor": "University of Colorado, Denver",
+          "type": "exclusion",
+          "phases": "NA",
+          "max_age": "55 Years",
+          "sex": "ALL"
+        },
+        "score": 0.7045981884002686,
+        "source": "ann",
+        "rrf_score": 0.012821
+      },
+      {
+        "id": "NCT05856877_inclusion",
+        "nct_id": "NCT05856877",
+        "text": "INCLUSION CRITERIA \u2014 Central Insulin Sensitivity in Individuals With Type 2 Diabetes (T2D) and at Risk for Developing T2D (NCT05856877):\n1. manifest diabetes mellitus type 2 with initial diagnosis \u2264 10 years ago, defined as\n\n   * a fasting blood glucose greater than 126 mg/dl and/or\n   * a blood glucose greater than 200 mg/dl at the 120 minute time point in the oral glucose tolerance test with 75 g glucose and/or\n   * an HbA1c greater than 6.5%\n2. or a currently existing increased risk of developing type 2 diabetes, defined as\n\n   * prediabetes, defined as\n\n     * elevated fasting blood glucose (IFG), fasting blood glucose between 100 and 125 mg/dl) and/or\n     * impaired glucose tolerance (IGT), 120-minute oral glucose tolerance test blood glucose between 140 and 199 mg/dl) and/or\n     * HbA1c between 5.7% and 6.4% with\n   * and/or at least one of the following factors indicating an increased risk for developing type 2 diabetes mellitus:\n\n     * previously existing prediabetes and/or\n     * recent-onset gestational diabetes, and/or\n     * positive family history (1st degree family members) for type 2 diabetes mellitus and/or\n     * BMI greater than 27 kg/m2\n3. or no manifest diabetes mellitus type 2 and no currently existing increased risk for developing type 2 diabetes (control group: BMI 18.5 to 24.5 kg/m2)\n4. female and male (1:1), voluntary adults\n5. at least 18 years old and able to give consent\n6. understanding of study explanations and instructions\n7. consent to information in case of unexpected proven pathological findings.",
+        "metadata": {
+          "min_age": "18 Years",
+          "sponsor": "University Hospital Tuebingen",
+          "max_age": "N/A",
+          "type": "inclusion",
+          "phases": "NA",
+          "sex": "ALL",
+          "title": "Central Insulin Sensitivity in Individuals With Type 2 Diabetes (T2D) and at Risk for Developing T2D",
+          "nct_id": "NCT05856877"
+        },
+        "score": 0.7041267156600952,
+        "source": "ann",
+        "rrf_score": 0.012658
+      },
+      {
+        "id": "NCT07322757_exclusion",
+        "nct_id": "NCT07322757",
+        "text": "EXCLUSION CRITERIA \u2014 Outcomes-Based Health Program for Type 2 Diabetes (NCT07322757):\n* eGFR \\< 30\n* uACR \\> 200\n* BMI \\> 50\n* heart ejection fraction EF \\< 30\n* active cancer or less than five years from cancer treatment at enrollment\n* blindness in both eyes\n* severe psychotic depression\n* inability to utilize digital applications",
+        "metadata": {
+          "min_age": "35 Years",
+          "type": "exclusion",
+          "phases": "NA",
+          "title": "Outcomes-Based Health Program for Type 2 Diabetes",
+          "max_age": "74 Years",
+          "nct_id": "NCT07322757",
+          "sponsor": "Kuopio University Hospital",
+          "sex": "ALL"
+        },
+        "score": 0.7034680843353271,
+        "source": "ann",
+        "rrf_score": 0.0125
+      },
+      {
+        "id": "NCT02390973_inclusion",
+        "nct_id": "NCT02390973",
+        "text": "INCLUSION CRITERIA \u2014 Surgery Versus Best Medical Management for the Long Term Remission of Type 2 Diabetes and Related Diseases (REMISSION) (NCT02390973):\n* BMI \u2265 35\n* type 2 diabetes\n* HbA1c \u2265 6,5 % or fasting glycemia \u22657mmol/l or non-fasting glycemia \u226511mmol/l\n* able to consent",
+        "metadata": {
+          "min_age": "18 Years",
+          "title": "Surgery Versus Best Medical Management for the Long Term Remission of Type 2 Diabetes and Related Diseases (REMISSION)",
+          "sponsor": "Laval University",
+          "sex": "ALL",
+          "type": "inclusion",
+          "max_age": "60 Years",
+          "phases": "NA",
+          "nct_id": "NCT02390973"
+        },
+        "score": 0.7032387256622314,
+        "source": "ann",
+        "rrf_score": 0.012346
+      },
+      {
+        "id": "NCT05553093_exclusion",
+        "nct_id": "NCT05553093",
+        "text": "EXCLUSION CRITERIA \u2014 Effects of Tirzepatide and Insulin Glargine on Glucolipid Metabolism and Brain Function in Patients With Type 2 Diabetes (NCT05553093):\n* Type 1 Diabetes Mellitus (T1DM)\n* Had chronic or acute pancreatitis at any time prior to visit 1.\n* A history of proliferative diabetic retinopathy or diabetic macular degeneration or non-proliferative diabetic retinopathy requiring acute treatment.\n* History of severe hypoglycemia and/or insensitive hypoglycemia within 6 months prior to visit 1.\n* History of ketoacidosis or hyperosmolar state/coma\n* Have a known clinically significant gastric emptying disorder (e.g., severe diabetic gastroparesis or gastric outlet obstruction), have received or plan to undergo gastric bypass surgery or restrictive bariatric surgery (e.g., Lap-Band\u00ae) during the study period, or take long-term medications that directly affect gastrointestinal motility.\n* Had any of the following cardiovascular diseases in the 2 months prior to the visit: acute myocardial infarction or cerebrovascular accident (stroke) or hospitalization due to congestive heart failure (CHF).\n* New York Heart Association Classification of Heart Function Class III and Class IV CHF.\n* Have acute or chronic hepatitis, have signs or symptoms of any liver disease other than non-alcoholic fatty liver disease (NAFLD), or have alanine aminotransferase (ALT) levels \\> 3.0 times the upper limit of the normal range determined by the central laboratory at visit 1;For NAFLD patients, only ALT levels \u2264 3.0 times the upper limit of the normal range (ULN) were eligible for this trial.\n* The estimated glomerular filtration rate (eGFR) calculated based on the Chronic Kidney Disease Epidemiology Collaboration equation\uff08CKD-EPI\uff09formula was less than 45 mL/min/1.73 m2, as determined by the central laboratory at visit 1.\n* The researchers suggest that there is evidence of significant, poorly controlled endocrine abnormalities, such as thyrotoxicosis or adrenal crisis.\n* Family or personal history of medullary thyroid cancer (MTC) or type 2 multiple endocrine tumor syndrome.\n* Serum calcitonin level \u2265 35 ng/L (pg/mL) was determined by the central laboratory at visit 1.\n* There was significant evidence of active autoimmune abnormalities (e.g., lupus or rheumatoid arthritis) and the investigators suggested that systemic glucocorticoid therapy might be required in the following 12 months.\n* Has received an organ transplant (corneal transplant allowed) or is waiting for an organ transplant.\n* A history of active or untreated malignancy, or a remission period of less than 5 years for a clinically significant malignancy (other than basal or squamous cell skin cancer, carcinoma in situ of the cervix, or carcinoma in situ of the prostate).\n* Presence of any other medical history (e.g., known drug or alcohol abuse or mental illness) that the investigator considered would have prevented the patient from complying with and completing the study protocol.\n* Presence of any blood disorders that may interfere with HbA1c measurements (e.g., hemolytic anemia, sickle cell disease).",
+        "metadata": {
+          "type": "exclusion",
+          "title": "Effects of Tirzepatide and Insulin Glargine on Glucolipid Metabolism and Brain Function in Patients With Type 2 Diabetes",
+          "sex": "ALL",
+          "max_age": "75 Years",
+          "min_age": "18 Years",
+          "phases": "PHASE4",
+          "nct_id": "NCT05553093",
+          "sponsor": "Nanjing First Hospital, Nanjing Medical University"
+        },
+        "score": 0.702191174030304,
+        "source": "ann",
+        "rrf_score": 0.012195
+      },
+      {
+        "id": "NCT06142006_inclusion",
+        "nct_id": "NCT06142006",
+        "text": "INCLUSION CRITERIA \u2014 The Diabetes Staging System in Patient Aligned Care Teams (NCT06142006):\n* male or female\n* prior history of cardiovascular disease (myocardial infraction, cardiac stents, coronary artery pass, diastolic/systolic heart failure, stroke, carotid endarterectomy, femoral popliteal bypass, abdominal aortic aneurysm)\n* prior history of chronic kidney disease (GFR \\<60, microalbumin creatinine/ratio \\>30 mg/g - creatinine on 3 separate occasions)\n* age 25-75 years\n* BMI \\>27\n* diagnosis of type 2 diabetes\n* hemoglobin A1C \\>7.0%\n* agreeable to regular visits per study protocol\n* access to telephone and reliable transportation and has an assigned PACT provider using a Freestyle Libre 2 or Freestyle lite glucometer to monitor blood sugars or willing to monitor blood sugars during study",
+        "metadata": {
+          "title": "The Diabetes Staging System in Patient Aligned Care Teams",
+          "type": "inclusion",
+          "max_age": "75 Years",
+          "nct_id": "NCT06142006",
+          "sex": "ALL",
+          "sponsor": "Durham VA Medical Center",
+          "phases": "",
+          "min_age": "25 Years"
+        },
+        "score": 0.7019508481025696,
+        "source": "ann",
+        "rrf_score": 0.012048
+      },
+      {
+        "id": "NCT07400588_inclusion",
+        "nct_id": "NCT07400588",
+        "text": "INCLUSION CRITERIA \u2014 Aleniglipron Phase 2 in Type 2 Diabetes Mellitus (NCT07400588):\n* Signed Informed Consent\n* A diagnosis of T2DM of \u22656 months,\n* Hemoglobin A1c (HbA1c) \u22656.5% to \u226410% at Screening\n* Have a BMI \u226527.0 kg/m2",
+        "metadata": {
+          "title": "Aleniglipron Phase 2 in Type 2 Diabetes Mellitus",
+          "nct_id": "NCT07400588",
+          "sponsor": "Gasherbrum Bio, Inc., a wholly owned subsidiary of Structure Therapeutics",
+          "type": "inclusion",
+          "max_age": "79 Years",
+          "phases": "PHASE2",
+          "min_age": "18 Years",
+          "sex": "ALL"
+        },
+        "score": 0.7016696929931641,
+        "source": "ann",
+        "rrf_score": 0.011905
+      },
+      {
+        "id": "NCT06319300_exclusion",
+        "nct_id": "NCT06319300",
+        "text": "EXCLUSION CRITERIA \u2014 Artificial Intelligence-assisted Insulin System in Type 2 Diabetes in General Wards (NCT06319300):\n* Type 1 diabetes mellitus, other special types of diabetes mellitus.\n* BG\\>22.2 mmol/L, or acute complications of diabetes, such as diabetic ketoacidosis, diabetic hyperosmolar state.\n* History of severe or repeated hypoglycaemia\n* BMI\u226545 kg/m2\n* Pregnant and lactating women\n* Clinically relevant liver disease (established cirrhosis and portal hypertension);\n* Presence of severe renal disease (serum creatinine \u22653.0 mg/dL or estimated glomerular filtration rate \\<30 ml/min/1.73 m2);\n* Severe cardiac insufficiency;\n* Patients on cortisol-based hormone therapy (equivalent to a prednisone dose \\>5 mg/day);\n* Psychiatric abnormalities or impaired cognitive function;\n* Patients with severe oedema, infection, or peripheral blood circulation disorder;\n* Patients with severe illness or patients to be transferred to ICU for treatment;\n* Surgery of the heart or abdomen that may have a significant impact on the test is planned during hospitalisation.",
+        "metadata": {
+          "sponsor": "Shanghai Zhongshan Hospital",
+          "max_age": "N/A",
+          "title": "Artificial Intelligence-assisted Insulin System in Type 2 Diabetes in General Wards",
+          "phases": "NA",
+          "sex": "ALL",
+          "nct_id": "NCT06319300",
+          "min_age": "18 Years",
+          "type": "exclusion"
+        },
+        "score": 0.7013221979141235,
+        "source": "ann",
+        "rrf_score": 0.011765
+      },
+      {
+        "id": "NCT05856877_exclusion",
+        "nct_id": "NCT05856877",
+        "text": "EXCLUSION CRITERIA \u2014 Central Insulin Sensitivity in Individuals With Type 2 Diabetes (T2D) and at Risk for Developing T2D (NCT05856877):\n* Only in subjects without manifest diabetes mellitus type 2: Taking medications that affect sugar metabolism (e.g., antidiabetic medications or glucocorticoids).\n* Diabetes mellitus type 1 or Latent autoimmune diabetes in the adult (GAD and/or IA2 antibodies positive)\n* MODY (Maturity onset Diabetes of the Young)\n* Decompensated diabetes mellitus type 2 (HbA1c greater than 9.6% and/or fasting blood glucose \\> 230 mg/dl)\n* BMI \\< 18.5 or \\> 45 kg/m2\n* Individuals wearing non-removable metal devices in or on the body such as:\n\n  * pacemakers\n  * artificial heart valves\n  * metal prostheses\n  * implanted magnetic metal parts (screws, plates from surgery)\n  * coils\n  * metal splinters/garnet chips\n  * fixed braces\n  * retainers going over more than four teeth\n  * acupuncture needle\n  * Insulin pump\n  * intraport\n  * Tattoos, eye shadow, etc.\n* there is a pregnancy or pregnancy cannot be excluded\n* breastfeeding women\n* Individuals with impaired temperature sensation and/or increased sensitivity to heating of the body.\n* symptomatic coronary heart disease, heart failure greater than NYHA 3, previous heart attack\n* Condition following stroke\n* Individuals with hearing disease or increased sensitivity to loud sounds\n* Persons with claustrophobia (fear of place)\n* Minors or subjects incapable of giving consent\n* Subjects who have had an operation less than 3 months ago\n* Acute illness or infection within the last 4 weeks\n* Severe neurological or psychiatric diseases, e.g. severe depression (at least 29 points according to BDI II), schizophrenia or bipolar disorder.\n* Use of centrally acting drugs\n* Known presence of malignant disease within the last 5 years\n* Diseases of the pancreas\n* Systemic infection (CRP \\> 1 mg/dl)\n* Following bariatric surgery\n* Antibiotic therapy within the last 4 weeks prior to study inclusion\n* No consent to be informed about incidentally discovered pathological findings\n* Participation in interventional trials and receipt of investigational medication in the last 30 days\n* Severe diabetic complications such as chronic kidney disease (KDIGO CKD greater than G4) or severe proliferative retinopathy\n* Subjects with hemoglobin levels Hb\\<10.5g/dl (for women), Hb\\<11.5g/dl (for men)\n* Other medical conditions that, in the opinion of an investigator, may jeopardize the success of the study or indicate that the subject may be at risk of harm\n* Allergic diseases to any of the substances used",
+        "metadata": {
+          "min_age": "18 Years",
+          "phases": "NA",
+          "sex": "ALL",
+          "title": "Central Insulin Sensitivity in Individuals With Type 2 Diabetes (T2D) and at Risk for Developing T2D",
+          "type": "exclusion",
+          "max_age": "N/A",
+          "sponsor": "University Hospital Tuebingen",
+          "nct_id": "NCT05856877"
+        },
+        "score": 0.698424220085144,
+        "source": "ann",
+        "rrf_score": 0.011628
+      },
+      {
+        "id": "NCT05099770_inclusion",
+        "nct_id": "NCT05099770",
+        "text": "INCLUSION CRITERIA \u2014 Proact: A Study of REACT in Subjects With Type 2 Diabetes Mellitus and Chronic Kidney Disease (NCT05099770):\n1. The participant is male or female, 30 to 80 years of age on the date of informed consent.\n2. Documented diagnosis of type 2 diabetes mellitus (T2DM) and chronic kidney disease\n3. Serum glycosylated hemoglobin (HbA1c) of 9.5% or lower at Screening.\n4. Systolic blood pressure of \u2264 140 mm Hg and diastolic blood pressure of \u2264 90 mm Hg at Screening.\n5. All participants should be strongly considered for treatment with sodium-glucose cotransporter 2 inhibitor (SGLT2i).\n6. On a clinically relevant, maximally tolerated dose of an angiotensin converting-enzyme inhibitor (ACEI) OR an angiotensin receptor blocker (ARB), unless not tolerated or contraindicated.\n7. Participant agrees and is able to refrain from using therapies that may increase bleeding risk for the specified pre-procedure and post-procedure durations.\n8. Participant is willing and able to cooperate with all aspects of the protocol and provide signed informed consent.\n\nKey",
+        "metadata": {
+          "phases": "PHASE3",
+          "max_age": "80 Years",
+          "nct_id": "NCT05099770",
+          "type": "inclusion",
+          "sex": "ALL",
+          "title": "Proact: A Study of REACT in Subjects With Type 2 Diabetes Mellitus and Chronic Kidney Disease",
+          "min_age": "30 Years",
+          "sponsor": "Prokidney"
+        },
+        "score": 0.6967750787734985,
+        "source": "ann",
+        "rrf_score": 0.011494
+      },
+      {
+        "id": "NCT06982859_inclusion",
+        "nct_id": "NCT06982859",
+        "text": "INCLUSION CRITERIA \u2014 A Study to Evaluate the Effect of Retatrutide on Insulin Secretion and Insulin Sensitivity in Adult Participants With Type 2 Diabetes Mellitus (NCT06982859):\n* Have been diagnosed with Type 2 Diabetes Mellitus (T2DM) for at least 6 months prior to screening.\n* Treated with diet and exercise and metformin daily, with or without other allowed oral antihyperglycaemia medications (OAMs), 3 months prior to screening. Allowed OAMs are dipeptidyl peptidase-4 inhibitors (DPP-IV) inhibitors, sodium/glucose cotransporter 2 (SGLT2) inhibitors, glinides, and sulfonylureas.\n* Have a HbA1c value at screening of:\n\n  * 6.5% and \u2264 9.5 % if on metformin with or without SGLT2 inhibitors, or\n  * 6% and \u22648.5% if on metformin in combination with allowed OAMs that require washout.\n* Have venous access sufficient to allow for blood sampling as per the protocol.\n* Have clinical laboratory test results within normal reference range for the population or investigative site or results with acceptable deviations that are judged to be not clinically significant by the investigator.\n* Have a body mass index (BMI) between 25 kilograms per meter squared (kg/m\u00b2) and 45 kg/m\u00b2, both inclusive, at screening.\n* Have had a stable body weight that is less than 5% change during the 3-month period prior to screening.",
+        "metadata": {
+          "sex": "ALL",
+          "max_age": "70 Years",
+          "nct_id": "NCT06982859",
+          "type": "inclusion",
+          "min_age": "18 Years",
+          "sponsor": "Eli Lilly and Company",
+          "title": "A Study to Evaluate the Effect of Retatrutide on Insulin Secretion and Insulin Sensitivity in Adult Participants With Type 2 Diabetes Mellitus",
+          "phases": "PHASE1"
+        },
+        "score": 0.6926784515380859,
+        "source": "ann",
+        "rrf_score": 0.011364
+      },
+      {
+        "id": "NCT07089784_inclusion",
+        "nct_id": "NCT07089784",
+        "text": "INCLUSION CRITERIA \u2014 Multiple Dose Study of MK-2828 in Participants With Type 2 Diabetes (MK-2828-003) (NCT07089784):\nThe main inclusion criteria include but are not limited to the following:\n\n* With the exception of type 2 diabetes mellitus (T2DM), is in generally good health\n* Has a history of T2DM for \u22651 year at the time of screening based on self-reporting\n* Has a baseline HbA1C level of \u226410% at the time of screening\n* Has a stable weight (based on self-reporting) defined as \u22645 kg gain or loss of body weight for at least 3 months before Visit 1/Screening\n* T2DM treated with lifestyle modification alone or with stable doses (no significant change for \u22653 months from Visit 1/Screening, based on self-reporting) of \u2264 3 oral anti-diabetic medications and anticipated not to require dose adjustments during the study duration\n* Body mass index (BMI) between 25 and 40 kg/m2, inclusive",
+        "metadata": {
+          "title": "Multiple Dose Study of MK-2828 in Participants With Type 2 Diabetes (MK-2828-003)",
+          "sex": "ALL",
+          "phases": "PHASE1",
+          "min_age": "24 Years",
+          "type": "inclusion",
+          "sponsor": "Merck Sharp & Dohme LLC",
+          "nct_id": "NCT07089784",
+          "max_age": "75 Years"
+        },
+        "score": 0.6924148201942444,
+        "source": "ann",
+        "rrf_score": 0.011236
+      },
+      {
+        "id": "NCT04943926_inclusion",
+        "nct_id": "NCT04943926",
+        "text": "INCLUSION CRITERIA \u2014 Dietary Strategies for Remission of Type 2 Diabetes (NCT04943926):\n* HbA1c \u226548 mmol/mol (with or without medical treatment)\n* Less than 10 years since the diagnosis of T2D\n* BMI \u226527 kg/m2 (\u226525 kg/m2 for Asians)",
+        "metadata": {
+          "min_age": "24 Years",
+          "sponsor": "University of Bergen",
+          "nct_id": "NCT04943926",
+          "title": "Dietary Strategies for Remission of Type 2 Diabetes",
+          "phases": "NA",
+          "type": "inclusion",
+          "sex": "ALL",
+          "max_age": "70 Years"
+        },
+        "score": 0.6920469403266907,
+        "source": "ann",
+        "rrf_score": 0.011111
+      },
+      {
+        "id": "NCT06546085_inclusion",
+        "nct_id": "NCT06546085",
+        "text": "INCLUSION CRITERIA \u2014 Extracellular Vesicles, Insulin Action, and Exercise (NCT06546085):\n* Male or female 30 - 80 years old.\n* HbA1c \\<5.7% and fasting glucose \\<100mg/dl to be considered NGT\n* T2D diagnosis or confirmation HbA1c \u22656.5% and fasting glucose \u2265126 mg/dl\n* Prescribed metformin, GLP-1 agonists (oral/injectable), TZDs, DPP-IV inhibitors, Acarbose, SGLT-2 inhibitors \u22656 year.\n* Has a body mass index of 20-24.99 or 25.0-45 kg/m2.\n* Not diagnosed with Type 1 diabetes.\n* Not currently engaged in \\>150 min/wk of exercise.",
+        "metadata": {
+          "title": "Extracellular Vesicles, Insulin Action, and Exercise",
+          "phases": "NA",
+          "sex": "ALL",
+          "nct_id": "NCT06546085",
+          "type": "inclusion",
+          "min_age": "30 Years",
+          "max_age": "80 Years",
+          "sponsor": "Rutgers, The State University of New Jersey"
+        },
+        "score": 0.6915213465690613,
+        "source": "ann",
+        "rrf_score": 0.010989
+      },
+      {
+        "id": "NCT05766735_inclusion",
+        "nct_id": "NCT05766735",
+        "text": "INCLUSION CRITERIA \u2014 Treating Early Type 2 Diabetes by Reducing Postprandial Glucose Excursions: A Paradigm Shift in Lifestyle Modification (NCT05766735):\n1. Clinical diagnosis, based on investigator assessment, of type 2 diabetes within the past 24 months\n2. Age \u226530.0 and \u226480 years\n3. Hemoglobin A1c = \u22656.5-\u226411% (medical record value \\<6 month-old is acceptable)\n4. Access to smartphone throughout the study\n5. Diabetes management visit with medical provider within 12 months of screening date\n6. If on weight altering medications (e.g., GLP-1, GIP), on a stable dose for about four weeks",
+        "metadata": {
+          "sex": "ALL",
+          "type": "inclusion",
+          "nct_id": "NCT05766735",
+          "max_age": "80 Years",
+          "phases": "NA",
+          "title": "Treating Early Type 2 Diabetes by Reducing Postprandial Glucose Excursions: A Paradigm Shift in Lifestyle Modification",
+          "sponsor": "Chiara Fabris, PhD",
+          "min_age": "30 Years"
+        },
+        "score": 0.6914603114128113,
+        "source": "ann",
+        "rrf_score": 0.01087
+      },
+      {
+        "id": "NCT06716203_exclusion",
+        "nct_id": "NCT06716203",
+        "text": "EXCLUSION CRITERIA \u2014 A Study of BGM0504 in Poorly Controlled Type 2 Diabetes Patients Only Through Diet and Exercise (NCT06716203):\n* \u25a0 Previous diagnosis of type 1 diabetes, special type diabetes ;\n\n  * There are malignant tumors within 5 years before screening, or patients are in latent of clinical malignant tumors (except patients with skin basal cell carcinoma and squamous cell carcinoma, cervical carcinoma in situ, prostate carcinoma in situ or papillary thyroid carcinoma who have no recurrence after surgery).\n  * Have had chronic or acute pancreatitis any time prior to study entry;\n  * Known allergic constitution (allergy to 3 or more kinds of food or drugs), or allergy to GLP-1 receptor agonists, or severe allergic diseases (asthma, urticaria, eczematous dermatitis, etc.) at screening;\n  * Mentally incapacitated or speech-impaired;\n  * Suspected or confirmed history of alcohol or drug abuse;\n  * Pregnant or lactating woman;\n  * The investigator considers that there are any other conditions that make it inappropriate to participate in this study.",
+        "metadata": {
+          "sex": "ALL",
+          "sponsor": "BrightGene Bio-Medical Technology Co., Ltd.",
+          "phases": "PHASE3",
+          "min_age": "18 Years",
+          "title": "A Study of BGM0504 in Poorly Controlled Type 2 Diabetes Patients Only Through Diet and Exercise",
+          "nct_id": "NCT06716203",
+          "max_age": "75 Years",
+          "type": "exclusion"
+        },
+        "score": 0.689872682094574,
+        "source": "ann",
+        "rrf_score": 0.010753
+      },
+      {
+        "id": "NCT06818851_inclusion",
+        "nct_id": "NCT06818851",
+        "text": "INCLUSION CRITERIA \u2014 The Effects of Henagliflozin on Glucose Fluctuation and Immunosenescence in Type 2 Diabetes Patients on Insulin Therapy (NCT06818851):\n* Diagnosed with type 2 diabetes mellitus (T2DM) for at least 6 months based on the 1999 WHO criteria.\n\n  * Age between 50 and 70 years at the time of signing the informed consent form (inclusive).\n  * Poor glycemic control despite treatment with basal insulin or insulin degludec/aspart (with or without oral antidiabetic drugs) within the 3 months prior to screening.\n  * HbA1c level above 8%.\n  * BMI \u2265 20 kg/m\u00b2.\n  * C-peptide levels within the normal reference range.\n  * Able to maintain stable dietary and exercise habits during the study.\n  * Capable of understanding the study procedures and methods, willing to strictly comply with the clinical trial protocol, and voluntarily sign the informed consent form.",
+        "metadata": {
+          "phases": "PHASE4",
+          "nct_id": "NCT06818851",
+          "title": "The Effects of Henagliflozin on Glucose Fluctuation and Immunosenescence in Type 2 Diabetes Patients on Insulin Therapy",
+          "sponsor": "Xinhua Hospital, Shanghai Jiao Tong University School of Medicine",
+          "max_age": "70 Years",
+          "sex": "ALL",
+          "min_age": "50 Years",
+          "type": "inclusion"
+        },
+        "score": 0.6849381923675537,
+        "source": "ann",
+        "rrf_score": 0.010638
+      },
+      {
+        "id": "NCT07149610_exclusion",
+        "nct_id": "NCT07149610",
+        "text": "EXCLUSION CRITERIA \u2014 Connected Care for Type 2 Diabetes Self-Management (NCT07149610):\n* acute medical problems: myocardial infarction or stroke within 6 months, difficulty in exercise and physical activity due to spinal disease (intervertebral disc prolapse, spinal stenosis, etc.), joint disease, or major surgery at the time of screening, painful arthritis, spinal stenosis, amputation, painful foot lesions or neuropathy limiting balance and mobility, advanced Parkinson's disease and/or neuromuscular disorders, advanced dementia, metastatic cancer, in long-term immunosuppressant therapy, significant visual or hearing impairment, uncontrolled hypertension or other serious conditions that restrict their participation in the study, severe/major depression and other relevant psychiatric disorders;\n* estimated glomerular filtration rate \\< 30 mL/min/1.73 m2;\n* plan to receive surgery that could limit physical activity during the study period;\n* pregnant or breastfeeding;\n* participation in another studies;\n* lack of written informed consent.",
+        "metadata": {
+          "phases": "NA",
+          "sponsor": "Marche Region Regional Health Agency",
+          "max_age": "N/A",
+          "min_age": "18 Years",
+          "nct_id": "NCT07149610",
+          "title": "Connected Care for Type 2 Diabetes Self-Management",
+          "type": "exclusion",
+          "sex": "ALL"
+        },
+        "score": 0.6845383048057556,
+        "source": "ann",
+        "rrf_score": 0.010526
+      },
+      {
+        "id": "NCT05501483_inclusion",
+        "nct_id": "NCT05501483",
+        "text": "INCLUSION CRITERIA \u2014 Adipose Tissue Heterogeneity and Its Link to Type 2 Diabetes (NCT05501483):\n* Signed informed consent\n* BMI 25 kg/m2 or higher\n* HbA1c 42 mmol/mol or higher\n* For fertile women, effective contraception",
+        "metadata": {
+          "sponsor": "Karolinska Institutet",
+          "max_age": "70 Years",
+          "min_age": "30 Years",
+          "nct_id": "NCT05501483",
+          "title": "Adipose Tissue Heterogeneity and Its Link to Type 2 Diabetes",
+          "sex": "ALL",
+          "type": "inclusion",
+          "phases": "NA"
+        },
+        "score": 0.6838775873184204,
+        "source": "ann",
+        "rrf_score": 0.010417
+      },
+      {
+        "id": "NCT07137585_inclusion",
+        "nct_id": "NCT07137585",
+        "text": "INCLUSION CRITERIA \u2014 A Study to Evaluate the Effect of RO7204239 on Insulin Sensitivity and Muscle Composition in Participants With Type 2 Diabetes Mellitus (T2DM) and Overweight or Obesity (NCT07137585):\n* Participants with T2DM for at least 6 months, treated with diet, exercise and/or metformin alone or in combination with either dipeptidyl peptidase 4 (DPP-4) inhibitor or sodium-glucose co-transporter 2 (SGLT2) at stable dose for the last 3 months prior to study entry and with a HbA1c between \u2264 6.5% and \u2264 10%\n* Body mass index (BMI) within the range of 27.0 to 45.0 kilogram per meter square (kg/m2)\n* Stable body weight for the 3 months prior to screening\n* Participants on lipid-lowering or antihypertensive drugs must be on stable doses for at least 3 months",
+        "metadata": {
+          "min_age": "18 Years",
+          "type": "inclusion",
+          "nct_id": "NCT07137585",
+          "title": "A Study to Evaluate the Effect of RO7204239 on Insulin Sensitivity and Muscle Composition in Participants With Type 2 Diabetes Mellitus (T2DM) and Overweight or Obesity",
+          "phases": "PHASE1",
+          "sponsor": "Hoffmann-La Roche",
+          "sex": "ALL",
+          "max_age": "N/A"
+        },
+        "score": 0.6831333637237549,
+        "source": "ann",
+        "rrf_score": 0.010309
+      },
+      {
+        "id": "NCT05766735_exclusion",
+        "nct_id": "NCT05766735",
+        "text": "EXCLUSION CRITERIA \u2014 Treating Early Type 2 Diabetes by Reducing Postprandial Glucose Excursions: A Paradigm Shift in Lifestyle Modification (NCT05766735):\n1. Medications that impede weight loss within the last 3 months, per study physicians' discretion\n2. Any psychotropic medication that could raise blood glucose, per study physicians' opinion\n3. Conditions that preclude participating in the study (e.g., severe mental disease like manic depressive illness, severe depression, active substance abuse)\n4. Conditions that preclude increasing physical activity (e.g., severe neuropathy, cardiovascular disease, COPD/emphysema, severe osteoarthritis, stroke)\n5. Conditions that prevent doing the self-directed GEM program, such as inability to read English, mental health conditions that prevent engagement in treatment, such as active substance abuse, severe depression\n6. Conditions that restrict diet such as severe gastroparesis, ulcers, or food allergies\n7. Severe vision impairment that at PI discretion would preclude ability to read the GEM manual or see the information on the CGM or activity tracker\n8. Currently undergoing treatment for cancer that in the opinion of the PI would preclude participation in the study\n9. Renal impairment (for example eGFR \\< 45 mL/min/1.73 meters squared; CKD-3b)\n10. Currently pregnant or contemplating pregnancy within the next 14 months\n11. Currently breastfeeding\n12. Any condition that, in the opinion of the principal investigator, could interfere with the safe and effective completion of the study.",
+        "metadata": {
+          "type": "exclusion",
+          "min_age": "30 Years",
+          "sex": "ALL",
+          "max_age": "80 Years",
+          "phases": "NA",
+          "title": "Treating Early Type 2 Diabetes by Reducing Postprandial Glucose Excursions: A Paradigm Shift in Lifestyle Modification",
+          "nct_id": "NCT05766735",
+          "sponsor": "Chiara Fabris, PhD"
+        },
+        "score": 0.6823198795318604,
+        "source": "ann",
+        "rrf_score": 0.010204
+      },
+      {
+        "id": "NCT07060456_inclusion",
+        "nct_id": "NCT07060456",
+        "text": "INCLUSION CRITERIA \u2014 Efficacy and Safety of HRS9531 in Participants With Type 2 Diabetes Treated With Basal Insulin (NCT07060456):\n1. Male or female, able and willing to provide a written informed consent\n2. Diagnosed with type 2 diabetes \u2265 90 days\uff1b\n3. On stable once-daily dose of basal insulin alone or in combination with metformin and/or SGLT2 inhibitor \u2265 90 days;\n4. HbA1c was 7.5%\\~11.0% (both inclusive);\n5. Body Mass Index (BMI) \u226522 kg/m2 at screening.",
+        "metadata": {
+          "min_age": "18 Years",
+          "phases": "PHASE3",
+          "type": "inclusion",
+          "title": "Efficacy and Safety of HRS9531 in Participants With Type 2 Diabetes Treated With Basal Insulin",
+          "sex": "ALL",
+          "max_age": "N/A",
+          "nct_id": "NCT07060456",
+          "sponsor": "Fujian Shengdi Pharmaceutical Co., Ltd."
+        },
+        "score": 0.6802048683166504,
+        "source": "ann",
+        "rrf_score": 0.010101
+      },
+      {
+        "id": "NCT05958368_inclusion",
+        "nct_id": "NCT05958368",
+        "text": "INCLUSION CRITERIA \u2014 Assessing the Value of Avocados on Glycemic Control in Type 2 Diabetes (NCT05958368):\n* Participant reported diagnosis of Type 2 diabetes\n* HbA1c between 5.7%-11% (inclusive) and / or fasting blood glucose of \u2265 100 mg/dL\n* BMI 27-50 kg/m2 (inclusive)\n* Age range - 18 - 65 years (inclusive)\n* On stable regimen of all medications (including diabetes) for at least 3 months (brief regimens of medications such as antibiotics, steroids, etc. are permitted)\n* Willing to follow all requirements of study protocol including blood draws\n* Under the care of a physician who will be responsible for managing the subject's diabetes\n* Willing to give release to provide their treating MD with information about the trial",
+        "metadata": {
+          "min_age": "18 Years",
+          "title": "Assessing the Value of Avocados on Glycemic Control in Type 2 Diabetes",
+          "sex": "ALL",
+          "max_age": "65 Years",
+          "nct_id": "NCT05958368",
+          "phases": "NA",
+          "type": "inclusion",
+          "sponsor": "Pennington Biomedical Research Center"
+        },
+        "score": 0.6800715923309326,
+        "source": "ann",
+        "rrf_score": 0.025152
+      }
+    ],
+    "bm25_results": [
+      {
+        "id": "NCT06118931_metadata",
+        "nct_id": "NCT06118931",
+        "text": "TRIAL OVERVIEW \u2014 Time-restricted Eating, Window Timing, Type 2 Diabetes Status and Sex on Glycemic Control (NCT06118931)\nConditions: Diabetes Mellitus, Type 2, Obesity, Prediabetic State, Hyperglycemia\nInterventions: Early (7:00 - 16:00) TRE, Mid (9:30 - 18:30) TRE, Late (12:00 - 21:00) TRE\nPhases: NA\nAge: 18 Years \u2013 N/A  |  Sex: ALL\nSponsor: University of Toronto",
+        "metadata": {
+          "sex": "ALL",
+          "max_age": "N/A",
+          "title": "Time-restricted Eating, Window Timing, Type 2 Diabetes Status and Sex on Glycemic Control",
+          "conditions": "Diabetes Mellitus, Type 2, Obesity, Prediabetic State, Hyperglycemia",
+          "phases": "NA",
+          "sponsor": "University of Toronto",
+          "type": "metadata",
+          "nct_id": "NCT06118931",
+          "min_age": "18 Years",
+          "interventions": "Early (7:00 - 16:00) TRE, Mid (9:30 - 18:30) TRE, Late (12:00 - 21:00) TRE"
+        },
+        "score": 41.66124243474955,
+        "source": "bm25",
+        "rrf_score": 0.016393
+      },
+      {
+        "id": "NCT06674980_metadata",
+        "nct_id": "NCT06674980",
+        "text": "TRIAL OVERVIEW \u2014 Clinical Trial Assessing Human Placental Membrane Products and Standard of Care Versus Standard of Care in Nonhealing DFUs and VLUs (NCT06674980)\nConditions: Pathologic Processes, Diabetes Mellitus, Glucose Metabolism Disorders, Metabolic Diseases, Endocrine System Disease, Diabetic Angiopathies, Vascular Diseases, Cardiovascular Diseases, Leg Ulcer, Skin Ulcer, Skin Diseases, Diabetes Complications, Diabetic Neuropathies, Foot Diseases, Diabetic Foot, Foot Ulcer, Diabetes Mellitus, Type 2, Ulcer, Foot Ulcer Unhealed\nInterventions: Standard of Care - DFU, AM/Single - DFU, AM/Double - DFU, Standard of Care - VLU, AM/Single - VLU, AM/Double - VLU\nPhases: NA\nAge: 18 Years \u2013 N/A  |  Sex: ALL\nSponsor: C5 Biomedical",
+        "metadata": {
+          "phases": "NA",
+          "title": "Clinical Trial Assessing Human Placental Membrane Products and Standard of Care Versus Standard of Care in Nonhealing DFUs and VLUs",
+          "max_age": "N/A",
+          "sex": "ALL",
+          "sponsor": "C5 Biomedical",
+          "nct_id": "NCT06674980",
+          "min_age": "18 Years",
+          "interventions": "Standard of Care - DFU, AM/Single - DFU, AM/Double - DFU, Standard of Care - VLU, AM/Single - VLU, AM/Double - VLU",
+          "conditions": "Pathologic Processes, Diabetes Mellitus, Glucose Metabolism Disorders, Metabolic Diseases, Endocrine System Disease, Diabetic Angiopathies, Vascular Diseases, Cardiovascular Diseases, Leg Ulcer, Skin Ulcer, Skin Diseases, Diabetes Complications, Diabetic Neuropathies, Foot Diseases, Diabetic Foot, Foot Ulcer, Diabetes Mellitus, Type 2, Ulcer, Foot Ulcer Unhealed",
+          "type": "metadata"
+        },
+        "score": 39.70348356824769,
+        "source": "bm25",
+        "rrf_score": 0.016129
+      },
+      {
+        "id": "NCT06065930_inclusion",
+        "nct_id": "NCT06065930",
+        "text": "INCLUSION CRITERIA \u2014 Adaptive Mechanisms In GRown up ObeSity Study (AMIGROS) (NCT06065930):\n1. Men and women of age: 40.0 - 70.0 years\n2. BMI: 18.0 - 25.0 kg/m2 (lean subjects) and BMI 30.0 - 38.0 kg/m2 (Ob-IS and Ob-IR)\n3. Fasting insulin \\< 9.0 mU/l (lean and Ob-IS subjects) and fasting insulin \\> 9.0 mU/l (Ob-IR)\n4. Fasting glucose \\< 6.1 mmol/l\n5. Body temperature \\< 37.5\u00b0C\n6. First-degree relative with known T2D in Ob-IR\n7. Weight stable \u00b1 5 kg \\< 3 months before screening\n8. Fluent in Swedish and can follow given instructions\n9. Consent given to participate",
+        "metadata": {
+          "nct_id": "NCT06065930",
+          "min_age": "40 Years",
+          "max_age": "70 Years",
+          "sponsor": "Vastra Gotaland Region",
+          "sex": "ALL",
+          "phases": "",
+          "type": "inclusion",
+          "title": "Adaptive Mechanisms In GRown up ObeSity Study (AMIGROS)"
+        },
+        "score": 38.959033368339824,
+        "source": "bm25",
+        "rrf_score": 0.015873
+      },
+      {
+        "id": "NCT03156478_exclusion",
+        "nct_id": "NCT03156478",
+        "text": "EXCLUSION CRITERIA \u2014 STOP DIABETES - Knowledge-based Solutions (NCT03156478):\n* type 1 or 2 diabetes\n* pregnancy or breastfeeding\n* current cancer or less than 6 months from the end of cancer treatment",
+        "metadata": {
+          "max_age": "70 Years",
+          "title": "STOP DIABETES - Knowledge-based Solutions",
+          "min_age": "18 Years",
+          "type": "exclusion",
+          "phases": "NA",
+          "sex": "ALL",
+          "nct_id": "NCT03156478",
+          "sponsor": "University of Eastern Finland"
+        },
+        "score": 38.799621157044236,
+        "source": "bm25",
+        "rrf_score": 0.015625
+      },
+      {
+        "id": "NCT06942195_inclusion",
+        "nct_id": "NCT06942195",
+        "text": "INCLUSION CRITERIA \u2014 Effects of Calcium on Gut Functions and Blood Glucose in Humans With Type 2 Diabetes (NCT06942195):\n* Males with type 2 diabetes mellitus (T2DM). Diagnosis of T2DM will be based on WHO criteria. Only males will be included to avoid the confounding effects of the menstrual cycle on gastric emptying.\n* BMI: 28-38 kg/m\u00b2.\n* HbA1c \\>=6.5 - \\<=7.9% at screening.\n* Blood glucose medications will be required to be withheld for 48 hours prior to each study day.\n* Weight-stable (i.e. \\<5% fluctuation) at study entry, which will be ascertained by a stable body weight in the preceding 3 months.",
+        "metadata": {
+          "max_age": "70 Years",
+          "sex": "MALE",
+          "phases": "NA",
+          "sponsor": "University of Adelaide",
+          "title": "Effects of Calcium on Gut Functions and Blood Glucose in Humans With Type 2 Diabetes",
+          "min_age": "18 Years",
+          "nct_id": "NCT06942195",
+          "type": "inclusion"
+        },
+        "score": 38.2492440607965,
+        "source": "bm25",
+        "rrf_score": 0.015385
+      },
+      {
+        "id": "NCT05958368_inclusion",
+        "nct_id": "NCT05958368",
+        "text": "INCLUSION CRITERIA \u2014 Assessing the Value of Avocados on Glycemic Control in Type 2 Diabetes (NCT05958368):\n* Participant reported diagnosis of Type 2 diabetes\n* HbA1c between 5.7%-11% (inclusive) and / or fasting blood glucose of \u2265 100 mg/dL\n* BMI 27-50 kg/m2 (inclusive)\n* Age range - 18 - 65 years (inclusive)\n* On stable regimen of all medications (including diabetes) for at least 3 months (brief regimens of medications such as antibiotics, steroids, etc. are permitted)\n* Willing to follow all requirements of study protocol including blood draws\n* Under the care of a physician who will be responsible for managing the subject's diabetes\n* Willing to give release to provide their treating MD with information about the trial",
+        "metadata": {
+          "title": "Assessing the Value of Avocados on Glycemic Control in Type 2 Diabetes",
+          "phases": "NA",
+          "type": "inclusion",
+          "sex": "ALL",
+          "max_age": "65 Years",
+          "nct_id": "NCT05958368",
+          "min_age": "18 Years",
+          "sponsor": "Pennington Biomedical Research Center"
+        },
+        "score": 38.078122012175406,
+        "source": "bm25"
+      },
+      {
+        "id": "NCT06582472_inclusion",
+        "nct_id": "NCT06582472",
+        "text": "INCLUSION CRITERIA \u2014 Early Retinal Neurodegeneration As Risk Factor, Biomarker and Pharmacological Target of Diabetic Retinopathy (NCT06582472):\nInclusion Criteria - Longitudinal study (patients):\n\n1. Participant is willing and able to give informed consent for participation in the trial.\n2. Male or Female, aged 40 - 80 years;\n3. In good general health as evidenced by medical history or diagnosed with type 2 diabetes for less than 10 years without clinical signs of retinopathy and other diabetic complications;\n4. HbA1c level 7% or greater;\n\nInclusion Criteria - Longitudinal study (healthy controls)\n\n1. Participant is willing and able to give informed consent for participation in the trial;\n2. Male or Female, aged 40 - 80 years;\n3. In good general health as evidenced by medical history without diagnosis of type 2 diabetes;\n\nInclusion Criteria - Cross-sectional study\n\n1. Participant is willing and able to give informed consent for participation in the trial;\n2. Male or Female, aged 40 - 80 years;\n3. Patient with a diagnosis of type 2 diabetes for longer than 20 years in the absence or presence of clinical signs of retinopathy and other diabetic complications;\n4. HbA1c level 7% or greater.\n\nExclusion Criteria (longitudinal study and cross-sectional study)\n\nAn individual who meets any of the following criteria will be excluded from participation in this study:\n\n1. retinal or systemic diseases other than diabetes;\n2. hypertension (BP values greater than 140/90 mm Hg);\n3. anemia (hematocrit less than 35%);\n4. smoking;\n5. laser treatment and pregnancy",
+        "metadata": {
+          "type": "inclusion",
+          "nct_id": "NCT06582472",
+          "max_age": "80 Years",
+          "min_age": "40 Years",
+          "phases": "",
+          "title": "Early Retinal Neurodegeneration As Risk Factor, Biomarker and Pharmacological Target of Diabetic Retinopathy",
+          "sponsor": "IRCCS Ospedale San Raffaele",
+          "sex": "ALL"
+        },
+        "score": 36.728324810945416,
+        "source": "bm25",
+        "rrf_score": 0.014925
+      },
+      {
+        "id": "NCT07163975_inclusion",
+        "nct_id": "NCT07163975",
+        "text": "INCLUSION CRITERIA \u2014 Complete Pulpotomy and Root Canal Treatment Patients With Irreversible Pulpitis With Type 2 Diabetes Mellitus (NCT07163975):\n* Type 2 diabetes mellitus defined by HbA1c levels 6.5% - 8% OR FPG \u2265126 mg/dL OR 2-hour plasma glucose \u2265200 mg/dL during an OGTT OR A random plasma glucose of 200 mg/dL or higher in a patient with classic symptoms of hyperglycemia or hyperglycemic crisis\n* Age between 18 - 70 years.\n* Permanent mandibular posterior teeth with clinical and radiographic signs and symptoms indicative of irreversible pulpitis (PAI score \u22642)\n* Tooth showing positive response to pulp sensibility testing with no tenderness on percussion.\n* BMI\\<30 Kg/m2",
+        "metadata": {
+          "phases": "NA",
+          "title": "Complete Pulpotomy and Root Canal Treatment Patients With Irreversible Pulpitis With Type 2 Diabetes Mellitus",
+          "type": "inclusion",
+          "max_age": "70 Years",
+          "sex": "ALL",
+          "sponsor": "Postgraduate Institute of Dental Sciences Rohtak",
+          "nct_id": "NCT07163975",
+          "min_age": "18 Years"
+        },
+        "score": 35.919874981036415,
+        "source": "bm25",
+        "rrf_score": 0.014706
+      },
+      {
+        "id": "NCT05934409_inclusion",
+        "nct_id": "NCT05934409",
+        "text": "INCLUSION CRITERIA \u2014 Adipose Tissue Storage in the Rapid Remission of Hepatic and Cardiac Metabolic Dysfunction After Bariatric Surgery (NCT05934409):\n* Aged 18 to 65\n* BMI 35 kg/m2\n* Diagnosed T2D - according to Diabetes Canada diagnostics criteria.\n* Diagnosed non-T2D - according to Diabetes Canada diagnostics criteria.\n* Women with a negative serum pregnancy test.",
+        "metadata": {
+          "type": "inclusion",
+          "phases": "NA",
+          "nct_id": "NCT05934409",
+          "sponsor": "Universit\u00e9 de Sherbrooke",
+          "sex": "ALL",
+          "title": "Adipose Tissue Storage in the Rapid Remission of Hepatic and Cardiac Metabolic Dysfunction After Bariatric Surgery",
+          "min_age": "18 Years",
+          "max_age": "65 Years"
+        },
+        "score": 35.61984646178771,
+        "source": "bm25",
+        "rrf_score": 0.014493
+      },
+      {
+        "id": "NCT06462170_inclusion",
+        "nct_id": "NCT06462170",
+        "text": "INCLUSION CRITERIA \u2014 Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study (NCT06462170):\n1. Consent provided\n2. Age \\>= 18 years.\n3. Diagnosed as type 2 diabetes mellitus.\n4. Not on insulin therapy.",
+        "metadata": {
+          "nct_id": "NCT06462170",
+          "title": "Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study",
+          "min_age": "18 Years",
+          "phases": "NA",
+          "sponsor": "Ottawa Hospital Research Institute",
+          "sex": "ALL",
+          "max_age": "N/A",
+          "type": "inclusion"
+        },
+        "score": 35.515107413268,
+        "source": "bm25",
+        "rrf_score": 0.014286
+      },
+      {
+        "id": "NCT06336122_metadata",
+        "nct_id": "NCT06336122",
+        "text": "TRIAL OVERVIEW \u2014 OASIS: Peer Support for T2DM in Appalachia (Peer Participant) (NCT06336122)\nConditions: Diabetes Mellitus, Type 2\nInterventions: Peer Coach Training - Weekly, Peer Coach Training - Biweekly\nPhases: NA\nAge: 55 Years \u2013 N/A  |  Sex: ALL\nSponsor: University of Kentucky",
+        "metadata": {
+          "interventions": "Peer Coach Training - Weekly, Peer Coach Training - Biweekly",
+          "min_age": "55 Years",
+          "sponsor": "University of Kentucky",
+          "max_age": "N/A",
+          "title": "OASIS: Peer Support for T2DM in Appalachia (Peer Participant)",
+          "nct_id": "NCT06336122",
+          "conditions": "Diabetes Mellitus, Type 2",
+          "type": "metadata",
+          "sex": "ALL",
+          "phases": "NA"
+        },
+        "score": 35.42575927119612,
+        "source": "bm25",
+        "rrf_score": 0.014085
+      },
+      {
+        "id": "NCT01793168_metadata",
+        "nct_id": "NCT01793168",
+        "text": "TRIAL OVERVIEW \u2014 Rare Disease Patient Registry & Natural History Study - Coordination of Rare Diseases at Sanford (NCT01793168)\nConditions: Rare Disorders, Undiagnosed Disorders, Disorders of Unknown Prevalence, Cornelia De Lange Syndrome, Prenatal Benign Hypophosphatasia, Perinatal Lethal Hypophosphatasia, Odontohypophosphatasia, Adult Hypophosphatasia, Childhood-onset Hypophosphatasia, Infantile Hypophosphatasia, Hypophosphatasia, Kabuki Syndrome, Bohring-Opitz Syndrome, Narcolepsy Without Cataplexy, Narcolepsy-cataplexy, Hypersomnolence Disorder, Idiopathic Hypersomnia Without Long Sleep Time, Idiopathic Hypersomnia With Long Sleep Time, Idiopathic Hypersomnia, Kleine-Levin Syndrome, Kawasaki Disease, Leiomyosarcoma, Leiomyosarcoma of the Corpus Uteri, Leiomyosarcoma of the Cervix Uteri, Leiomyosarcoma of Small Intestine, Acquired Myasthenia Gravis, Addison Disease, Hyperacusis (Hyperacousis), Juvenile Myasthenia Gravis, Transient Neonatal Myasthenia Gravis, Williams Syndrome, Lyme Disease, Myasthenia Gravis, Marinesco Sjogren Syndrome(Marinesco-Sjogren Syndrome), Isolated Klippel-Feil Syndrome, Frasier Syndrome, Denys-Drash Syndrome, Beckwith-Wiedemann Syndrome, Emanuel Syndrome, Isolated Aniridia, Axenfeld-Rieger Syndrome, Aniridia-intellectual Disability Syndrome, Aniridia - Renal Agenesis - Psychomotor Retardation, Aniridia - Ptosis - Intellectual Disability - Familial Obesity, Aniridia - Cerebellar Ataxia - Intellectual Disability, Aniridia - Absent Patella, Aniridia, Peters Anomaly - Cataract, Peters Anomaly, Potocki-Shaffer Syndrome, Silver-Russell Syndrome Due to Maternal Uniparental Disomy of Chromosome 11, Silver-Russell Syndrome Due to Imprinting Defect of 11p15, Silver-Russell Syndrome Due to 11p15 Microduplication, Syndromic Aniridia, WAGR Syndrome, Wolf-Hirschhorn Syndrome, 4p16.3 Microduplication Syndrome, 4p Deletion Syndrome, Non-Wolf-Hirschhorn Syndrome, Autosomal Recessive Stickler Syndrome, Stickler Syndrome Type 2, Stickler Syndrome Type 1, Stickler Syndrome, Mucolipidosis Type 4, X-linked Spinocerebellar Ataxia Type 4, X-linked Spinocerebellar Ataxia Type 3, X-linked Intellectual Disability - Ataxia - Apraxia, X-linked Progressive Cerebellar Ataxia, X-linked Non Progressive Cerebellar Ataxia, X-linked Cerebellar Ataxia, Vitamin B12 Deficiency Ataxia, Toxic Exposure Ataxia, Unclassified Autosomal Dominant Spinocerebellar Ataxia, Thyroid Antibody Ataxia, Sporadic Adult-onset Ataxia of Unknown Etiology, Spinocerebellar Ataxia With Oculomotor Anomaly, Spinocerebellar Ataxia With Epilepsy, Spinocerebellar Ataxia With Axonal Neuropathy Type 2, Spinocerebellar Ataxia Type 8, Spinocerebellar Ataxia Type 7, Spinocerebellar Ataxia Type 6, Spinocerebellar Ataxia Type 5, Spinocerebellar Ataxia Type 4, Spinocerebellar Ataxia Type 37, Spinocerebellar Ataxia Type 36, Spinocerebellar Ataxia Type 35, Spinocerebellar Ataxia Type 34, Spinocerebellar Ataxia Type 32, Spinocerebellar Ataxia Type 31, Spinocerebellar Ataxia Type 30, Spinocerebellar Ataxia Type 3, Spinocerebellar Ataxia Type 29, Spinocerebellar Ataxia Type 28, Spinocerebellar Ataxia Type 27, Spinocerebellar Ataxia Type 26, Spinocerebellar Ataxia Type 25, Spinocerebellar Ataxia Type 23, Spinocerebellar Ataxia Type 22, Spinocerebellar Ataxia Type 21, Spinocerebellar Ataxia Type 20, Spinocerebellar Ataxia Type 2, Spinocerebellar Ataxia Type 19/22, Spinocerebellar Ataxia Type 18, Spinocerebellar Ataxia Type 17, Spinocerebellar Ataxia Type 16, Spinocerebellar Ataxia Type 15/16, Spinocerebellar Ataxia Type 14, Spinocerebellar Ataxia Type 13, Spinocerebellar Ataxia Type 12, Spinocerebellar Ataxia Type 11, Spinocerebellar Ataxia Type 10, Spinocerebellar Ataxia Type 1 With Axonal Neuropathy, Spinocerebellar Ataxia Type 1, Spinocerebellar Ataxia - Unknown, Spinocerebellar Ataxia - Dysmorphism, Non Progressive Epilepsy and/or Ataxia With Myoclonus as a Major Feature, Spasticity-ataxia-gait Anomalies Syndrome, Spastic Ataxia With Congenital Miosis, Spastic Ataxia - Corneal Dystrophy, Spastic Ataxia, Rare Hereditary Ataxia, Rare Ataxia, Recessive Mitochondrial Ataxia Syndrome, Progressive Epilepsy and/or Ataxia With Myoclonus as a Major Feature, Posterior Column Ataxia - Retinitis Pigmentosa, Post-Stroke Ataxia, Post-Head Injury Ataxia, Post Vaccination Ataxia, Polyneuropathy - Hearing Loss - Ataxia - Retinitis Pigmentosa - Cataract, Muscular Atrophy - Ataxia - Retinitis Pigmentosa - Diabetes Mellitus, Non-hereditary Degenerative Ataxia, Paroxysmal Dystonic Choreathetosis With Episodic Ataxia and Spasticity, Olivopontocerebellar Atrophy - Deafness, NARP Syndrome, Myoclonus - Cerebellar Ataxia - Deafness, Multiple System Atrophy, Parkinsonian Type, Multiple System Atrophy, Cerebellar Type, Multiple System Atrophy, Maternally-inherited Leigh Syndrome, Machado-Joseph Disease Type 3, Machado-Joseph Disease Type 2, Machado-Joseph Disease Type 1, Leigh Syndrome, Late-onset Ataxia With Dementia, Infection or Post Infection Ataxia, GAD Ataxia, Hereditary Episodic Ataxia, Gliadin/Gluten Ataxia, Friedreich Ataxia, Fragile X-associated Tremor/Ataxia Syndrome, Familial Paroxysmal Ataxia, Exposure to Medications Ataxia, Episodic Ataxia With Slurred Speech, Episodic Ataxia Unknown Type, Episodic Ataxia Type 7, Episodic Ataxia Type 6, Episodic Ataxia Type 5, Episodic Ataxia Type 4, Episodic Ataxia Type 3, Episodic Ataxia Type 1, Epilepsy and/or Ataxia With Myoclonus as Major Feature, Early-onset Spastic Ataxia-neuropathy Syndrome, Early-onset Progressive Neurodegeneration - Blindness - Ataxia - Spasticity, Early-onset Cerebellar Ataxia With Retained Tendon Reflexes, Early-onset Ataxia With Dementia, Childhood-onset Autosomal Recessive Slowly Progressive Spinocerebellar Ataxia, Dilated Cardiomyopathy With Ataxia, Cataract - Ataxia - Deafness, Cerebellar Ataxia, Cayman Type, Cerebellar Ataxia With Peripheral Neuropathy, Cerebellar Ataxia - Hypogonadism, Cerebellar Ataxia - Ectodermal Dysplasia, Cerebellar Ataxia - Areflexia - Pes Cavus - Optic Atrophy - Sensorineural Hearing Loss, Brain Tumor Ataxia, Brachydactyly - Nystagmus - Cerebellar Ataxia, Benign Paroxysmal Tonic Upgaze of Childhood With Ataxia, Autosomal Recessive Syndromic Cerebellar Ataxia, Autosomal Recessive Spastic Ataxia With Leukoencephalopathy, Autosomal Recessive Spastic Ataxia of Charlevoix-Saguenay, Autosomal Recessive Spastic Ataxia - Optic Atrophy - Dysarthria, Autosomal Recessive Spastic Ataxia, Autosomal Recessive Metabolic Cerebellar Ataxia, Autosomal Dominant Spinocerebellar Ataxia Due to Repeat Expansions That do Not Encode Polyglutamine, Autosomal Recessive Ataxia, Beauce Type, Autosomal Recessive Ataxia Due to Ubiquinone Deficiency, Autosomal Recessive Ataxia Due to PEX10 Deficiency, Autosomal Recessive Degenerative and Progressive Cerebellar Ataxia, Autosomal Recessive Congenital Cerebellar Ataxia Due to MGLUR1 Deficiency, Autosomal Recessive Congenital Cerebellar Ataxia Due to GRID2 Deficiency, Autosomal Recessive Congenital Cerebellar Ataxia, Autosomal Recessive Cerebellar Ataxia-pyramidal Signs-nystagmus-oculomotor Apraxia Syndrome, Autosomal Recessive Cerebellar Ataxia-epilepsy-intellectual Disability Syndrome Due to WWOX Deficiency, Autosomal Recessive Cerebellar Ataxia-epilepsy-intellectual Disability Syndrome Due to TUD Deficiency, Autosomal Recessive Cerebellar Ataxia-epilepsy-intellectual Disability Syndrome Due to KIAA0226 Deficiency, Autosomal Recessive Cerebellar Ataxia-epilepsy-intellectual Disability Syndrome, Autosomal Recessive Cerebellar Ataxia With Late-onset Spasticity, Autosomal Recessive Cerebellar Ataxia Due to STUB1 Deficiency, Autosomal Recessive Cerebellar Ataxia Due to a DNA Repair Defect, Autosomal Recessive Cerebellar Ataxia - Saccadic Intrusion, Autosomal Recessive Cerebellar Ataxia - Psychomotor Retardation, Autosomal Recessive Cerebellar Ataxia - Blindness - Deafness, Autosomal Recessive Cerebellar Ataxia, Autosomal Dominant Spinocerebellar Ataxia Due to a Polyglutamine Anomaly, Autosomal Dominant Spinocerebellar Ataxia Due to a Point Mutation, Autosomal Dominant Spinocerebellar Ataxia Due to a Channelopathy, Autosomal Dominant Spastic Ataxia Type 1, Autosomal Dominant Spastic Ataxia, Autosomal Dominant Optic Atrophy, Ataxia-telangiectasia Variant, Ataxia-telangiectasia, Autosomal Dominant Cerebellar Ataxia, Deafness and Narcolepsy, Autosomal Dominant Cerebellar Ataxia Type 4, Autosomal Dominant Cerebellar Ataxia Type 3, Autosomal Dominant Cerebellar Ataxia Type 2, Autosomal Dominant Cerebellar Ataxia Type 1, Autosomal Dominant Cerebellar Ataxia, Ataxia-telangiectasia-like Disorder, Ataxia With Vitamin E Deficiency, Ataxia With Dementia, Ataxia - Oculomotor Apraxia Type 1, Ataxia - Other, Ataxia - Genetic Diagnosis - Unknown, Acquired Ataxia, Adult-onset Autosomal Recessive Cerebellar Ataxia, Alcohol Related Ataxia, Multiple Endocrine Neoplasia, Multiple Endocrine Neoplasia Type II, Multiple Endocrine Neoplasia Type 1, Multiple Endocrine Neoplasia Type 2, Multiple Endocrine Neoplasia, Type IV, Multiple Endocrine Neoplasia, Type 3, Multiple Endocrine Neoplasia (MEN) Syndrome, Multiple Endocrine Neoplasia Type 2B, Multiple Endocrine Neoplasia Type 2A, Atypical Hemolytic Uremic Syndrome, Atypical HUS, Wiedemann-Steiner Syndrome, Breast Implant-Associated Anaplastic Large Cell Lymphoma, Autoimmune/Inflammatory Syndrome Induced by Adjuvants (ASIA), Hemophagocytic Lymphohistiocytosis, Behcet&#39;s Disease, Alagille Syndrome, Inclusion Body Myopathy With Early-onset Paget Disease and Frontotemporal Dementia (IBMPFD), Lowe Syndrome, Pitt Hopkins Syndrome, 1p36 Deletion Syndrome, Jansen Type Metaphyseal Chondrodysplasia, Cockayne Syndrome, Chronic Recurrent Multifocal Osteomyelitis, CRMO, Malan Syndrome, Hereditary Sensory and Autonomic Neuropathy Type Ie, VCP Disease, Hypnic Jerking, Sleep Myoclonus, Mollaret Meningitis, Recurrent Viral Meningitis, CRB1, Leber Congenital Amaurosis, Retinitis Pigmentosa, Rare Retinal Disorder, KCNMA1-Channelopathy, Primary Biliary Cirrhosis, ZMYND11, Transient Global Amnesia, Glycogen Storage Disease, Alstrom Syndrome, White Sutton Syndrome, DNM1, EIEE31, Myhre Syndrome, Recurrent Respiratory Papillomatosis, Laryngeal Papillomatosis, Tracheal Papillomatosis, Refsum Disease, Nicolaides Baraitser Syndrome, Leukodystrophy, Tango2, Cauda Equina Syndrome, Rare Gastrointestinal Disorders, Achalasia-Addisonian Syndrome, Achalasia Cardia, Achalasia Icrocephaly Syndrome, Anal Fistula, Congenital Sucrase-Isomaltase Deficiency, Eosinophilic Gastroenteritis, Idiopathic Gastroparesis, Hirschsprung Disease, Rare Inflammatory Bowel Disease, Intestinal Pseudo-Obstruction, Scleroderma, Short Bowel Syndrome, Sacral Agenesis, Sacral Agenesis Syndrome, Caudal Regression, Scheuermann Disease, SMC1A Truncated Mutations (Causing Loss of Gene Function), Cystinosis, Juvenile Nephropathic Cystinosis, Nephropathic Cystinosis, Kennedy Disease, Spinal Bulbar Muscular Atrophy, Warburg Micro Syndrome, Mucolipidoses, Mitochondrial Diseases, Mitochondrial Aminoacyl-tRNA Synthetases, Mt-aaRS Disorders, Hypertrophic Olivary Degeneration, Non-Ketotic Hyperglycinemia, Fish Odor Syndrome, Halitosis, Isolated Congenital Asplenia, Lambert Eaton (LEMS), Biliary Atresia, STAG1 Gene Mutation, Coffin Lowry Syndrome, Borjeson-Forssman-Lehman Syndrome, Blau Syndrome, Arginase 1 Deficiency, HSPB8 Myopathy, Beta-Mannosidosis, TBX4 Syndrome, DHDDS Gene Mutations, MAND-MBD5-Associated Neurodevelopmental Disorder, Constitutional Mismatch Repair Deficiency (CMMRD), SPATA5 Disorder, SPATA5L1 Related Disorder, Acrodysostosis, Multi-systematic Smooth Muscle Dysfunction Syndrome, CRELD1 (Cysteine Rich With EGF Like Domains 1), GNB1 Syndrome, Pyruvate Dehydrogenase Complex Deficiency Disease, Beta Mannosidosis, Kbg Syndrome, Labrune Syndrome, Metachromatic Leukodystrophy (MLD), Moyamoya Disease, OPHN1 Syndrome, Oculopharyngeal Muscular Dystrophy (OPMD), TUBB3 Mutation, WOREE (WWOX-related Epileptic Encephalopathy, SCAR12, Skraban-Deardorff Syndrome, Hereditary Myopathy With Early Respiratory Failure\nInterventions: \nPhases: \nAge: N/A \u2013 N/A  |  Sex: ALL\nSponsor: Sanford Health",
+        "metadata": {
+          "min_age": "N/A",
+          "sex": "ALL",
+          "nct_id": "NCT01793168",
+          "max_age": "N/A",
+          "interventions": "",
+          "title": "Rare Disease Patient Registry & Natural History Study - Coordination of Rare Diseases at Sanford",
+          "conditions": "Rare Disorders, Undiagnosed Disorders, Disorders of Unknown Prevalence, Cornelia De Lange Syndrome, Prenatal Benign Hypophosphatasia, Perinatal Lethal Hypophosphatasia, Odontohypophosphatasia, Adult Hypophosphatasia, Childhood-onset Hypophosphatasia, Infantile Hypophosphatasia, Hypophosphatasia, Kabuki Syndrome, Bohring-Opitz Syndrome, Narcolepsy Without Cataplexy, Narcolepsy-cataplexy, Hypersomnolence Disorder, Idiopathic Hypersomnia Without Long Sleep Time, Idiopathic Hypersomnia With Long Sleep Time, Idiopathic Hypersomnia, Kleine-Levin Syndrome, Kawasaki Disease, Leiomyosarcoma, Leiomyosarcoma of the Corpus Uteri, Leiomyosarcoma of the Cervix Uteri, Leiomyosarcoma of Small Intestine, Acquired Myasthenia Gravis, Addison Disease, Hyperacusis (Hyperacousis), Juvenile Myasthenia Gravis, Transient Neonatal Myasthenia Gravis, Williams Syndrome, Lyme Disease, Myasthenia Gravis, Marinesco Sjogren Syndrome(Marinesco-Sjogren Syndrome), Isolated Klippel-Feil Syndrome, Frasier Syndrome, Denys-Drash Syndrome, Beckwith-Wiedemann Syndrome, Emanuel Syndrome, Isolated Aniridia, Axenfeld-Rieger Syndrome, Aniridia-intellectual Disability Syndrome, Aniridia - Renal Agenesis - Psychomotor Retardation, Aniridia - Ptosis - Intellectual Disability - Familial Obesity, Aniridia - Cerebellar Ataxia - Intellectual Disability, Aniridia - Absent Patella, Aniridia, Peters Anomaly - Cataract, Peters Anomaly, Potocki-Shaffer Syndrome, Silver-Russell Syndrome Due to Maternal Uniparental Disomy of Chromosome 11, Silver-Russell Syndrome Due to Imprinting Defect of 11p15, Silver-Russell Syndrome Due to 11p15 Microduplication, Syndromic Aniridia, WAGR Syndrome, Wolf-Hirschhorn Syndrome, 4p16.3 Microduplication Syndrome, 4p Deletion Syndrome, Non-Wolf-Hirschhorn Syndrome, Autosomal Recessive Stickler Syndrome, Stickler Syndrome Type 2, Stickler Syndrome Type 1, Stickler Syndrome, Mucolipidosis Type 4, X-linked Spinocerebellar Ataxia Type 4, X-linked Spinocerebellar Ataxia Type 3, X-linked Intellectual Disability - Ataxia - Apraxia, X-linked Progressive Cerebellar Ataxia, X-linked Non Progressive Cerebellar Ataxia, X-linked Cerebellar Ataxia, Vitamin B12 Deficiency Ataxia, Toxic Exposure Ataxia, Unclassified Autosomal Dominant Spinocerebellar Ataxia, Thyroid Antibody Ataxia, Sporadic Adult-onset Ataxia of Unknown Etiology, Spinocerebellar Ataxia With Oculomotor Anomaly, Spinocerebellar Ataxia With Epilepsy, Spinocerebellar Ataxia With Axonal Neuropathy Type 2, Spinocerebellar Ataxia Type 8, Spinocerebellar Ataxia Type 7, Spinocerebellar Ataxia Type 6, Spinocerebellar Ataxia Type 5, Spinocerebellar Ataxia Type 4, Spinocerebellar Ataxia Type 37, Spinocerebellar Ataxia Type 36, Spinocerebellar Ataxia Type 35, Spinocerebellar Ataxia Type 34, Spinocerebellar Ataxia Type 32, Spinocerebellar Ataxia Type 31, Spinocerebellar Ataxia Type 30, Spinocerebellar Ataxia Type 3, Spinocerebellar Ataxia Type 29, Spinocerebellar Ataxia Type 28, Spinocerebellar Ataxia Type 27, Spinocerebellar Ataxia Type 26, Spinocerebellar Ataxia Type 25, Spinocerebellar Ataxia Type 23, Spinocerebellar Ataxia Type 22, Spinocerebellar Ataxia Type 21, Spinocerebellar Ataxia Type 20, Spinocerebellar Ataxia Type 2, Spinocerebellar Ataxia Type 19/22, Spinocerebellar Ataxia Type 18, Spinocerebellar Ataxia Type 17, Spinocerebellar Ataxia Type 16, Spinocerebellar Ataxia Type 15/16, Spinocerebellar Ataxia Type 14, Spinocerebellar Ataxia Type 13, Spinocerebellar Ataxia Type 12, Spinocerebellar Ataxia Type 11, Spinocerebellar Ataxia Type 10, Spinocerebellar Ataxia Type 1 With Axonal Neuropathy, Spinocerebellar Ataxia Type 1, Spinocerebellar Ataxia - Unknown, Spinocerebellar Ataxia - Dysmorphism, Non Progressive Epilepsy and/or Ataxia With Myoclonus as a Major Feature, Spasticity-ataxia-gait Anomalies Syndrome, Spastic Ataxia With Congenital Miosis, Spastic Ataxia - Corneal Dystrophy, Spastic Ataxia, Rare Hereditary Ataxia, Rare Ataxia, Recessive Mitochondrial Ataxia Syndrome, Progressive Epilepsy and/or Ataxia With Myoclonus as a Major Feature, Posterior Column Ataxia - Retinitis Pigmentosa, Post-Stroke Ataxia, Post-Head Injury Ataxia, Post Vaccination Ataxia, Polyneuropathy - Hearing Loss - Ataxia - Retinitis Pigmentosa - Cataract, Muscular Atrophy - Ataxia - Retinitis Pigmentosa - Diabetes Mellitus, Non-hereditary Degenerative Ataxia, Paroxysmal Dystonic Choreathetosis With Episodic Ataxia and Spasticity, Olivopontocerebellar Atrophy - Deafness, NARP Syndrome, Myoclonus - Cerebellar Ataxia - Deafness, Multiple System Atrophy, Parkinsonian Type, Multiple System Atrophy, Cerebellar Type, Multiple System Atrophy, Maternally-inherited Leigh Syndrome, Machado-Joseph Disease Type 3, Machado-Joseph Disease Type 2, Machado-Joseph Disease Type 1, Leigh Syndrome, Late-onset Ataxia With Dementia, Infection or Post Infection Ataxia, GAD Ataxia, Hereditary Episodic Ataxia, Gliadin/Gluten Ataxia, Friedreich Ataxia, Fragile X-associated Tremor/Ataxia Syndrome, Familial Paroxysmal Ataxia, Exposure to Medications Ataxia, Episodic Ataxia With Slurred Speech, Episodic Ataxia Unknown Type, Episodic Ataxia Type 7, Episodic Ataxia Type 6, Episodic Ataxia Type 5, Episodic Ataxia Type 4, Episodic Ataxia Type 3, Episodic Ataxia Type 1, Epilepsy and/or Ataxia With Myoclonus as Major Feature, Early-onset Spastic Ataxia-neuropathy Syndrome, Early-onset Progressive Neurodegeneration - Blindness - Ataxia - Spasticity, Early-onset Cerebellar Ataxia With Retained Tendon Reflexes, Early-onset Ataxia With Dementia, Childhood-onset Autosomal Recessive Slowly Progressive Spinocerebellar Ataxia, Dilated Cardiomyopathy With Ataxia, Cataract - Ataxia - Deafness, Cerebellar Ataxia, Cayman Type, Cerebellar Ataxia With Peripheral Neuropathy, Cerebellar Ataxia - Hypogonadism, Cerebellar Ataxia - Ectodermal Dysplasia, Cerebellar Ataxia - Areflexia - Pes Cavus - Optic Atrophy - Sensorineural Hearing Loss, Brain Tumor Ataxia, Brachydactyly - Nystagmus - Cerebellar Ataxia, Benign Paroxysmal Tonic Upgaze of Childhood With Ataxia, Autosomal Recessive Syndromic Cerebellar Ataxia, Autosomal Recessive Spastic Ataxia With Leukoencephalopathy, Autosomal Recessive Spastic Ataxia of Charlevoix-Saguenay, Autosomal Recessive Spastic Ataxia - Optic Atrophy - Dysarthria, Autosomal Recessive Spastic Ataxia, Autosomal Recessive Metabolic Cerebellar Ataxia, Autosomal Dominant Spinocerebellar Ataxia Due to Repeat Expansions That do Not Encode Polyglutamine, Autosomal Recessive Ataxia, Beauce Type, Autosomal Recessive Ataxia Due to Ubiquinone Deficiency, Autosomal Recessive Ataxia Due to PEX10 Deficiency, Autosomal Recessive Degenerative and Progressive Cerebellar Ataxia, Autosomal Recessive Congenital Cerebellar Ataxia Due to MGLUR1 Deficiency, Autosomal Recessive Congenital Cerebellar Ataxia Due to GRID2 Deficiency, Autosomal Recessive Congenital Cerebellar Ataxia, Autosomal Recessive Cerebellar Ataxia-pyramidal Signs-nystagmus-oculomotor Apraxia Syndrome, Autosomal Recessive Cerebellar Ataxia-epilepsy-intellectual Disability Syndrome Due to WWOX Deficiency, Autosomal Recessive Cerebellar Ataxia-epilepsy-intellectual Disability Syndrome Due to TUD Deficiency, Autosomal Recessive Cerebellar Ataxia-epilepsy-intellectual Disability Syndrome Due to KIAA0226 Deficiency, Autosomal Recessive Cerebellar Ataxia-epilepsy-intellectual Disability Syndrome, Autosomal Recessive Cerebellar Ataxia With Late-onset Spasticity, Autosomal Recessive Cerebellar Ataxia Due to STUB1 Deficiency, Autosomal Recessive Cerebellar Ataxia Due to a DNA Repair Defect, Autosomal Recessive Cerebellar Ataxia - Saccadic Intrusion, Autosomal Recessive Cerebellar Ataxia - Psychomotor Retardation, Autosomal Recessive Cerebellar Ataxia - Blindness - Deafness, Autosomal Recessive Cerebellar Ataxia, Autosomal Dominant Spinocerebellar Ataxia Due to a Polyglutamine Anomaly, Autosomal Dominant Spinocerebellar Ataxia Due to a Point Mutation, Autosomal Dominant Spinocerebellar Ataxia Due to a Channelopathy, Autosomal Dominant Spastic Ataxia Type 1, Autosomal Dominant Spastic Ataxia, Autosomal Dominant Optic Atrophy, Ataxia-telangiectasia Variant, Ataxia-telangiectasia, Autosomal Dominant Cerebellar Ataxia, Deafness and Narcolepsy, Autosomal Dominant Cerebellar Ataxia Type 4, Autosomal Dominant Cerebellar Ataxia Type 3, Autosomal Dominant Cerebellar Ataxia Type 2, Autosomal Dominant Cerebellar Ataxia Type 1, Autosomal Dominant Cerebellar Ataxia, Ataxia-telangiectasia-like Disorder, Ataxia With Vitamin E Deficiency, Ataxia With Dementia, Ataxia - Oculomotor Apraxia Type 1, Ataxia - Other, Ataxia - Genetic Diagnosis - Unknown, Acquired Ataxia, Adult-onset Autosomal Recessive Cerebellar Ataxia, Alcohol Related Ataxia, Multiple Endocrine Neoplasia, Multiple Endocrine Neoplasia Type II, Multiple Endocrine Neoplasia Type 1, Multiple Endocrine Neoplasia Type 2, Multiple Endocrine Neoplasia, Type IV, Multiple Endocrine Neoplasia, Type 3, Multiple Endocrine Neoplasia (MEN) Syndrome, Multiple Endocrine Neoplasia Type 2B, Multiple Endocrine Neoplasia Type 2A, Atypical Hemolytic Uremic Syndrome, Atypical HUS, Wiedemann-Steiner Syndrome, Breast Implant-Associated Anaplastic Large Cell Lymphoma, Autoimmune/Inflammatory Syndrome Induced by Adjuvants (ASIA), Hemophagocytic Lymphohistiocytosis, Behcet&#39;s Disease, Alagille Syndrome, Inclusion Body Myopathy With Early-onset Paget Disease and Frontotemporal Dementia (IBMPFD), Lowe Syndrome, Pitt Hopkins Syndrome, 1p36 Deletion Syndrome, Jansen Type Metaphyseal Chondrodysplasia, Cockayne Syndrome, Chronic Recurrent Multifocal Osteomyelitis, CRMO, Malan Syndrome, Hereditary Sensory and Autonomic Neuropathy Type Ie, VCP Disease, Hypnic Jerking, Sleep Myoclonus, Mollaret Meningitis, Recurrent Viral Meningitis, CRB1, Leber Congenital Amaurosis, Retinitis Pigmentosa, Rare Retinal Disorder, KCNMA1-Channelopathy, Primary Biliary Cirrhosis, ZMYND11, Transient Global Amnesia, Glycogen Storage Disease, Alstrom Syndrome, White Sutton Syndrome, DNM1, EIEE31, Myhre Syndrome, Recurrent Respiratory Papillomatosis, Laryngeal Papillomatosis, Tracheal Papillomatosis, Refsum Disease, Nicolaides Baraitser Syndrome, Leukodystrophy, Tango2, Cauda Equina Syndrome, Rare Gastrointestinal Disorders, Achalasia-Addisonian Syndrome, Achalasia Cardia, Achalasia Icrocephaly Syndrome, Anal Fistula, Congenital Sucrase-Isomaltase Deficiency, Eosinophilic Gastroenteritis, Idiopathic Gastroparesis, Hirschsprung Disease, Rare Inflammatory Bowel Disease, Intestinal Pseudo-Obstruction, Scleroderma, Short Bowel Syndrome, Sacral Agenesis, Sacral Agenesis Syndrome, Caudal Regression, Scheuermann Disease, SMC1A Truncated Mutations (Causing Loss of Gene Function), Cystinosis, Juvenile Nephropathic Cystinosis, Nephropathic Cystinosis, Kennedy Disease, Spinal Bulbar Muscular Atrophy, Warburg Micro Syndrome, Mucolipidoses, Mitochondrial Diseases, Mitochondrial Aminoacyl-tRNA Synthetases, Mt-aaRS Disorders, Hypertrophic Olivary Degeneration, Non-Ketotic Hyperglycinemia, Fish Odor Syndrome, Halitosis, Isolated Congenital Asplenia, Lambert Eaton (LEMS), Biliary Atresia, STAG1 Gene Mutation, Coffin Lowry Syndrome, Borjeson-Forssman-Lehman Syndrome, Blau Syndrome, Arginase 1 Deficiency, HSPB8 Myopathy, Beta-Mannosidosis, TBX4 Syndrome, DHDDS Gene Mutations, MAND-MBD5-Associated Neurodevelopmental Disorder, Constitutional Mismatch Repair Deficiency (CMMRD), SPATA5 Disorder, SPATA5L1 Related Disorder, Acrodysostosis, Multi-systematic Smooth Muscle Dysfunction Syndrome, CRELD1 (Cysteine Rich With EGF Like Domains 1), GNB1 Syndrome, Pyruvate Dehydrogenase Complex Deficiency Disease, Beta Mannosidosis, Kbg Syndrome, Labrune Syndrome, Metachromatic Leukodystrophy (MLD), Moyamoya Disease, OPHN1 Syndrome, Oculopharyngeal Muscular Dystrophy (OPMD), TUBB3 Mutation, WOREE (WWOX-related Epileptic Encephalopathy, SCAR12, Skraban-Deardorff Syndrome, Hereditary Myopathy With Early Respiratory Failure",
+          "phases": "",
+          "type": "metadata",
+          "sponsor": "Sanford Health"
+        },
+        "score": 34.46630877904171,
+        "source": "bm25",
+        "rrf_score": 0.013889
+      },
+      {
+        "id": "NCT05977218_inclusion",
+        "nct_id": "NCT05977218",
+        "text": "INCLUSION CRITERIA \u2014 DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial (NCT05977218):\n* Age between 18 and 75 years\n* Self-reported type 2 diabetes with a duration of \u22652 years\n* Regularly grocery shopping",
+        "metadata": {
+          "max_age": "75 Years",
+          "title": "DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial",
+          "nct_id": "NCT05977218",
+          "sex": "ALL",
+          "type": "inclusion",
+          "min_age": "18 Years",
+          "sponsor": "Linkoeping University",
+          "phases": "NA"
+        },
+        "score": 33.70494246793161,
+        "source": "bm25",
+        "rrf_score": 0.013699
+      },
+      {
+        "id": "NCT07005986_inclusion",
+        "nct_id": "NCT07005986",
+        "text": "INCLUSION CRITERIA \u2014 Role of Circulating Pyrophosphate as a Biomarker of Mediacalcinosis in Type 2 Diabetic Patients (NCT07005986):\n1. Adult men (between 40 and 70 years of age).\n2. T2DM defined according to ADA or HAS criteria, evolving for more than 6 months, may be : - Not complicated\n\n   * Complicated by diabetic retinopathy and/or diabetic nephropathy (creatinine clearance \\> 60 ml/min) and/or peripheral arterial disease and/or ischemic heart disease and/or stroke. - With dyslipidemia (LDLc \\> 1.90) and/or a history of past or active smoking.\n   * Balanced with HbA1c \\< 8% according to patient's personalized objectives, or unbalanced with HbA1c \\> 9%.\n   * Treated with insulin therapy (single or multi-injections) or not. - Whose treatment includes at least one iSGLT2.\n3. Member of 'S\u00e9curit\u00e9 Sociale\"",
+        "metadata": {
+          "sponsor": "Centre Hospitalier Universitaire de Nice",
+          "type": "inclusion",
+          "min_age": "40 Years",
+          "sex": "MALE",
+          "max_age": "70 Years",
+          "nct_id": "NCT07005986",
+          "title": "Role of Circulating Pyrophosphate as a Biomarker of Mediacalcinosis in Type 2 Diabetic Patients",
+          "phases": "NA"
+        },
+        "score": 32.69711168544283,
+        "source": "bm25",
+        "rrf_score": 0.013514
+      },
+      {
+        "id": "NCT06462170_metadata",
+        "nct_id": "NCT06462170",
+        "text": "TRIAL OVERVIEW \u2014 Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study (NCT06462170)\nConditions: Type 2 Diabetes\nInterventions: Boost Original meal replacement shake\nPhases: NA\nAge: 18 Years \u2013 N/A  |  Sex: ALL\nSponsor: Ottawa Hospital Research Institute",
+        "metadata": {
+          "conditions": "Type 2 Diabetes",
+          "nct_id": "NCT06462170",
+          "max_age": "N/A",
+          "sex": "ALL",
+          "phases": "NA",
+          "interventions": "Boost Original meal replacement shake",
+          "sponsor": "Ottawa Hospital Research Institute",
+          "min_age": "18 Years",
+          "title": "Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study",
+          "type": "metadata"
+        },
+        "score": 32.52679210675216,
+        "source": "bm25",
+        "rrf_score": 0.013333
+      },
+      {
+        "id": "NCT06408961_exclusion",
+        "nct_id": "NCT06408961",
+        "text": "EXCLUSION CRITERIA \u2014 EVOC - EVs in Obesity and Cardiometabolic Disease (NCT06408961):\n* Pregnancy (as adjudicated by patient history)\n* Prior clinical history of myocardial infarction or valvular heart disease",
+        "metadata": {
+          "max_age": "N/A",
+          "nct_id": "NCT06408961",
+          "min_age": "18 Years",
+          "sex": "ALL",
+          "title": "EVOC - EVs in Obesity and Cardiometabolic Disease",
+          "type": "exclusion",
+          "sponsor": "Massachusetts General Hospital",
+          "phases": ""
+        },
+        "score": 32.43283584474864,
+        "source": "bm25",
+        "rrf_score": 0.013158
+      },
+      {
+        "id": "NCT05977218_metadata",
+        "nct_id": "NCT05977218",
+        "text": "TRIAL OVERVIEW \u2014 DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial (NCT05977218)\nConditions: Type 2 Diabetes\nInterventions: FoodSwitch\nPhases: NA\nAge: 18 Years \u2013 75 Years  |  Sex: ALL\nSponsor: Linkoeping University",
+        "metadata": {
+          "title": "DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial",
+          "min_age": "18 Years",
+          "interventions": "FoodSwitch",
+          "max_age": "75 Years",
+          "nct_id": "NCT05977218",
+          "sponsor": "Linkoeping University",
+          "sex": "ALL",
+          "phases": "NA",
+          "conditions": "Type 2 Diabetes",
+          "type": "metadata"
+        },
+        "score": 31.965375728022572,
+        "source": "bm25",
+        "rrf_score": 0.012987
+      },
+      {
+        "id": "NCT07094529_inclusion",
+        "nct_id": "NCT07094529",
+        "text": "INCLUSION CRITERIA \u2014 Personalized Hypoglycemia Outpatient Treatment - a Feasibility Study (NCT07094529):\n* In order to be eligible to participate in this study, an individual must meet all of the following criteria:\n\n  1. Consent provided\n  2. Age \\>= 18 years.\n  3. Diagnosed as type 2 diabetes mellitus.\n  4. Type 2 diabetes medications include at least one of the following for at least one month prior to entering the study: sulfonylurea or insulin of any type.",
+        "metadata": {
+          "type": "inclusion",
+          "title": "Personalized Hypoglycemia Outpatient Treatment - a Feasibility Study",
+          "nct_id": "NCT07094529",
+          "min_age": "18 Years",
+          "sex": "ALL",
+          "max_age": "N/A",
+          "phases": "NA",
+          "sponsor": "Ottawa Hospital Research Institute"
+        },
+        "score": 31.948635569232493,
+        "source": "bm25",
+        "rrf_score": 0.012821
+      },
+      {
+        "id": "NCT03156478_inclusion",
+        "nct_id": "NCT03156478",
+        "text": "INCLUSION CRITERIA \u2014 STOP DIABETES - Knowledge-based Solutions (NCT03156478):\n* age of 18-70 years\n* 12 points or more in the Finnish diabetes risk score or previous gestational diabetes or repeated impaired fasting glucose (IFG) (fasting plasma glucose level 6,1 - 6,9 mmol/l) or impaired glucose tolerance (2-hour glucose level 7,8 - 11,0 mmol/l in oral glucose tolerance test)\n* living in the hospital district of Northern Savo, P\u00e4ij\u00e4t-H\u00e4me or South Karelia\n* possibility to use computer, smartphone or tablet with internet connection\n* having own self-phone number\n* adequate Finnish language skill",
+        "metadata": {
+          "sponsor": "University of Eastern Finland",
+          "title": "STOP DIABETES - Knowledge-based Solutions",
+          "max_age": "70 Years",
+          "sex": "ALL",
+          "min_age": "18 Years",
+          "nct_id": "NCT03156478",
+          "type": "inclusion",
+          "phases": "NA"
+        },
+        "score": 31.787244534165318,
+        "source": "bm25",
+        "rrf_score": 0.012658
+      },
+      {
+        "id": "NCT05208164_metadata",
+        "nct_id": "NCT05208164",
+        "text": "TRIAL OVERVIEW \u2014 My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes (NCT05208164)\nConditions: Type 2 Diabetes, Sleep, Stress\nInterventions: Mindfunlness Meditation\nPhases: NA\nAge: 21 Years \u2013 75 Years  |  Sex: ALL\nSponsor: University of Illinois at Chicago",
+        "metadata": {
+          "sponsor": "University of Illinois at Chicago",
+          "title": "My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes",
+          "interventions": "Mindfunlness Meditation",
+          "phases": "NA",
+          "min_age": "21 Years",
+          "type": "metadata",
+          "sex": "ALL",
+          "conditions": "Type 2 Diabetes, Sleep, Stress",
+          "nct_id": "NCT05208164",
+          "max_age": "75 Years"
+        },
+        "score": 31.56306131245582,
+        "source": "bm25",
+        "rrf_score": 0.0125
+      },
+      {
+        "id": "NCT01179815_inclusion",
+        "nct_id": "NCT01179815",
+        "text": "INCLUSION CRITERIA \u2014 Swiss Diabetes Registry - SwissDiab Study (NCT01179815):\n* Age \\> 18 years\n* Diagnosis of diabetes mellitus according to ADA criteria\n* Informed consent",
+        "metadata": {
+          "max_age": "N/A",
+          "nct_id": "NCT01179815",
+          "title": "Swiss Diabetes Registry - SwissDiab Study",
+          "phases": "",
+          "sponsor": "Insel Gruppe AG, University Hospital Bern",
+          "min_age": "18 Years",
+          "sex": "ALL",
+          "type": "inclusion"
+        },
+        "score": 30.94927253432215,
+        "source": "bm25",
+        "rrf_score": 0.012346
+      },
+      {
+        "id": "NCT06638099_inclusion",
+        "nct_id": "NCT06638099",
+        "text": "INCLUSION CRITERIA \u2014 Increasing CGM Use Among Patients With T2D (NCT06638099):\nParticipant Eligibility:\n\nInclusion:\n\n* adults 18 years or older,\n* have been diagnosed with T2D at least one year prior to recruitment,\n* are a current patient of one of the three participating Innercare Clinics with no -\n* plans to discontinue their care at Innercare within the next 6 months,\n* can understand and speak in English or Spanish,\n* have telephone access,\n* do not plan to move out of the area within the next 6 months.\n\nExclusion:\n\n* Plans to move out of the area in the next 6 months\n* Patients with newly diagnose diabetes mellitus (less than one year), diabetes insipidus, diabetes type 1 or gestational diabetes.\n\nProvider/Staff Eligibility:\n\nInclusion\n\n* 18 years or older,\n* able to read and write in English,\n* currently employed at one of the participating Innercare clinics (Brawley, El Centro, Calexico),\n* currently be treating at least one adult patient for T2D, scheduled to complete the CGM toolkit training. Exclusion\n* Personnel without experience providing care to adult patients with T2D in primary care settings.",
+        "metadata": {
+          "title": "Increasing CGM Use Among Patients With T2D",
+          "sex": "ALL",
+          "phases": "NA",
+          "nct_id": "NCT06638099",
+          "min_age": "18 Years",
+          "max_age": "N/A",
+          "type": "inclusion",
+          "sponsor": "San Diego State University"
+        },
+        "score": 30.458370659664904,
+        "source": "bm25",
+        "rrf_score": 0.012195
+      },
+      {
+        "id": "NCT01179815_metadata",
+        "nct_id": "NCT01179815",
+        "text": "TRIAL OVERVIEW \u2014 Swiss Diabetes Registry - SwissDiab Study (NCT01179815)\nConditions: Diabetes Mellitus\nInterventions: \nPhases: \nAge: 18 Years \u2013 N/A  |  Sex: ALL\nSponsor: Insel Gruppe AG, University Hospital Bern",
+        "metadata": {
+          "title": "Swiss Diabetes Registry - SwissDiab Study",
+          "phases": "",
+          "min_age": "18 Years",
+          "sponsor": "Insel Gruppe AG, University Hospital Bern",
+          "conditions": "Diabetes Mellitus",
+          "nct_id": "NCT01179815",
+          "sex": "ALL",
+          "interventions": "",
+          "max_age": "N/A",
+          "type": "metadata"
+        },
+        "score": 30.42197986549559,
+        "source": "bm25",
+        "rrf_score": 0.012048
+      },
+      {
+        "id": "NCT06069258_metadata",
+        "nct_id": "NCT06069258",
+        "text": "TRIAL OVERVIEW \u2014 Movement Behaviours Among Bahraini Diabetics (NCT06069258)\nConditions: Diabetes Mellitus, Type 2\nInterventions: \nPhases: \nAge: 20 Years \u2013 75 Years  |  Sex: ALL\nSponsor: Royal College of Surgeons in Ireland - Medical University of Bahrain",
+        "metadata": {
+          "title": "Movement Behaviours Among Bahraini Diabetics",
+          "interventions": "",
+          "phases": "",
+          "nct_id": "NCT06069258",
+          "conditions": "Diabetes Mellitus, Type 2",
+          "max_age": "75 Years",
+          "type": "metadata",
+          "sex": "ALL",
+          "sponsor": "Royal College of Surgeons in Ireland - Medical University of Bahrain",
+          "min_age": "20 Years"
+        },
+        "score": 30.30180907686559,
+        "source": "bm25",
+        "rrf_score": 0.011905
+      },
+      {
+        "id": "NCT06574035_metadata",
+        "nct_id": "NCT06574035",
+        "text": "TRIAL OVERVIEW \u2014 Michigan Men's Diabetes Project III(MenDIII): Mind and Motion (NCT06574035)\nConditions: Diabetes Mellitus, Type 2, Depressive Symptoms, Depression\nInterventions: Cognitive Behavioral Therapy, Exercise, Group Discussions - Ongoing Support\nPhases: NA\nAge: 18 Years \u2013 N/A  |  Sex: MALE\nSponsor: University of Michigan",
+        "metadata": {
+          "conditions": "Diabetes Mellitus, Type 2, Depressive Symptoms, Depression",
+          "phases": "NA",
+          "type": "metadata",
+          "min_age": "18 Years",
+          "sponsor": "University of Michigan",
+          "sex": "MALE",
+          "nct_id": "NCT06574035",
+          "title": "Michigan Men's Diabetes Project III(MenDIII): Mind and Motion",
+          "max_age": "N/A",
+          "interventions": "Cognitive Behavioral Therapy, Exercise, Group Discussions - Ongoing Support"
+        },
+        "score": 30.280003302738926,
+        "source": "bm25",
+        "rrf_score": 0.011765
+      },
+      {
+        "id": "NCT06544876_metadata",
+        "nct_id": "NCT06544876",
+        "text": "TRIAL OVERVIEW \u2014 Balance Control and Recovery in Diabetes Peripheral Neuropathy (NCT06544876)\nConditions: Diabetic Peripheral Neuropathy, Diabetic Peripheral Neuropathy Type 2, Diabetic Peripheral Neuropathy Type 2 - Uncontrolled, Healthy Aging\nInterventions: sit-to-stand, stand to sit, standing perturbation, MRI of sciatic nerve\nPhases: NA\nAge: 50 Years \u2013 99 Years  |  Sex: ALL\nSponsor: Lisa Griffin",
+        "metadata": {
+          "conditions": "Diabetic Peripheral Neuropathy, Diabetic Peripheral Neuropathy Type 2, Diabetic Peripheral Neuropathy Type 2 - Uncontrolled, Healthy Aging",
+          "type": "metadata",
+          "nct_id": "NCT06544876",
+          "sponsor": "Lisa Griffin",
+          "title": "Balance Control and Recovery in Diabetes Peripheral Neuropathy",
+          "sex": "ALL",
+          "max_age": "99 Years",
+          "min_age": "50 Years",
+          "interventions": "sit-to-stand, stand to sit, standing perturbation, MRI of sciatic nerve",
+          "phases": "NA"
+        },
+        "score": 29.90486635726609,
+        "source": "bm25",
+        "rrf_score": 0.011628
+      },
+      {
+        "id": "NCT05307731_inclusion",
+        "nct_id": "NCT05307731",
+        "text": "INCLUSION CRITERIA \u2014 Fingolimod for Type 2 Diabetes Mellitus (NCT05307731):\n1. Age: 18-70 years old;\n2. clinically diagnosed type 2 diabetes.\n3. Glycosylated hemoglobin: 6.5% - 9.5%;\n4. No drug treatment or only one oral hypoglycemic drug within 6 months;\n5. Fasting blood glucose: \\< 13.9mmol/l for those without medication, or \\< 13.3mmol/l for those with medication;\n6. if the antidiabetic drugs are taken, the dosage and the drug must be stable in the past 3 months.\n7. Body mass index (BMI) \u2264 45 kg / m2;\n8. Sign informed consent",
+        "metadata": {
+          "title": "Fingolimod for Type 2 Diabetes Mellitus",
+          "sex": "ALL",
+          "min_age": "18 Years",
+          "phases": "PHASE4",
+          "type": "inclusion",
+          "max_age": "70 Years",
+          "nct_id": "NCT05307731",
+          "sponsor": "General Hospital of Shenyang Military Region"
+        },
+        "score": 29.72576754676572,
+        "source": "bm25"
+      },
+      {
+        "id": "NCT05527574_inclusion",
+        "nct_id": "NCT05527574",
+        "text": "INCLUSION CRITERIA \u2014 Home-based Interventions for FrAilty preveNTion in AdultS With DIabeTes and Chronic Kidney Disease (NCT05527574):\n* Adults (50-85 years)\n* Clinically Diagnosed with diabetes (Type 2) and stage 1-IV CKD (Glomerular Filtration - Rate (GFR) 10-89 ml/min/1.73m2).",
+        "metadata": {
+          "nct_id": "NCT05527574",
+          "phases": "NA",
+          "min_age": "50 Years",
+          "type": "inclusion",
+          "sex": "ALL",
+          "max_age": "85 Years",
+          "sponsor": "University of Alberta",
+          "title": "Home-based Interventions for FrAilty preveNTion in AdultS With DIabeTes and Chronic Kidney Disease"
+        },
+        "score": 29.61732104846401,
+        "source": "bm25",
+        "rrf_score": 0.011364
+      },
+      {
+        "id": "NCT06462170_exclusion",
+        "nct_id": "NCT06462170",
+        "text": "EXCLUSION CRITERIA \u2014 Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study (NCT06462170):\n1. Diagnosed as another form of diabetes mellitus.\n2. Allergic to one or more ingredients in Boost meal replacement shake.\n3. Unable to fast since midnight and attend in person for the morning protocol.",
+        "metadata": {
+          "phases": "NA",
+          "type": "exclusion",
+          "nct_id": "NCT06462170",
+          "max_age": "N/A",
+          "sponsor": "Ottawa Hospital Research Institute",
+          "title": "Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study",
+          "sex": "ALL",
+          "min_age": "18 Years"
+        },
+        "score": 28.948150507301335,
+        "source": "bm25",
+        "rrf_score": 0.011236
+      },
+      {
+        "id": "NCT05164263_inclusion",
+        "nct_id": "NCT05164263",
+        "text": "INCLUSION CRITERIA \u2014 Real World Safety & Efficacy Experience of Empagliflozin With or Without Metformin in T2DM Patients - EASE Study (NCT05164263):\nPatient with T2DM between 18 to 65 years with HbA1C 7% - 10%, who can give informed consent. Patient uncontrolled on oral antidiabetics and lifestyle modification for at least 3 months. Patient who are empagliflozin naive. eGFR \u02c360 mL/min/1.73m2.",
+        "metadata": {
+          "title": "Real World Safety & Efficacy Experience of Empagliflozin With or Without Metformin in T2DM Patients - EASE Study",
+          "sex": "ALL",
+          "type": "inclusion",
+          "max_age": "65 Years",
+          "phases": "PHASE4",
+          "nct_id": "NCT05164263",
+          "min_age": "18 Years",
+          "sponsor": "Getz Pharma"
+        },
+        "score": 28.702693046431264,
+        "source": "bm25",
+        "rrf_score": 0.011111
+      },
+      {
+        "id": "NCT07094529_metadata",
+        "nct_id": "NCT07094529",
+        "text": "TRIAL OVERVIEW \u2014 Personalized Hypoglycemia Outpatient Treatment - a Feasibility Study (NCT07094529)\nConditions: Type 2 Diabetes (T2DM), Hypoglycemia (Diabetic)\nInterventions: Recumbent Exercise Bike to induce mild hypoglycemia, Delaying food to induce mild hypoglycemia,\nPhases: NA\nAge: 18 Years \u2013 N/A  |  Sex: ALL\nSponsor: Ottawa Hospital Research Institute",
+        "metadata": {
+          "sponsor": "Ottawa Hospital Research Institute",
+          "max_age": "N/A",
+          "interventions": "Recumbent Exercise Bike to induce mild hypoglycemia, Delaying food to induce mild hypoglycemia,",
+          "phases": "NA",
+          "nct_id": "NCT07094529",
+          "min_age": "18 Years",
+          "type": "metadata",
+          "sex": "ALL",
+          "conditions": "Type 2 Diabetes (T2DM), Hypoglycemia (Diabetic)",
+          "title": "Personalized Hypoglycemia Outpatient Treatment - a Feasibility Study"
+        },
+        "score": 28.474521841557628,
+        "source": "bm25",
+        "rrf_score": 0.010989
+      },
+      {
+        "id": "NCT05977218_exclusion",
+        "nct_id": "NCT05977218",
+        "text": "EXCLUSION CRITERIA \u2014 DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial (NCT05977218):\n* No access to BankID (a digital identification system commonly used in Sweden)\n* Failure to complete eligibility screening and run-in periods",
+        "metadata": {
+          "type": "exclusion",
+          "sponsor": "Linkoeping University",
+          "phases": "NA",
+          "max_age": "75 Years",
+          "min_age": "18 Years",
+          "nct_id": "NCT05977218",
+          "sex": "ALL",
+          "title": "DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial"
+        },
+        "score": 28.38782236819214,
+        "source": "bm25",
+        "rrf_score": 0.01087
+      },
+      {
+        "id": "NCT07173543_metadata",
+        "nct_id": "NCT07173543",
+        "text": "TRIAL OVERVIEW \u2014 IH, Brain Health, and T2D (NCT07173543)\nConditions: Type 2 Diabetes, Aging\nInterventions: Intermittent Hypoxia 1 (IH1), Intermittent Hypoxia 2 (IH2), SHAM - normoxia\nPhases: NA\nAge: 60 Years \u2013 85 Years  |  Sex: ALL\nSponsor: Darren P Casey",
+        "metadata": {
+          "interventions": "Intermittent Hypoxia 1 (IH1), Intermittent Hypoxia 2 (IH2), SHAM - normoxia",
+          "min_age": "60 Years",
+          "phases": "NA",
+          "max_age": "85 Years",
+          "title": "IH, Brain Health, and T2D",
+          "nct_id": "NCT07173543",
+          "type": "metadata",
+          "conditions": "Type 2 Diabetes, Aging",
+          "sex": "ALL",
+          "sponsor": "Darren P Casey"
+        },
+        "score": 28.156370928655512,
+        "source": "bm25",
+        "rrf_score": 0.010753
+      },
+      {
+        "id": "NCT05208164_inclusion",
+        "nct_id": "NCT05208164",
+        "text": "INCLUSION CRITERIA \u2014 My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes (NCT05208164):\n* Self-identifies as African American or Black\n* Diagnosis of type 2 diabetes\n* Valid address in greater Chicagoland area\n* Mobile phone with unlimited text-messaging\n* Mobile device (smartphone, tablet, or computer) with the ability to connect to the internet if remote online delivery\n* Availability to participate in mindfulness class either in-person or online\n* Age 21-75",
+        "metadata": {
+          "title": "My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes",
+          "sponsor": "University of Illinois at Chicago",
+          "phases": "NA",
+          "type": "inclusion",
+          "nct_id": "NCT05208164",
+          "max_age": "75 Years",
+          "min_age": "21 Years",
+          "sex": "ALL"
+        },
+        "score": 28.130842791202546,
+        "source": "bm25",
+        "rrf_score": 0.010638
+      },
+      {
+        "id": "NCT05208164_exclusion",
+        "nct_id": "NCT05208164",
+        "text": "EXCLUSION CRITERIA \u2014 My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes (NCT05208164):\n* Untreated obstructive sleep apnea (OSA)\n* Severe insomnia, narcolepsy, or REM sleep related disorder\n* Major cognitive impairments or psychiatric disorder\n* Alcohol or drug abuse\n* Limited English proficiency\n* Inability to send/receive text messages\n* Currently engaging in mindfulness practice",
+        "metadata": {
+          "max_age": "75 Years",
+          "sponsor": "University of Illinois at Chicago",
+          "sex": "ALL",
+          "type": "exclusion",
+          "min_age": "21 Years",
+          "nct_id": "NCT05208164",
+          "phases": "NA",
+          "title": "My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes"
+        },
+        "score": 27.751664589617032,
+        "source": "bm25",
+        "rrf_score": 0.010526
+      },
+      {
+        "id": "NCT01179815_exclusion",
+        "nct_id": "NCT01179815",
+        "text": "EXCLUSION CRITERIA \u2014 Swiss Diabetes Registry - SwissDiab Study (NCT01179815):\n* Patients with gestational diabetes mellitus, patients unable to give informed consent, legally incompetent or incapable to comply with the study terms and conditions as well as patients with significantly reduced life expectancy (\\<1 year) will be excluded",
+        "metadata": {
+          "max_age": "N/A",
+          "title": "Swiss Diabetes Registry - SwissDiab Study",
+          "sponsor": "Insel Gruppe AG, University Hospital Bern",
+          "min_age": "18 Years",
+          "phases": "",
+          "sex": "ALL",
+          "nct_id": "NCT01179815",
+          "type": "exclusion"
+        },
+        "score": 27.701324740135117,
+        "source": "bm25",
+        "rrf_score": 0.010417
+      },
+      {
+        "id": "NCT06983054_inclusion",
+        "nct_id": "NCT06983054",
+        "text": "INCLUSION CRITERIA \u2014 DiEtary Sodium Intake Effects on Ertugliflozin-induced Changes in GFR, reNal Oxygenation and Systemic Hemodynamics: the DESIGN Study, a Randomized, Placebo-controlled, Cross-over Study With Ertugliflozin in People With Type 2 Diabetes (NCT06983054):\nAdults with previously diagnosed T2DM according to American Diabetes Association (ADA) criteria\n\n* HbA1c 6.5-10%\n* Age 18 - 85 years of age\n* Overweight or obese with BMI: \\>25 kg/m2\n* We will make every effort to enrol participants of all races/ethnicities.\"\n* Both sexes (females must be post-menopausal; no menses \\>1 year; in case of doubt, Follicle-Stimulating Hormone (FSH) will be determined with cut-off defined as \\>31 U/L)\n* Ability to provide signed and dated, written informed consent prior to any study procedures\n* Estimated GFR 60-90 ml/min/1.73m2 by CKD-EPI matching the eGFR range of most participants in VERTIS-CV\n* Sodium intake at baseline \\< 200 mmol/day\n* UACR \\< 30 mg/mmol\n* All participants need to be on a stable dose of diabetes medication, including Metformin, SU, DPP4-inhibitors, or insulin.\n* Participants suffering from hypertension need to be on a stable dose of RAS inhibitors. In case RAS inhibition is not tolerated, the participant should to be on a stable dose of other antihypertensive treatment.",
+        "metadata": {
+          "nct_id": "NCT06983054",
+          "phases": "PHASE4",
+          "sex": "ALL",
+          "sponsor": "Amsterdam UMC, location VUmc",
+          "type": "inclusion",
+          "min_age": "18 Years",
+          "title": "DiEtary Sodium Intake Effects on Ertugliflozin-induced Changes in GFR, reNal Oxygenation and Systemic Hemodynamics: the DESIGN Study, a Randomized, Placebo-controlled, Cross-over Study With Ertugliflozin in People With Type 2 Diabetes",
+          "max_age": "85 Years"
+        },
+        "score": 26.875886343165114,
+        "source": "bm25",
+        "rrf_score": 0.010309
+      },
+      {
+        "id": "NCT03156478_metadata",
+        "nct_id": "NCT03156478",
+        "text": "TRIAL OVERVIEW \u2014 STOP DIABETES - Knowledge-based Solutions (NCT03156478)\nConditions: Type2 Diabetes, Life Style, Diet Habit, Physical Activity, Empowerment\nInterventions: Digital lifestyle intervention group, Combined digital and face-to-face lifestyle intervention group\nPhases: NA\nAge: 18 Years \u2013 70 Years  |  Sex: ALL\nSponsor: University of Eastern Finland",
+        "metadata": {
+          "type": "metadata",
+          "phases": "NA",
+          "interventions": "Digital lifestyle intervention group, Combined digital and face-to-face lifestyle intervention group",
+          "sponsor": "University of Eastern Finland",
+          "title": "STOP DIABETES - Knowledge-based Solutions",
+          "conditions": "Type2 Diabetes, Life Style, Diet Habit, Physical Activity, Empowerment",
+          "min_age": "18 Years",
+          "sex": "ALL",
+          "max_age": "70 Years",
+          "nct_id": "NCT03156478"
+        },
+        "score": 26.666517765128773,
+        "source": "bm25",
+        "rrf_score": 0.010204
+      },
+      {
+        "id": "NCT05164263_metadata",
+        "nct_id": "NCT05164263",
+        "text": "TRIAL OVERVIEW \u2014 Real World Safety & Efficacy Experience of Empagliflozin With or Without Metformin in T2DM Patients - EASE Study (NCT05164263)\nConditions: Type II Diabetes Mellitus, Efficacy, Self, Safety Issues\nInterventions: Empagliflozin\nPhases: PHASE4\nAge: 18 Years \u2013 65 Years  |  Sex: ALL\nSponsor: Getz Pharma",
+        "metadata": {
+          "title": "Real World Safety & Efficacy Experience of Empagliflozin With or Without Metformin in T2DM Patients - EASE Study",
+          "sex": "ALL",
+          "min_age": "18 Years",
+          "nct_id": "NCT05164263",
+          "conditions": "Type II Diabetes Mellitus, Efficacy, Self, Safety Issues",
+          "sponsor": "Getz Pharma",
+          "phases": "PHASE4",
+          "max_age": "65 Years",
+          "interventions": "Empagliflozin",
+          "type": "metadata"
+        },
+        "score": 26.666517765128773,
+        "source": "bm25",
+        "rrf_score": 0.010101
+      },
+      {
+        "id": "NCT06408961_inclusion",
+        "nct_id": "NCT06408961",
+        "text": "INCLUSION CRITERIA \u2014 EVOC - EVs in Obesity and Cardiometabolic Disease (NCT06408961):\n* Age greater than or equal to 18 years of age\n* Obese (BMI\\>/=30 kg/m2; for obesity/bariatric surgery group)\n* For 20 patients, additional criteria will be presence of pre-diabetes or diabetes (HgbA1c \\> 5.7 or Fasting blood glucose \\> 100).",
+        "metadata": {
+          "phases": "",
+          "nct_id": "NCT06408961",
+          "sex": "ALL",
+          "max_age": "N/A",
+          "title": "EVOC - EVs in Obesity and Cardiometabolic Disease",
+          "sponsor": "Massachusetts General Hospital",
+          "type": "inclusion",
+          "min_age": "18 Years"
+        },
+        "score": 25.812790459247758,
+        "source": "bm25",
+        "rrf_score": 0.01
+      }
+    ],
+    "fused_results": [
+      {
+        "id": "NCT06462170_inclusion",
+        "nct_id": "NCT06462170",
+        "text": "INCLUSION CRITERIA \u2014 Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study (NCT06462170):\n1. Consent provided\n2. Age \\>= 18 years.\n3. Diagnosed as type 2 diabetes mellitus.\n4. Not on insulin therapy.",
+        "metadata": {
+          "nct_id": "NCT06462170",
+          "title": "Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study",
+          "min_age": "18 Years",
+          "phases": "NA",
+          "sponsor": "Ottawa Hospital Research Institute",
+          "sex": "ALL",
+          "max_age": "N/A",
+          "type": "inclusion"
+        },
+        "score": 35.515107413268,
+        "source": "bm25",
+        "rrf_score": 0.014286
+      },
+      {
+        "id": "NCT06462170_metadata",
+        "nct_id": "NCT06462170",
+        "text": "TRIAL OVERVIEW \u2014 Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study (NCT06462170)\nConditions: Type 2 Diabetes\nInterventions: Boost Original meal replacement shake\nPhases: NA\nAge: 18 Years \u2013 N/A  |  Sex: ALL\nSponsor: Ottawa Hospital Research Institute",
+        "metadata": {
+          "conditions": "Type 2 Diabetes",
+          "nct_id": "NCT06462170",
+          "max_age": "N/A",
+          "sex": "ALL",
+          "phases": "NA",
+          "interventions": "Boost Original meal replacement shake",
+          "sponsor": "Ottawa Hospital Research Institute",
+          "min_age": "18 Years",
+          "title": "Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study",
+          "type": "metadata"
+        },
+        "score": 32.52679210675216,
+        "source": "bm25",
+        "rrf_score": 0.013333
+      },
+      {
+        "id": "NCT06462170_exclusion",
+        "nct_id": "NCT06462170",
+        "text": "EXCLUSION CRITERIA \u2014 Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study (NCT06462170):\n1. Diagnosed as another form of diabetes mellitus.\n2. Allergic to one or more ingredients in Boost meal replacement shake.\n3. Unable to fast since midnight and attend in person for the morning protocol.",
+        "metadata": {
+          "phases": "NA",
+          "type": "exclusion",
+          "nct_id": "NCT06462170",
+          "max_age": "N/A",
+          "sponsor": "Ottawa Hospital Research Institute",
+          "title": "Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study",
+          "sex": "ALL",
+          "min_age": "18 Years"
+        },
+        "score": 28.948150507301335,
+        "source": "bm25",
+        "rrf_score": 0.011236
+      },
+      {
+        "id": "NCT03156478_exclusion",
+        "nct_id": "NCT03156478",
+        "text": "EXCLUSION CRITERIA \u2014 STOP DIABETES - Knowledge-based Solutions (NCT03156478):\n* type 1 or 2 diabetes\n* pregnancy or breastfeeding\n* current cancer or less than 6 months from the end of cancer treatment",
+        "metadata": {
+          "max_age": "70 Years",
+          "title": "STOP DIABETES - Knowledge-based Solutions",
+          "min_age": "18 Years",
+          "type": "exclusion",
+          "phases": "NA",
+          "sex": "ALL",
+          "nct_id": "NCT03156478",
+          "sponsor": "University of Eastern Finland"
+        },
+        "score": 38.799621157044236,
+        "source": "bm25",
+        "rrf_score": 0.015625
+      },
+      {
+        "id": "NCT03156478_inclusion",
+        "nct_id": "NCT03156478",
+        "text": "INCLUSION CRITERIA \u2014 STOP DIABETES - Knowledge-based Solutions (NCT03156478):\n* age of 18-70 years\n* 12 points or more in the Finnish diabetes risk score or previous gestational diabetes or repeated impaired fasting glucose (IFG) (fasting plasma glucose level 6,1 - 6,9 mmol/l) or impaired glucose tolerance (2-hour glucose level 7,8 - 11,0 mmol/l in oral glucose tolerance test)\n* living in the hospital district of Northern Savo, P\u00e4ij\u00e4t-H\u00e4me or South Karelia\n* possibility to use computer, smartphone or tablet with internet connection\n* having own self-phone number\n* adequate Finnish language skill",
+        "metadata": {
+          "sponsor": "University of Eastern Finland",
+          "title": "STOP DIABETES - Knowledge-based Solutions",
+          "max_age": "70 Years",
+          "sex": "ALL",
+          "min_age": "18 Years",
+          "nct_id": "NCT03156478",
+          "type": "inclusion",
+          "phases": "NA"
+        },
+        "score": 31.787244534165318,
+        "source": "bm25",
+        "rrf_score": 0.012658
+      },
+      {
+        "id": "NCT03156478_metadata",
+        "nct_id": "NCT03156478",
+        "text": "TRIAL OVERVIEW \u2014 STOP DIABETES - Knowledge-based Solutions (NCT03156478)\nConditions: Type2 Diabetes, Life Style, Diet Habit, Physical Activity, Empowerment\nInterventions: Digital lifestyle intervention group, Combined digital and face-to-face lifestyle intervention group\nPhases: NA\nAge: 18 Years \u2013 70 Years  |  Sex: ALL\nSponsor: University of Eastern Finland",
+        "metadata": {
+          "type": "metadata",
+          "phases": "NA",
+          "interventions": "Digital lifestyle intervention group, Combined digital and face-to-face lifestyle intervention group",
+          "sponsor": "University of Eastern Finland",
+          "title": "STOP DIABETES - Knowledge-based Solutions",
+          "conditions": "Type2 Diabetes, Life Style, Diet Habit, Physical Activity, Empowerment",
+          "min_age": "18 Years",
+          "sex": "ALL",
+          "max_age": "70 Years",
+          "nct_id": "NCT03156478"
+        },
+        "score": 26.666517765128773,
+        "source": "bm25",
+        "rrf_score": 0.010204
+      },
+      {
+        "id": "NCT05977218_inclusion",
+        "nct_id": "NCT05977218",
+        "text": "INCLUSION CRITERIA \u2014 DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial (NCT05977218):\n* Age between 18 and 75 years\n* Self-reported type 2 diabetes with a duration of \u22652 years\n* Regularly grocery shopping",
+        "metadata": {
+          "max_age": "75 Years",
+          "title": "DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial",
+          "nct_id": "NCT05977218",
+          "sex": "ALL",
+          "type": "inclusion",
+          "min_age": "18 Years",
+          "sponsor": "Linkoeping University",
+          "phases": "NA"
+        },
+        "score": 33.70494246793161,
+        "source": "bm25",
+        "rrf_score": 0.013699
+      },
+      {
+        "id": "NCT05977218_metadata",
+        "nct_id": "NCT05977218",
+        "text": "TRIAL OVERVIEW \u2014 DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial (NCT05977218)\nConditions: Type 2 Diabetes\nInterventions: FoodSwitch\nPhases: NA\nAge: 18 Years \u2013 75 Years  |  Sex: ALL\nSponsor: Linkoeping University",
+        "metadata": {
+          "title": "DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial",
+          "min_age": "18 Years",
+          "interventions": "FoodSwitch",
+          "max_age": "75 Years",
+          "nct_id": "NCT05977218",
+          "sponsor": "Linkoeping University",
+          "sex": "ALL",
+          "phases": "NA",
+          "conditions": "Type 2 Diabetes",
+          "type": "metadata"
+        },
+        "score": 31.965375728022572,
+        "source": "bm25",
+        "rrf_score": 0.012987
+      },
+      {
+        "id": "NCT05977218_exclusion",
+        "nct_id": "NCT05977218",
+        "text": "EXCLUSION CRITERIA \u2014 DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial (NCT05977218):\n* No access to BankID (a digital identification system commonly used in Sweden)\n* Failure to complete eligibility screening and run-in periods",
+        "metadata": {
+          "type": "exclusion",
+          "sponsor": "Linkoeping University",
+          "phases": "NA",
+          "max_age": "75 Years",
+          "min_age": "18 Years",
+          "nct_id": "NCT05977218",
+          "sex": "ALL",
+          "title": "DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial"
+        },
+        "score": 28.38782236819214,
+        "source": "bm25",
+        "rrf_score": 0.01087
+      },
+      {
+        "id": "NCT01179815_inclusion",
+        "nct_id": "NCT01179815",
+        "text": "INCLUSION CRITERIA \u2014 Swiss Diabetes Registry - SwissDiab Study (NCT01179815):\n* Age \\> 18 years\n* Diagnosis of diabetes mellitus according to ADA criteria\n* Informed consent",
+        "metadata": {
+          "max_age": "N/A",
+          "nct_id": "NCT01179815",
+          "title": "Swiss Diabetes Registry - SwissDiab Study",
+          "phases": "",
+          "sponsor": "Insel Gruppe AG, University Hospital Bern",
+          "min_age": "18 Years",
+          "sex": "ALL",
+          "type": "inclusion"
+        },
+        "score": 30.94927253432215,
+        "source": "bm25",
+        "rrf_score": 0.012346
+      },
+      {
+        "id": "NCT01179815_metadata",
+        "nct_id": "NCT01179815",
+        "text": "TRIAL OVERVIEW \u2014 Swiss Diabetes Registry - SwissDiab Study (NCT01179815)\nConditions: Diabetes Mellitus\nInterventions: \nPhases: \nAge: 18 Years \u2013 N/A  |  Sex: ALL\nSponsor: Insel Gruppe AG, University Hospital Bern",
+        "metadata": {
+          "title": "Swiss Diabetes Registry - SwissDiab Study",
+          "phases": "",
+          "min_age": "18 Years",
+          "sponsor": "Insel Gruppe AG, University Hospital Bern",
+          "conditions": "Diabetes Mellitus",
+          "nct_id": "NCT01179815",
+          "sex": "ALL",
+          "interventions": "",
+          "max_age": "N/A",
+          "type": "metadata"
+        },
+        "score": 30.42197986549559,
+        "source": "bm25",
+        "rrf_score": 0.012048
+      },
+      {
+        "id": "NCT01179815_exclusion",
+        "nct_id": "NCT01179815",
+        "text": "EXCLUSION CRITERIA \u2014 Swiss Diabetes Registry - SwissDiab Study (NCT01179815):\n* Patients with gestational diabetes mellitus, patients unable to give informed consent, legally incompetent or incapable to comply with the study terms and conditions as well as patients with significantly reduced life expectancy (\\<1 year) will be excluded",
+        "metadata": {
+          "max_age": "N/A",
+          "title": "Swiss Diabetes Registry - SwissDiab Study",
+          "sponsor": "Insel Gruppe AG, University Hospital Bern",
+          "min_age": "18 Years",
+          "phases": "",
+          "sex": "ALL",
+          "nct_id": "NCT01179815",
+          "type": "exclusion"
+        },
+        "score": 27.701324740135117,
+        "source": "bm25",
+        "rrf_score": 0.010417
+      },
+      {
+        "id": "NCT05208164_metadata",
+        "nct_id": "NCT05208164",
+        "text": "TRIAL OVERVIEW \u2014 My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes (NCT05208164)\nConditions: Type 2 Diabetes, Sleep, Stress\nInterventions: Mindfunlness Meditation\nPhases: NA\nAge: 21 Years \u2013 75 Years  |  Sex: ALL\nSponsor: University of Illinois at Chicago",
+        "metadata": {
+          "sponsor": "University of Illinois at Chicago",
+          "title": "My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes",
+          "interventions": "Mindfunlness Meditation",
+          "phases": "NA",
+          "min_age": "21 Years",
+          "type": "metadata",
+          "sex": "ALL",
+          "conditions": "Type 2 Diabetes, Sleep, Stress",
+          "nct_id": "NCT05208164",
+          "max_age": "75 Years"
+        },
+        "score": 31.56306131245582,
+        "source": "bm25",
+        "rrf_score": 0.0125
+      },
+      {
+        "id": "NCT05208164_inclusion",
+        "nct_id": "NCT05208164",
+        "text": "INCLUSION CRITERIA \u2014 My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes (NCT05208164):\n* Self-identifies as African American or Black\n* Diagnosis of type 2 diabetes\n* Valid address in greater Chicagoland area\n* Mobile phone with unlimited text-messaging\n* Mobile device (smartphone, tablet, or computer) with the ability to connect to the internet if remote online delivery\n* Availability to participate in mindfulness class either in-person or online\n* Age 21-75",
+        "metadata": {
+          "title": "My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes",
+          "sponsor": "University of Illinois at Chicago",
+          "phases": "NA",
+          "type": "inclusion",
+          "nct_id": "NCT05208164",
+          "max_age": "75 Years",
+          "min_age": "21 Years",
+          "sex": "ALL"
+        },
+        "score": 28.130842791202546,
+        "source": "bm25",
+        "rrf_score": 0.010638
+      },
+      {
+        "id": "NCT05208164_exclusion",
+        "nct_id": "NCT05208164",
+        "text": "EXCLUSION CRITERIA \u2014 My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes (NCT05208164):\n* Untreated obstructive sleep apnea (OSA)\n* Severe insomnia, narcolepsy, or REM sleep related disorder\n* Major cognitive impairments or psychiatric disorder\n* Alcohol or drug abuse\n* Limited English proficiency\n* Inability to send/receive text messages\n* Currently engaging in mindfulness practice",
+        "metadata": {
+          "max_age": "75 Years",
+          "sponsor": "University of Illinois at Chicago",
+          "sex": "ALL",
+          "type": "exclusion",
+          "min_age": "21 Years",
+          "nct_id": "NCT05208164",
+          "phases": "NA",
+          "title": "My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes"
+        },
+        "score": 27.751664589617032,
+        "source": "bm25",
+        "rrf_score": 0.010526
+      }
+    ],
+    "top_trials": [
+      {
+        "nct_id": "NCT06462170",
+        "chunks": [
+          {
+            "id": "NCT06462170_inclusion",
+            "nct_id": "NCT06462170",
+            "text": "INCLUSION CRITERIA \u2014 Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study (NCT06462170):\n1. Consent provided\n2. Age \\>= 18 years.\n3. Diagnosed as type 2 diabetes mellitus.\n4. Not on insulin therapy.",
+            "metadata": {
+              "nct_id": "NCT06462170",
+              "title": "Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study",
+              "min_age": "18 Years",
+              "phases": "NA",
+              "sponsor": "Ottawa Hospital Research Institute",
+              "sex": "ALL",
+              "max_age": "N/A",
+              "type": "inclusion"
+            },
+            "score": 35.515107413268,
+            "source": "bm25",
+            "rrf_score": 0.014286
+          },
+          {
+            "id": "NCT06462170_metadata",
+            "nct_id": "NCT06462170",
+            "text": "TRIAL OVERVIEW \u2014 Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study (NCT06462170)\nConditions: Type 2 Diabetes\nInterventions: Boost Original meal replacement shake\nPhases: NA\nAge: 18 Years \u2013 N/A  |  Sex: ALL\nSponsor: Ottawa Hospital Research Institute",
+            "metadata": {
+              "conditions": "Type 2 Diabetes",
+              "nct_id": "NCT06462170",
+              "max_age": "N/A",
+              "sex": "ALL",
+              "phases": "NA",
+              "interventions": "Boost Original meal replacement shake",
+              "sponsor": "Ottawa Hospital Research Institute",
+              "min_age": "18 Years",
+              "title": "Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study",
+              "type": "metadata"
+            },
+            "score": 32.52679210675216,
+            "source": "bm25",
+            "rrf_score": 0.013333
+          },
+          {
+            "id": "NCT06462170_exclusion",
+            "nct_id": "NCT06462170",
+            "text": "EXCLUSION CRITERIA \u2014 Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study (NCT06462170):\n1. Diagnosed as another form of diabetes mellitus.\n2. Allergic to one or more ingredients in Boost meal replacement shake.\n3. Unable to fast since midnight and attend in person for the morning protocol.",
+            "metadata": {
+              "phases": "NA",
+              "type": "exclusion",
+              "nct_id": "NCT06462170",
+              "max_age": "N/A",
+              "sponsor": "Ottawa Hospital Research Institute",
+              "title": "Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study",
+              "sex": "ALL",
+              "min_age": "18 Years"
+            },
+            "score": 28.948150507301335,
+            "source": "bm25",
+            "rrf_score": 0.011236
+          }
+        ],
+        "metadata": {
+          "nct_id": "NCT06462170",
+          "title": "Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study",
+          "min_age": "18 Years",
+          "phases": "NA",
+          "sponsor": "Ottawa Hospital Research Institute",
+          "sex": "ALL",
+          "max_age": "N/A",
+          "type": "inclusion"
+        },
+        "score": 0.038855
+      },
+      {
+        "nct_id": "NCT03156478",
+        "chunks": [
+          {
+            "id": "NCT03156478_exclusion",
+            "nct_id": "NCT03156478",
+            "text": "EXCLUSION CRITERIA \u2014 STOP DIABETES - Knowledge-based Solutions (NCT03156478):\n* type 1 or 2 diabetes\n* pregnancy or breastfeeding\n* current cancer or less than 6 months from the end of cancer treatment",
+            "metadata": {
+              "max_age": "70 Years",
+              "title": "STOP DIABETES - Knowledge-based Solutions",
+              "min_age": "18 Years",
+              "type": "exclusion",
+              "phases": "NA",
+              "sex": "ALL",
+              "nct_id": "NCT03156478",
+              "sponsor": "University of Eastern Finland"
+            },
+            "score": 38.799621157044236,
+            "source": "bm25",
+            "rrf_score": 0.015625
+          },
+          {
+            "id": "NCT03156478_inclusion",
+            "nct_id": "NCT03156478",
+            "text": "INCLUSION CRITERIA \u2014 STOP DIABETES - Knowledge-based Solutions (NCT03156478):\n* age of 18-70 years\n* 12 points or more in the Finnish diabetes risk score or previous gestational diabetes or repeated impaired fasting glucose (IFG) (fasting plasma glucose level 6,1 - 6,9 mmol/l) or impaired glucose tolerance (2-hour glucose level 7,8 - 11,0 mmol/l in oral glucose tolerance test)\n* living in the hospital district of Northern Savo, P\u00e4ij\u00e4t-H\u00e4me or South Karelia\n* possibility to use computer, smartphone or tablet with internet connection\n* having own self-phone number\n* adequate Finnish language skill",
+            "metadata": {
+              "sponsor": "University of Eastern Finland",
+              "title": "STOP DIABETES - Knowledge-based Solutions",
+              "max_age": "70 Years",
+              "sex": "ALL",
+              "min_age": "18 Years",
+              "nct_id": "NCT03156478",
+              "type": "inclusion",
+              "phases": "NA"
+            },
+            "score": 31.787244534165318,
+            "source": "bm25",
+            "rrf_score": 0.012658
+          },
+          {
+            "id": "NCT03156478_metadata",
+            "nct_id": "NCT03156478",
+            "text": "TRIAL OVERVIEW \u2014 STOP DIABETES - Knowledge-based Solutions (NCT03156478)\nConditions: Type2 Diabetes, Life Style, Diet Habit, Physical Activity, Empowerment\nInterventions: Digital lifestyle intervention group, Combined digital and face-to-face lifestyle intervention group\nPhases: NA\nAge: 18 Years \u2013 70 Years  |  Sex: ALL\nSponsor: University of Eastern Finland",
+            "metadata": {
+              "type": "metadata",
+              "phases": "NA",
+              "interventions": "Digital lifestyle intervention group, Combined digital and face-to-face lifestyle intervention group",
+              "sponsor": "University of Eastern Finland",
+              "title": "STOP DIABETES - Knowledge-based Solutions",
+              "conditions": "Type2 Diabetes, Life Style, Diet Habit, Physical Activity, Empowerment",
+              "min_age": "18 Years",
+              "sex": "ALL",
+              "max_age": "70 Years",
+              "nct_id": "NCT03156478"
+            },
+            "score": 26.666517765128773,
+            "source": "bm25",
+            "rrf_score": 0.010204
+          }
+        ],
+        "metadata": {
+          "max_age": "70 Years",
+          "title": "STOP DIABETES - Knowledge-based Solutions",
+          "min_age": "18 Years",
+          "type": "exclusion",
+          "phases": "NA",
+          "sex": "ALL",
+          "nct_id": "NCT03156478",
+          "sponsor": "University of Eastern Finland"
+        },
+        "score": 0.038487
+      },
+      {
+        "nct_id": "NCT05977218",
+        "chunks": [
+          {
+            "id": "NCT05977218_inclusion",
+            "nct_id": "NCT05977218",
+            "text": "INCLUSION CRITERIA \u2014 DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial (NCT05977218):\n* Age between 18 and 75 years\n* Self-reported type 2 diabetes with a duration of \u22652 years\n* Regularly grocery shopping",
+            "metadata": {
+              "max_age": "75 Years",
+              "title": "DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial",
+              "nct_id": "NCT05977218",
+              "sex": "ALL",
+              "type": "inclusion",
+              "min_age": "18 Years",
+              "sponsor": "Linkoeping University",
+              "phases": "NA"
+            },
+            "score": 33.70494246793161,
+            "source": "bm25",
+            "rrf_score": 0.013699
+          },
+          {
+            "id": "NCT05977218_metadata",
+            "nct_id": "NCT05977218",
+            "text": "TRIAL OVERVIEW \u2014 DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial (NCT05977218)\nConditions: Type 2 Diabetes\nInterventions: FoodSwitch\nPhases: NA\nAge: 18 Years \u2013 75 Years  |  Sex: ALL\nSponsor: Linkoeping University",
+            "metadata": {
+              "title": "DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial",
+              "min_age": "18 Years",
+              "interventions": "FoodSwitch",
+              "max_age": "75 Years",
+              "nct_id": "NCT05977218",
+              "sponsor": "Linkoeping University",
+              "sex": "ALL",
+              "phases": "NA",
+              "conditions": "Type 2 Diabetes",
+              "type": "metadata"
+            },
+            "score": 31.965375728022572,
+            "source": "bm25",
+            "rrf_score": 0.012987
+          },
+          {
+            "id": "NCT05977218_exclusion",
+            "nct_id": "NCT05977218",
+            "text": "EXCLUSION CRITERIA \u2014 DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial (NCT05977218):\n* No access to BankID (a digital identification system commonly used in Sweden)\n* Failure to complete eligibility screening and run-in periods",
+            "metadata": {
+              "type": "exclusion",
+              "sponsor": "Linkoeping University",
+              "phases": "NA",
+              "max_age": "75 Years",
+              "min_age": "18 Years",
+              "nct_id": "NCT05977218",
+              "sex": "ALL",
+              "title": "DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial"
+            },
+            "score": 28.38782236819214,
+            "source": "bm25",
+            "rrf_score": 0.01087
+          }
+        ],
+        "metadata": {
+          "max_age": "75 Years",
+          "title": "DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial",
+          "nct_id": "NCT05977218",
+          "sex": "ALL",
+          "type": "inclusion",
+          "min_age": "18 Years",
+          "sponsor": "Linkoeping University",
+          "phases": "NA"
+        },
+        "score": 0.037556
+      },
+      {
+        "nct_id": "NCT01179815",
+        "chunks": [
+          {
+            "id": "NCT01179815_inclusion",
+            "nct_id": "NCT01179815",
+            "text": "INCLUSION CRITERIA \u2014 Swiss Diabetes Registry - SwissDiab Study (NCT01179815):\n* Age \\> 18 years\n* Diagnosis of diabetes mellitus according to ADA criteria\n* Informed consent",
+            "metadata": {
+              "max_age": "N/A",
+              "nct_id": "NCT01179815",
+              "title": "Swiss Diabetes Registry - SwissDiab Study",
+              "phases": "",
+              "sponsor": "Insel Gruppe AG, University Hospital Bern",
+              "min_age": "18 Years",
+              "sex": "ALL",
+              "type": "inclusion"
+            },
+            "score": 30.94927253432215,
+            "source": "bm25",
+            "rrf_score": 0.012346
+          },
+          {
+            "id": "NCT01179815_metadata",
+            "nct_id": "NCT01179815",
+            "text": "TRIAL OVERVIEW \u2014 Swiss Diabetes Registry - SwissDiab Study (NCT01179815)\nConditions: Diabetes Mellitus\nInterventions: \nPhases: \nAge: 18 Years \u2013 N/A  |  Sex: ALL\nSponsor: Insel Gruppe AG, University Hospital Bern",
+            "metadata": {
+              "title": "Swiss Diabetes Registry - SwissDiab Study",
+              "phases": "",
+              "min_age": "18 Years",
+              "sponsor": "Insel Gruppe AG, University Hospital Bern",
+              "conditions": "Diabetes Mellitus",
+              "nct_id": "NCT01179815",
+              "sex": "ALL",
+              "interventions": "",
+              "max_age": "N/A",
+              "type": "metadata"
+            },
+            "score": 30.42197986549559,
+            "source": "bm25",
+            "rrf_score": 0.012048
+          },
+          {
+            "id": "NCT01179815_exclusion",
+            "nct_id": "NCT01179815",
+            "text": "EXCLUSION CRITERIA \u2014 Swiss Diabetes Registry - SwissDiab Study (NCT01179815):\n* Patients with gestational diabetes mellitus, patients unable to give informed consent, legally incompetent or incapable to comply with the study terms and conditions as well as patients with significantly reduced life expectancy (\\<1 year) will be excluded",
+            "metadata": {
+              "max_age": "N/A",
+              "title": "Swiss Diabetes Registry - SwissDiab Study",
+              "sponsor": "Insel Gruppe AG, University Hospital Bern",
+              "min_age": "18 Years",
+              "phases": "",
+              "sex": "ALL",
+              "nct_id": "NCT01179815",
+              "type": "exclusion"
+            },
+            "score": 27.701324740135117,
+            "source": "bm25",
+            "rrf_score": 0.010417
+          }
+        ],
+        "metadata": {
+          "max_age": "N/A",
+          "nct_id": "NCT01179815",
+          "title": "Swiss Diabetes Registry - SwissDiab Study",
+          "phases": "",
+          "sponsor": "Insel Gruppe AG, University Hospital Bern",
+          "min_age": "18 Years",
+          "sex": "ALL",
+          "type": "inclusion"
+        },
+        "score": 0.034810999999999995
+      },
+      {
+        "nct_id": "NCT05208164",
+        "chunks": [
+          {
+            "id": "NCT05208164_metadata",
+            "nct_id": "NCT05208164",
+            "text": "TRIAL OVERVIEW \u2014 My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes (NCT05208164)\nConditions: Type 2 Diabetes, Sleep, Stress\nInterventions: Mindfunlness Meditation\nPhases: NA\nAge: 21 Years \u2013 75 Years  |  Sex: ALL\nSponsor: University of Illinois at Chicago",
+            "metadata": {
+              "sponsor": "University of Illinois at Chicago",
+              "title": "My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes",
+              "interventions": "Mindfunlness Meditation",
+              "phases": "NA",
+              "min_age": "21 Years",
+              "type": "metadata",
+              "sex": "ALL",
+              "conditions": "Type 2 Diabetes, Sleep, Stress",
+              "nct_id": "NCT05208164",
+              "max_age": "75 Years"
+            },
+            "score": 31.56306131245582,
+            "source": "bm25",
+            "rrf_score": 0.0125
+          },
+          {
+            "id": "NCT05208164_inclusion",
+            "nct_id": "NCT05208164",
+            "text": "INCLUSION CRITERIA \u2014 My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes (NCT05208164):\n* Self-identifies as African American or Black\n* Diagnosis of type 2 diabetes\n* Valid address in greater Chicagoland area\n* Mobile phone with unlimited text-messaging\n* Mobile device (smartphone, tablet, or computer) with the ability to connect to the internet if remote online delivery\n* Availability to participate in mindfulness class either in-person or online\n* Age 21-75",
+            "metadata": {
+              "title": "My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes",
+              "sponsor": "University of Illinois at Chicago",
+              "phases": "NA",
+              "type": "inclusion",
+              "nct_id": "NCT05208164",
+              "max_age": "75 Years",
+              "min_age": "21 Years",
+              "sex": "ALL"
+            },
+            "score": 28.130842791202546,
+            "source": "bm25",
+            "rrf_score": 0.010638
+          },
+          {
+            "id": "NCT05208164_exclusion",
+            "nct_id": "NCT05208164",
+            "text": "EXCLUSION CRITERIA \u2014 My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes (NCT05208164):\n* Untreated obstructive sleep apnea (OSA)\n* Severe insomnia, narcolepsy, or REM sleep related disorder\n* Major cognitive impairments or psychiatric disorder\n* Alcohol or drug abuse\n* Limited English proficiency\n* Inability to send/receive text messages\n* Currently engaging in mindfulness practice",
+            "metadata": {
+              "max_age": "75 Years",
+              "sponsor": "University of Illinois at Chicago",
+              "sex": "ALL",
+              "type": "exclusion",
+              "min_age": "21 Years",
+              "nct_id": "NCT05208164",
+              "phases": "NA",
+              "title": "My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes"
+            },
+            "score": 27.751664589617032,
+            "source": "bm25",
+            "rrf_score": 0.010526
+          }
+        ],
+        "metadata": {
+          "sponsor": "University of Illinois at Chicago",
+          "title": "My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes",
+          "interventions": "Mindfunlness Meditation",
+          "phases": "NA",
+          "min_age": "21 Years",
+          "type": "metadata",
+          "sex": "ALL",
+          "conditions": "Type 2 Diabetes, Sleep, Stress",
+          "nct_id": "NCT05208164",
+          "max_age": "75 Years"
+        },
+        "score": 0.033664
+      }
+    ]
+  },
+  "retrieval_log": [
+    {
+      "nct_id": "NCT06462170",
+      "attempt": 1,
+      "confidence": 0.8,
+      "verdict": "uncertain",
+      "accepted": true
+    },
+    {
+      "nct_id": "NCT03156478",
+      "attempt": 1,
+      "confidence": 0.9,
+      "verdict": "not_eligible",
+      "accepted": true
+    },
+    {
+      "nct_id": "NCT05977218",
+      "attempt": 1,
+      "confidence": 0.7,
+      "verdict": "uncertain",
+      "accepted": true
+    },
+    {
+      "nct_id": "NCT01179815",
+      "attempt": 1,
+      "confidence": 0.8,
+      "verdict": "uncertain",
+      "accepted": true
+    },
+    {
+      "nct_id": "NCT05208164",
+      "attempt": 1,
+      "confidence": 0.9,
+      "verdict": "not_eligible",
+      "accepted": true
+    }
+  ],
+  "verdicts": [
+    {
+      "nct_id": "NCT06462170",
+      "trial_title": "Pancreatic Insulin Production Capacity (PIPC) - a Feasibility Study",
+      "verdict": "uncertain",
+      "confidence": 0.8,
+      "criteria_checks": [
+        {
+          "criterion": "Consent provided",
+          "patient_value": "Not specified",
+          "result": "uncertain",
+          "reasoning": "The patient profile does not mention whether consent has been provided.",
+          "cited_chunk_id": "NCT06462170_inclusion"
+        },
+        {
+          "criterion": "Age >= 18 years",
+          "patient_value": "58",
+          "result": "meets",
+          "reasoning": "The patient is 58 years old, which meets the age requirement.",
+          "cited_chunk_id": "NCT06462170_inclusion"
+        },
+        {
+          "criterion": "Diagnosed as type 2 diabetes mellitus",
+          "patient_value": "Type 2 diabetes mellitus",
+          "result": "meets",
+          "reasoning": "The patient has a primary diagnosis of type 2 diabetes mellitus.",
+          "cited_chunk_id": "NCT06462170_inclusion"
+        },
+        {
+          "criterion": "Not on insulin therapy",
+          "patient_value": "Not on insulin",
+          "result": "meets",
+          "reasoning": "The patient is not using insulin, which meets this criterion.",
+          "cited_chunk_id": "NCT06462170_inclusion"
+        },
+        {
+          "criterion": "Diagnosed as another form of diabetes mellitus",
+          "patient_value": "Type 2 diabetes mellitus",
+          "result": "meets",
+          "reasoning": "The patient is diagnosed with type 2 diabetes, not another form.",
+          "cited_chunk_id": "NCT06462170_exclusion"
+        },
+        {
+          "criterion": "Allergic to one or more ingredients in Boost meal replacement shake",
+          "patient_value": "Not specified",
+          "result": "uncertain",
+          "reasoning": "The patient profile does not provide information on allergies.",
+          "cited_chunk_id": "NCT06462170_exclusion"
+        },
+        {
+          "criterion": "Unable to fast since midnight and attend in person for the morning protocol",
+          "patient_value": "Not specified",
+          "result": "uncertain",
+          "reasoning": "The patient profile does not mention the ability to fast or attend in person.",
+          "cited_chunk_id": "NCT06462170_exclusion"
+        }
+      ],
+      "missing_information": [
+        "Consent status",
+        "Allergy information regarding Boost meal replacement shake",
+        "Ability to fast and attend in person for the morning protocol"
+      ],
+      "summary": "The patient meets the age and diagnosis criteria and is not on insulin therapy, which aligns with the trial's inclusion criteria. However, there is missing information regarding consent, potential allergies to the Boost meal replacement shake, and the ability to fast and attend the protocol, making the eligibility uncertain."
+    },
+    {
+      "nct_id": "NCT05977218",
+      "trial_title": "DIgitAl diabeTES Treatment - the Healthy Eating, heaLthy Patients Trial",
+      "verdict": "uncertain",
+      "confidence": 0.7,
+      "criteria_checks": [
+        {
+          "criterion": "Age between 18 and 75 years",
+          "patient_value": "58 years",
+          "result": "meets",
+          "reasoning": "The patient is 58 years old, which falls within the required age range of 18 to 75 years.",
+          "cited_chunk_id": "NCT05977218_inclusion"
+        },
+        {
+          "criterion": "Self-reported type 2 diabetes with a duration of \u22652 years",
+          "patient_value": "Type 2 diabetes mellitus",
+          "result": "uncertain",
+          "reasoning": "The patient has type 2 diabetes, but the duration of the condition is not specified in the profile.",
+          "cited_chunk_id": "NCT05977218_inclusion"
+        },
+        {
+          "criterion": "Regularly grocery shopping",
+          "patient_value": "Not specified",
+          "result": "uncertain",
+          "reasoning": "The patient profile does not provide information about grocery shopping habits.",
+          "cited_chunk_id": "NCT05977218_inclusion"
+        },
+        {
+          "criterion": "No access to BankID",
+          "patient_value": "Not specified",
+          "result": "uncertain",
+          "reasoning": "The patient profile does not mention access to BankID, which is necessary for exclusion determination.",
+          "cited_chunk_id": "NCT05977218_exclusion"
+        },
+        {
+          "criterion": "Failure to complete eligibility screening and run-in periods",
+          "patient_value": "Not applicable",
+          "result": "uncertain",
+          "reasoning": "This criterion cannot be assessed with the current patient information.",
+          "cited_chunk_id": "NCT05977218_exclusion"
+        }
+      ],
+      "missing_information": [
+        "Duration of type 2 diabetes",
+        "Grocery shopping habits",
+        "Access to BankID"
+      ],
+      "summary": "The patient meets the age criterion and has type 2 diabetes, but the duration of the condition is unknown. Additionally, there is no information on grocery shopping habits or access to BankID, which are necessary to determine full eligibility. Further information is needed to make a definitive eligibility decision."
+    },
+    {
+      "nct_id": "NCT01179815",
+      "trial_title": "Swiss Diabetes Registry - SwissDiab Study",
+      "verdict": "uncertain",
+      "confidence": 0.8,
+      "criteria_checks": [
+        {
+          "criterion": "Age > 18 years",
+          "patient_value": "58 years",
+          "result": "meets",
+          "reasoning": "The patient is 58 years old, which is above the minimum age requirement of 18 years.",
+          "cited_chunk_id": "NCT01179815_inclusion"
+        },
+        {
+          "criterion": "Diagnosis of diabetes mellitus according to ADA criteria",
+          "patient_value": "Type 2 diabetes mellitus",
+          "result": "meets",
+          "reasoning": "The patient has a diagnosis of Type 2 diabetes mellitus, which satisfies the requirement for a diabetes diagnosis.",
+          "cited_chunk_id": "NCT01179815_inclusion"
+        },
+        {
+          "criterion": "Informed consent",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "The patient profile does not specify whether informed consent can be or has been obtained.",
+          "cited_chunk_id": "NCT01179815_inclusion"
+        },
+        {
+          "criterion": "Exclusion of patients with gestational diabetes mellitus",
+          "patient_value": "Type 2 diabetes mellitus",
+          "result": "meets",
+          "reasoning": "The patient has Type 2 diabetes mellitus, not gestational diabetes.",
+          "cited_chunk_id": "NCT01179815_exclusion"
+        },
+        {
+          "criterion": "Exclusion of patients unable to give informed consent",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "The ability of the patient to give informed consent is not specified in the profile.",
+          "cited_chunk_id": "NCT01179815_exclusion"
+        },
+        {
+          "criterion": "Exclusion of patients with significantly reduced life expectancy (<1 year)",
+          "patient_value": "Not indicated",
+          "result": "meets",
+          "reasoning": "There is no indication in the profile that the patient has a significantly reduced life expectancy.",
+          "cited_chunk_id": "NCT01179815_exclusion"
+        }
+      ],
+      "missing_information": [
+        "Informed consent status",
+        "Ability to give informed consent"
+      ],
+      "summary": "The patient meets the age and diabetes diagnosis criteria for the trial. However, it is uncertain if the patient can provide informed consent, which is required for eligibility. Additional information on the patient's consent status is needed to determine full eligibility."
+    },
+    {
+      "nct_id": "NCT03156478",
+      "trial_title": "STOP DIABETES - Knowledge-based Solutions",
+      "verdict": "not_eligible",
+      "confidence": 0.9,
+      "criteria_checks": [
+        {
+          "criterion": "age of 18-70 years",
+          "patient_value": "58 years",
+          "result": "meets",
+          "reasoning": "The patient is within the eligible age range of 18 to 70 years.",
+          "cited_chunk_id": "NCT03156478_inclusion"
+        },
+        {
+          "criterion": "type 1 or 2 diabetes",
+          "patient_value": "Type 2 diabetes mellitus",
+          "result": "does_not_meet",
+          "reasoning": "The exclusion criteria incorrectly list type 2 diabetes as an exclusion, which conflicts with the trial's focus on type 2 diabetes.",
+          "cited_chunk_id": "NCT03156478_exclusion"
+        },
+        {
+          "criterion": "12 points or more in the Finnish diabetes risk score or previous gestational diabetes or repeated impaired fasting glucose (IFG) or impaired glucose tolerance",
+          "patient_value": "Fasting glucose: 187 mg/dL (10.4 mmol/L)",
+          "result": "does_not_meet",
+          "reasoning": "The patient's fasting glucose level is above the specified range for impaired fasting glucose.",
+          "cited_chunk_id": "NCT03156478_inclusion"
+        },
+        {
+          "criterion": "living in the hospital district of Northern Savo, P\u00e4ij\u00e4t-H\u00e4me or South Karelia",
+          "patient_value": "Unknown",
+          "result": "uncertain",
+          "reasoning": "The patient's residence location is not provided, which is necessary to determine eligibility.",
+          "cited_chunk_id": "NCT03156478_inclusion"
+        },
+        {
+          "criterion": "possibility to use computer, smartphone or tablet with internet connection",
+          "patient_value": "Unknown",
+          "result": "uncertain",
+          "reasoning": "There is no information about the patient's access to digital devices or internet.",
+          "cited_chunk_id": "NCT03156478_inclusion"
+        },
+        {
+          "criterion": "having own self-phone number",
+          "patient_value": "Unknown",
+          "result": "uncertain",
+          "reasoning": "The patient's phone number status is not provided.",
+          "cited_chunk_id": "NCT03156478_inclusion"
+        },
+        {
+          "criterion": "adequate Finnish language skill",
+          "patient_value": "Unknown",
+          "result": "uncertain",
+          "reasoning": "The patient's proficiency in Finnish is not provided.",
+          "cited_chunk_id": "NCT03156478_inclusion"
+        }
+      ],
+      "missing_information": [
+        "Patient's residence location",
+        "Access to digital devices and internet",
+        "Patient's phone number status",
+        "Proficiency in Finnish language"
+      ],
+      "summary": "The patient is not eligible for the trial due to the exclusion of type 2 diabetes, which seems to be an error in the criteria. Additionally, the patient's fasting glucose level does not meet the specified range for impaired fasting glucose. There is also missing information regarding the patient's residence, access to digital devices, phone number, and Finnish language proficiency."
+    },
+    {
+      "nct_id": "NCT05208164",
+      "trial_title": "My ESSENCE - A Research Study on Mindfulness for African-Americans With Type 2 Diabetes",
+      "verdict": "not_eligible",
+      "confidence": 0.9,
+      "criteria_checks": [
+        {
+          "criterion": "Self-identifies as African American or Black",
+          "patient_value": "Not provided",
+          "result": "does_not_meet",
+          "reasoning": "The patient profile does not specify the patient's racial or ethnic identity, which is a key inclusion criterion.",
+          "cited_chunk_id": "NCT05208164_inclusion"
+        },
+        {
+          "criterion": "Diagnosis of type 2 diabetes",
+          "patient_value": "Type 2 diabetes mellitus",
+          "result": "meets",
+          "reasoning": "The patient has a diagnosis of type 2 diabetes, meeting this inclusion criterion.",
+          "cited_chunk_id": "NCT05208164_inclusion"
+        },
+        {
+          "criterion": "Valid address in greater Chicagoland area",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "The patient's address is not provided, so it is unclear if they meet this criterion.",
+          "cited_chunk_id": "NCT05208164_inclusion"
+        },
+        {
+          "criterion": "Mobile phone with unlimited text-messaging",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "The patient profile does not specify if they have a mobile phone with unlimited text-messaging.",
+          "cited_chunk_id": "NCT05208164_inclusion"
+        },
+        {
+          "criterion": "Mobile device with internet connectivity",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "The patient profile does not specify if they have a mobile device with internet connectivity.",
+          "cited_chunk_id": "NCT05208164_inclusion"
+        },
+        {
+          "criterion": "Availability to participate in mindfulness class",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "The patient's availability to participate in the class is not mentioned.",
+          "cited_chunk_id": "NCT05208164_inclusion"
+        },
+        {
+          "criterion": "Age 21-75",
+          "patient_value": "58",
+          "result": "meets",
+          "reasoning": "The patient is 58 years old, which falls within the eligible age range.",
+          "cited_chunk_id": "NCT05208164_inclusion"
+        },
+        {
+          "criterion": "Untreated obstructive sleep apnea (OSA)",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "There is no information on whether the patient has untreated OSA.",
+          "cited_chunk_id": "NCT05208164_exclusion"
+        },
+        {
+          "criterion": "Severe insomnia, narcolepsy, or REM sleep related disorder",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "The patient profile does not mention any sleep disorders.",
+          "cited_chunk_id": "NCT05208164_exclusion"
+        },
+        {
+          "criterion": "Major cognitive impairments or psychiatric disorder",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "There is no information on cognitive impairments or psychiatric disorders.",
+          "cited_chunk_id": "NCT05208164_exclusion"
+        },
+        {
+          "criterion": "Alcohol or drug abuse",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "The patient profile does not mention alcohol or drug abuse.",
+          "cited_chunk_id": "NCT05208164_exclusion"
+        },
+        {
+          "criterion": "Limited English proficiency",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "The patient's proficiency in English is not specified.",
+          "cited_chunk_id": "NCT05208164_exclusion"
+        },
+        {
+          "criterion": "Inability to send/receive text messages",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "The patient profile does not specify their ability to send/receive text messages.",
+          "cited_chunk_id": "NCT05208164_exclusion"
+        },
+        {
+          "criterion": "Currently engaging in mindfulness practice",
+          "patient_value": "Not provided",
+          "result": "uncertain",
+          "reasoning": "There is no information on whether the patient is currently engaging in mindfulness practice.",
+          "cited_chunk_id": "NCT05208164_exclusion"
+        }
+      ],
+      "missing_information": [
+        "Racial or ethnic identity",
+        "Address in greater Chicagoland area",
+        "Mobile phone with unlimited text-messaging",
+        "Mobile device with internet connectivity",
+        "Availability to participate in mindfulness class",
+        "Information on untreated OSA",
+        "Information on sleep disorders",
+        "Information on cognitive impairments or psychiatric disorders",
+        "Information on alcohol or drug abuse",
+        "English proficiency",
+        "Ability to send/receive text messages",
+        "Current engagement in mindfulness practice"
+      ],
+      "summary": "The patient is not eligible for the trial due to missing information on key inclusion criteria, particularly racial or ethnic identity, which is required for participation. Additionally, there are several other criteria for which the patient's eligibility is uncertain due to lack of information."
+    }
+  ],
+  "summary": {
+    "total_evaluated": 5,
+    "eligible": 0,
+    "uncertain": 3,
+    "not_eligible": 2,
+    "re_retrievals": 0
+  }
+}

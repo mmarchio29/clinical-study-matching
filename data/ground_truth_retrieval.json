@@ -1,0 +1,152 @@
+{
+  "P001": {
+    "NCT05491005": false,
+    "NCT05390892": true,
+    "NCT05008276": false,
+    "NCT07394114": true,
+    "NCT06818851": true,
+    "NCT07053306": false,
+    "NCT04791358": true,
+    "NCT06716203": true
+  },
+  "P002": {
+    "NCT05491005": false,
+    "NCT05390892": false,
+    "NCT07394114": false,
+    "NCT06818851": false,
+    "NCT07053306": true,
+    "NCT06716203": false,
+    "NCT02390973": false,
+    "NCT07053293": true
+  },
+  "P003": {
+    "NCT04791358": false,
+    "NCT06717698": true,
+    "NCT04783441": false,
+    "NCT06906627": false,
+    "NCT07256613": false,
+    "NCT05008276": false,
+    "NCT05527574": false,
+    "NCT04802395": false
+  },
+  "P004": {
+    "NCT04791358": false,
+    "NCT04783441": false,
+    "NCT06717698": false,
+    "NCT06906627": false,
+    "NCT05008276": false,
+    "NCT05527574": false,
+    "NCT07256613": false,
+    "NCT04802395": false
+  },
+  "P005": {
+    "NCT05008276": false,
+    "NCT06983054": false,
+    "NCT07053293": false,
+    "NCT05491005": false,
+    "NCT07053306": false,
+    "NCT06818851": false,
+    "NCT04783441": false,
+    "NCT04501406": false
+  },
+  "P006": {
+    "NCT05008276": false,
+    "NCT06983054": false,
+    "NCT07053293": false,
+    "NCT05491005": false,
+    "NCT07053306": false,
+    "NCT06818851": false,
+    "NCT04783441": false,
+    "NCT04501406": false
+  },
+  "P007": {
+    "NCT05008276": false,
+    "NCT06843902": false,
+    "NCT05491005": false,
+    "NCT06142006": false,
+    "NCT07216508": false,
+    "NCT07053293": false,
+    "NCT04783441": false,
+    "NCT07394114": false
+  },
+  "P008": {
+    "NCT05008276": false,
+    "NCT06843902": false,
+    "NCT05491005": false,
+    "NCT06142006": false,
+    "NCT07216508": false,
+    "NCT07053293": false,
+    "NCT04783441": false,
+    "NCT07394114": false
+  },
+  "P009": {
+    "NCT07216508": false,
+    "NCT05008276": false,
+    "NCT07053293": false,
+    "NCT05491005": false,
+    "NCT04783441": false,
+    "NCT07053306": false,
+    "NCT02037867": false,
+    "NCT04501406": false
+  },
+  "P010": {
+    "NCT07216508": false,
+    "NCT05008276": false,
+    "NCT07053293": false,
+    "NCT05491005": false,
+    "NCT04783441": false,
+    "NCT07053306": false,
+    "NCT02037867": false,
+    "NCT04501406": false
+  },
+  "P011": {
+    "NCT06983054": false,
+    "NCT05008276": false,
+    "NCT07053293": false,
+    "NCT07053306": false,
+    "NCT05390892": false,
+    "NCT04791358": false,
+    "NCT06717698": false,
+    "NCT04783441": false
+  },
+  "P012": {
+    "NCT06983054": false,
+    "NCT05008276": false,
+    "NCT07053293": false,
+    "NCT07053306": false,
+    "NCT05390892": false,
+    "NCT04791358": false,
+    "NCT06717698": false,
+    "NCT04783441": false
+  },
+  "P013": {
+    "NCT05491005": false,
+    "NCT05008276": false,
+    "NCT06818851": false,
+    "NCT07394114": false,
+    "NCT04791358": false,
+    "NCT04783441": false,
+    "NCT07053306": false,
+    "NCT06984185": false
+  },
+  "P014": {
+    "NCT05491005": false,
+    "NCT05008276": false,
+    "NCT07394114": false,
+    "NCT06818851": false,
+    "NCT07053306": false,
+    "NCT04783441": false,
+    "NCT04791358": false,
+    "NCT06984185": false
+  },
+  "P015": {
+    "NCT05008276": false,
+    "NCT07053306": false,
+    "NCT07053293": false,
+    "NCT06065930": false,
+    "NCT06983054": false,
+    "NCT06408961": true,
+    "NCT06716203": false,
+    "NCT05491005": false
+  }
+}

@@ -49,6 +49,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 GT_PATH       = "./data/ground_truth_retrieval.json"
 PATIENTS_PATH = "./data/synthetic_patients.json"
 RESULTS_DIR   = "./data/eval_results"
+BENCHMARK_PATH = "./data/benchmark_reviewed.json"
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -183,13 +184,11 @@ def eval_retriever_config(
     config keys:
         use_hyde (bool)
         use_bm25 (bool)
-        ef_search (int)
         label (str)
     """
     label     = config.get("label", "unnamed")
     use_hyde  = config.get("use_hyde", True)
     use_bm25  = config.get("use_bm25", True)
-    ef_search = config.get("ef_search", 100)
 
     metrics_per_k = {k: {"recall": [], "mrr": [], "ndcg": []} for k in k_values}
     latencies = []
@@ -209,7 +208,6 @@ def eval_retriever_config(
             patient,
             top_k=max(k_values),
             final_k=max(k_values),
-            ef_search=ef_search,
             use_hyde=use_hyde,
             use_bm25=use_bm25,
             verbose=False,
@@ -251,10 +249,10 @@ def run_ablation(patients: list[dict], ground_truth: dict) -> list[dict]:
     D = no BM25, ANN + HyDE only   — isolates BM25's contribution
     """
     configs = [
-        {"label": "A: HyDE+ANN+BM25+RRF", "use_hyde": True,  "use_bm25": True,  "ef_search": 100},
-        {"label": "B: direct+ANN only",    "use_hyde": False, "use_bm25": False, "ef_search": 100},
-        {"label": "C: BM25 only",          "use_hyde": False, "use_bm25": True,  "ef_search": 100},
-        {"label": "D: HyDE+ANN only",      "use_hyde": True,  "use_bm25": False, "ef_search": 100},
+        {"label": "A: HyDE+ANN+BM25+RRF", "use_hyde": True,  "use_bm25": True},
+        {"label": "B: direct+ANN only",    "use_hyde": False, "use_bm25": False},
+        {"label": "C: BM25 only",          "use_hyde": False, "use_bm25": True},
+        {"label": "D: HyDE+ANN only",      "use_hyde": True,  "use_bm25": False},
     ]
     results = []
     for cfg in configs:
@@ -263,26 +261,6 @@ def run_ablation(patients: list[dict], ground_truth: dict) -> list[dict]:
         results.append(r)
         print(f"    recall@5={r.get('recall@5','—')}  ndcg@5={r.get('ndcg@5','—')}  MRR={r.get('mrr@5','—')}")
     return results
-
-
-def run_ef_sweep(patients: list[dict], ground_truth: dict) -> list[dict]:
-    """
-    Sweep HNSW ef_search from 10 → 300 and plot recall@5 vs latency.
-    This demonstrates understanding of the ANN recall/speed tradeoff
-    that comes from the navigable small worlds graph structure.
-    Higher ef = more graph nodes explored = better recall, slower query.
-    """
-    ef_values = [10, 20, 40, 60, 100, 150, 200, 300]
-    results   = []
-    for ef in ef_values:
-        print(f"  ef_search={ef}")
-        cfg = {"label": f"ef={ef}", "use_hyde": True, "use_bm25": False, "ef_search": ef}
-        r   = eval_retriever_config(patients[:10], ground_truth, cfg, k_values=[5])
-        r["ef_search"] = ef
-        results.append(r)
-        print(f"    recall@5={r.get('recall@5','—')}  latency={r.get('avg_latency_s','—')}s")
-    return results
-
 
 # ══════════════════════════════════════════════════════════════════════════════
 # Stage 2 — Generation metrics
@@ -343,6 +321,68 @@ def verdict_metrics(agent_results: list[dict], ground_truth_verdicts: dict) -> d
         "precision": round(prec, 3), "recall": round(rec, 3), "f1": round(f1, 3),
         "tp": tp, "fp": fp, "fn": fn, "tn": tn,
     }
+
+
+def paid_local_feasibility_metrics(agent_results: list[dict], k: int = 5) -> dict:
+    """
+    Measures business-critical relevance:
+      - feasibility_precision@k
+      - paid_match_precision@k
+      - local_match_precision@k
+    """
+    total = feasible = paid = local = 0
+    for result in agent_results:
+        patient = result.get("patient", {})
+        prefs = patient.get("preferences", {})
+        min_comp = prefs.get("minimum_compensation")
+        user_loc = patient.get("location", {})
+        user_city = str(user_loc.get("city", "")).lower()
+        user_state = str(user_loc.get("state", "")).lower()
+        user_country = str(user_loc.get("country", "")).lower()
+
+        top_trials = result.get("retrieval", {}).get("top_trials", [])[:k]
+        for t in top_trials:
+            total += 1
+            m = t.get("metadata", {})
+            trial_paid = (m.get("amount_min") is not None) or (m.get("amount_max") is not None)
+            trial_local = (
+                (user_city and str(m.get("site_city", "")).lower() == user_city) or
+                (user_state and str(m.get("site_state", "")).lower() == user_state) or
+                (user_country and str(m.get("site_country", "")).lower() == user_country) or
+                bool(m.get("remote_allowed", False))
+            )
+            comp_ok = True
+            if min_comp is not None:
+                observed = m.get("amount_max") if m.get("amount_max") is not None else m.get("amount_min")
+                comp_ok = (observed is not None and observed >= min_comp)
+
+            if trial_paid:
+                paid += 1
+            if trial_local:
+                local += 1
+            if trial_paid and trial_local and comp_ok:
+                feasible += 1
+
+    denom = max(total, 1)
+    return {
+        f"n_trials@{k}": total,
+        f"feasibility_precision@{k}": round(feasible / denom, 3),
+        f"paid_match_precision@{k}": round(paid / denom, 3),
+        f"local_match_precision@{k}": round(local / denom, 3),
+    }
+
+
+def load_benchmark_labels(default_gt: dict) -> dict:
+    """
+    Prefer reviewed benchmark labels; fall back to silver labels.
+    """
+    if os.path.exists(BENCHMARK_PATH):
+        with open(BENCHMARK_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        print(f"Loaded reviewed benchmark labels from {BENCHMARK_PATH}")
+        return data
+    print(f"No reviewed benchmark at {BENCHMARK_PATH}; using silver labels from {GT_PATH}")
+    return default_gt
 
 
 def hallucination_rate(baseline_results: list[dict], valid_ncts: set[str]) -> dict:
@@ -423,6 +463,7 @@ def main(build_gt: bool = False, n_patients: int = 20):
         with open(GT_PATH) as f:
             ground_truth = json.load(f)
         print(f"Loaded ground truth: {len(ground_truth)} patients labelled")
+    benchmark_gt = load_benchmark_labels(ground_truth)
 
     # ── Stage 1: Retrieval evaluation ────────────────────────────────────────
     print("\n" + "="*60)
@@ -431,9 +472,6 @@ def main(build_gt: bool = False, n_patients: int = 20):
 
     print("\n[Ablation study]")
     ablation = run_ablation(patients, ground_truth)
-
-    print("\n[HNSW ef sweep — ANN recall vs latency]")
-    ef_sweep = run_ef_sweep(patients, ground_truth)
 
     # ── Stage 2: Generation evaluation ───────────────────────────────────────
     print("\n" + "="*60)
@@ -458,11 +496,12 @@ def main(build_gt: bool = False, n_patients: int = 20):
         except Exception as e:
             print(f"    Error: {e}")
 
-    vm   = verdict_metrics(agent_results, ground_truth)
+    vm   = verdict_metrics(agent_results, benchmark_gt)
     bvm  = verdict_metrics(baseline_results, ground_truth)
     hall = hallucination_rate(baseline_results, valid_ncts)
     cit  = citation_grounding(agent_results)
     loop = retrieval_loop_stats(agent_results)
+    feas = paid_local_feasibility_metrics(agent_results, k=5)
 
     # ── Print summary report ─────────────────────────────────────────────────
     print("\n" + "="*60)
@@ -476,10 +515,6 @@ def main(build_gt: bool = False, n_patients: int = 20):
               f"ndcg@5={r.get('ndcg@5','—'):<6}  "
               f"mrr={r.get('mrr@5','—')}")
 
-    print("\n── HNSW ef sweep (recall@5 vs latency) ──")
-    for r in ef_sweep:
-        print(f"  ef={r['ef_search']:<4}  recall@5={r.get('recall@5','—'):<6}  "
-              f"latency={r.get('avg_latency_s','—')}s")
 
     print("\n── Generation: verdict accuracy ──")
     print(f"  Agent:    P={vm['precision']}  R={vm['recall']}  F1={vm['f1']}")
@@ -497,15 +532,20 @@ def main(build_gt: bool = False, n_patients: int = 20):
     print(f"  {loop['re_retrievals']}/{loop['total_evaluations']} evaluations triggered re-retrieval  "
           f"({loop['rate']:.0%})")
 
+    print("\n── Paid/local feasibility ──")
+    print(f"  feasibility@5={feas['feasibility_precision@5']}  "
+          f"paid@5={feas['paid_match_precision@5']}  "
+          f"local@5={feas['local_match_precision@5']}")
+
     # Save full report
     report = {
         "ablation":           ablation,
-        "ef_sweep":           ef_sweep,
         "verdict_agent":      vm,
         "verdict_baseline":   bvm,
         "hallucination":      hall,
         "citation_grounding": cit,
         "retrieval_loop":     loop,
+        "paid_local_feasibility": feas,
     }
     out = f"{RESULTS_DIR}/eval_report.json"
     with open(out, "w") as f:

@@ -1,0 +1,212 @@
+[
+  {
+    "patient_id": "P001",
+    "primary_diagnosis": "Type 2 Diabetes",
+    "age": 67,
+    "sex": "female",
+    "lab_values": {"HbA1c": 8.4, "eGFR": 58}
+  },
+  {
+    "patient_id": "P002",
+    "primary_diagnosis": "Type 2 Diabetes",
+    "age": 52,
+    "sex": "male",
+    "lab_values": {"HbA1c": 7.2, "eGFR": 90}
+  },
+  {
+    "patient_id": "P003",
+    "primary_diagnosis": "Chronic Kidney Disease",
+    "age": 71,
+    "sex": "male",
+    "lab_values": {"eGFR": 32}
+  },
+  {
+    "patient_id": "P004",
+    "primary_diagnosis": "Chronic Kidney Disease",
+    "age": 60,
+    "sex": "female",
+    "lab_values": {"eGFR": 45}
+  },
+  {
+    "patient_id": "P005",
+    "primary_diagnosis": "Asthma",
+    "age": 29,
+    "sex": "female",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P006",
+    "primary_diagnosis": "Asthma",
+    "age": 41,
+    "sex": "male",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P007",
+    "primary_diagnosis": "Breast Cancer",
+    "age": 55,
+    "sex": "female",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P008",
+    "primary_diagnosis": "Breast Cancer",
+    "age": 63,
+    "sex": "female",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P009",
+    "primary_diagnosis": "Lung Cancer",
+    "age": 68,
+    "sex": "male",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P010",
+    "primary_diagnosis": "Lung Cancer",
+    "age": 59,
+    "sex": "female",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P011",
+    "primary_diagnosis": "Hypertension",
+    "age": 64,
+    "sex": "male",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P012",
+    "primary_diagnosis": "Hypertension",
+    "age": 50,
+    "sex": "female",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P013",
+    "primary_diagnosis": "Type 1 Diabetes",
+    "age": 25,
+    "sex": "female",
+    "lab_values": {"HbA1c": 9.1}
+  },
+  {
+    "patient_id": "P014",
+    "primary_diagnosis": "Type 1 Diabetes",
+    "age": 34,
+    "sex": "male",
+    "lab_values": {"HbA1c": 7.8}
+  },
+  {
+    "patient_id": "P015",
+    "primary_diagnosis": "Obesity",
+    "age": 46,
+    "sex": "female",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P016",
+    "primary_diagnosis": "Obesity",
+    "age": 38,
+    "sex": "male",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P017",
+    "primary_diagnosis": "Alzheimer's Disease",
+    "age": 74,
+    "sex": "female",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P018",
+    "primary_diagnosis": "Alzheimer's Disease",
+    "age": 79,
+    "sex": "male",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P019",
+    "primary_diagnosis": "Rheumatoid Arthritis",
+    "age": 57,
+    "sex": "female",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P020",
+    "primary_diagnosis": "Rheumatoid Arthritis",
+    "age": 62,
+    "sex": "male",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P021",
+    "primary_diagnosis": "Chronic Obstructive Pulmonary Disease",
+    "age": 70,
+    "sex": "male",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P022",
+    "primary_diagnosis": "Chronic Obstructive Pulmonary Disease",
+    "age": 66,
+    "sex": "female",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P023",
+    "primary_diagnosis": "Depression",
+    "age": 31,
+    "sex": "female",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P024",
+    "primary_diagnosis": "Depression",
+    "age": 45,
+    "sex": "male",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P025",
+    "primary_diagnosis": "Parkinson's Disease",
+    "age": 72,
+    "sex": "male",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P026",
+    "primary_diagnosis": "Parkinson's Disease",
+    "age": 69,
+    "sex": "female",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P027",
+    "primary_diagnosis": "Heart Failure",
+    "age": 75,
+    "sex": "male",
+    "lab_values": {"eGFR": 40}
+  },
+  {
+    "patient_id": "P028",
+    "primary_diagnosis": "Heart Failure",
+    "age": 68,
+    "sex": "female",
+    "lab_values": {"eGFR": 52}
+  },
+  {
+    "patient_id": "P029",
+    "primary_diagnosis": "Colorectal Cancer",
+    "age": 61,
+    "sex": "male",
+    "lab_values": {}
+  },
+  {
+    "patient_id": "P030",
+    "primary_diagnosis": "Colorectal Cancer",
+    "age": 58,
+    "sex": "female",
+    "lab_values": {}
+  }
+]

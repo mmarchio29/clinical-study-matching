@@ -28,13 +28,15 @@ Usage:
 """
 
 import json
-import math
 import os
 import pickle
+import re
 from collections import defaultdict
 
 import chromadb
 from openai import OpenAI
+import chromadb
+print("Chroma version:", chromadb.__version__)
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
@@ -45,7 +47,7 @@ BM25_PATH       = "./data/bm25_index.pkl"
 EMBED_MODEL     = "text-embedding-3-small"
 AGENT_MODEL     = "gpt-4o"
 
-TOP_K             = 10   # candidates per retriever before fusion
+TOP_K             = 40   # candidates per retriever before fusion
 FINAL_K           = 5    # top results after RRF fusion to pass to agent
 RRF_K             = 60   # RRF constant (standard value)
 EF_SEARCH         = 100  # HNSW ef at query time — sweep this in eval.py
@@ -53,7 +55,6 @@ CONFIDENCE_THRESH = 0.55 # below this → re-retrieve (max 2 retries)
 MAX_RETRIES       = 2
 
 client = OpenAI(api_key=OPENAI_API_KEY)
-
 
 # ── Shared state (loaded once) ────────────────────────────────────────────────
 
@@ -75,6 +76,29 @@ def get_bm25():
     return _bm25_data["bm25"], _bm25_data["chunk_ids"]
 
 
+def _age_to_years(age_str: str | None) -> float | None:
+    if not age_str or age_str == "N/A":
+        return None
+    s = str(age_str).strip().lower()
+    m = re.match(r"([0-9]+(?:\.[0-9]+)?)\s*(year|years|month|months|week|weeks|day|days)", s)
+    if not m:
+        return None
+    val = float(m.group(1))
+    unit = m.group(2)
+    if unit.startswith("year"):
+        return val
+    if unit.startswith("month"):
+        return val / 12.0
+    if unit.startswith("week"):
+        return val / 52.0
+    return val / 365.0
+
+
+def is_active_or_recruiting(metadata: dict) -> bool:
+    status = str(metadata.get("status", "RECRUITING")).strip().upper()
+    return status.startswith("RECRUITING") or status.startswith("ACTIVE")
+
+
 # ── Embed helper ──────────────────────────────────────────────────────────────
 
 def embed(text: str) -> list[float]:
@@ -85,15 +109,16 @@ def embed(text: str) -> list[float]:
 # TECHNIQUE 1 — HyDE (Hypothetical Document Embeddings)
 # ══════════════════════════════════════════════════════════════════════════════
 
-HYDE_SYSTEM = """You are a clinical trial protocol writer.
+HYDE_SYSTEM = """Write concise clinical trial eligibility criteria (max 80 words).
 
-Given a patient profile, write the ELIGIBILITY CRITERIA section that a
-clinical trial perfectly matched to this patient would have.
-Write it in the exact style of real ClinicalTrials.gov eligibility criteria:
-inclusion bullet points first, then exclusion bullet points.
-Use clinical terminology (HbA1c, eGFR, BMI, NYHA class, etc.).
-Do NOT mention the patient by name. Write as if drafting the trial protocol.
-Keep it to 150–250 words."""
+Focus only on:
+- condition
+- key lab thresholds (HbA1c, eGFR, BMI)
+- key inclusion/exclusion factors
+- location feasibility (city/state/country or remote participation)
+- compensation expectations if relevant
+
+Use bullet points. No narrative. No explanation."""
 
 def generate_hypothetical_doc(patient: dict) -> str:
     """
@@ -126,7 +151,6 @@ def retrieve_ann(
     query_embedding: list[float],
     top_k: int = TOP_K,
     chunk_type: str | None = None,
-    ef_search: int = EF_SEARCH,
 ) -> list[dict]:
     """
     Approximate Nearest Neighbor search using ChromaDB's HNSW index.
@@ -146,7 +170,7 @@ def retrieve_ann(
         query_embeddings = [query_embedding],
         n_results        = top_k,
         where            = where,
-        include          = ["documents", "metadatas", "distances"],
+        include          = ["documents", "metadatas", "distances"]
     )
 
     return [
@@ -191,8 +215,8 @@ def retrieve_bm25(query: str, top_k: int = TOP_K) -> list[dict]:
     results = []
     for rank_pos, idx in enumerate(ranked):
         cid = chunk_ids[idx]
-        if scores[idx] == 0:
-            break   # no term overlap at all — stop early
+        #if scores[idx] == 0:
+            #break   # no term overlap at all — stop early
 
         # Fetch the chunk from ChromaDB by ID
         fetched = collection.get(ids=[cid], include=["documents", "metadatas"])
@@ -208,6 +232,10 @@ def retrieve_bm25(query: str, top_k: int = TOP_K) -> list[dict]:
             "source":   "bm25",
         })
     return results
+
+
+def filter_active_results(results: list[dict]) -> list[dict]:
+    return [r for r in results if is_active_or_recruiting(r.get("metadata", {}))]
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -247,7 +275,31 @@ def reciprocal_rank_fusion(
         doc["rrf_score"] = round(scores[doc["id"]], 6)
     return fused
 
+def aggregate_by_trial(fused_chunks: list[dict]) -> list[dict]:
+    trial_scores = defaultdict(float)
+    trial_docs = {}
 
+    for chunk in fused_chunks:
+        nct = chunk["nct_id"]
+        trial_scores[nct] += chunk.get("rrf_score", 0)
+
+        if nct not in trial_docs:
+            trial_docs[nct] = {
+                "nct_id": nct,
+                "chunks": [],
+                "metadata": chunk["metadata"],
+            }
+        trial_docs[nct]["chunks"].append(chunk)
+
+    results = []
+    for nct, score in trial_scores.items():
+        doc = trial_docs[nct]
+        doc["score"] = score
+        doc["base_score"] = score
+        doc["bonus_score"] = 0.0
+        results.append(doc)
+
+    return sorted(results, key=lambda x: x["score"], reverse=True)
 # ══════════════════════════════════════════════════════════════════════════════
 # Main retrieval function (HyDE + ANN + BM25 + RRF)
 # ══════════════════════════════════════════════════════════════════════════════
@@ -256,7 +308,6 @@ def retrieve(
     patient: dict,
     top_k: int = TOP_K,
     final_k: int = FINAL_K,
-    ef_search: int = EF_SEARCH,
     use_hyde: bool = True,
     use_bm25: bool = True,
     verbose: bool = False,
@@ -294,15 +345,19 @@ def retrieve(
 
     # ── Step 2: ANN search ───────────────────────────────────────────────────
     query_emb  = embed(query_text)
-    ann_hits   = retrieve_ann(query_emb, top_k=top_k, ef_search=ef_search)
+    ann_hits   = retrieve_ann(query_emb, top_k=top_k)
+    ann_hits   = filter_active_results(ann_hits)
     if verbose:
-        print(f"  [ANN] Top score: {ann_hits[0]['score']:.3f}  ({len(ann_hits)} hits)")
+        top_ann = ann_hits[0]["score"] if ann_hits else 0.0
+        print(f"  [ANN] Top score: {top_ann:.3f}  ({len(ann_hits)} hits)")
 
     # ── Step 3: BM25 search (on the hypothetical doc or patient summary) ─────
     if use_bm25:
         bm25_hits = retrieve_bm25(query_text, top_k=top_k)
+        bm25_hits = filter_active_results(bm25_hits)
         if verbose:
-            print(f"  [BM25] Top score: {bm25_hits[0]['score']:.2f}  ({len(bm25_hits)} hits)")
+            top_bm25 = bm25_hits[0]["score"] if bm25_hits else 0.0
+            print(f"  [BM25] Top score: {top_bm25:.2f}  ({len(bm25_hits)} hits)")
     else:
         bm25_hits = []
 
@@ -310,19 +365,23 @@ def retrieve(
     lists_to_fuse = [ann_hits]
     if bm25_hits:
         lists_to_fuse.append(bm25_hits)
-    fused = reciprocal_rank_fusion(lists_to_fuse)[:final_k]
+    # fused = reciprocal_rank_fusion(lists_to_fuse)[:final_k]
+    fused_chunks = reciprocal_rank_fusion(lists_to_fuse)
+    trial_ranked = aggregate_by_trial(fused_chunks)
+    top_trials = trial_ranked[:final_k]
     if verbose:
-        ncts = list(dict.fromkeys(c["nct_id"] for c in fused))
-        print(f"  [RRF] Top {len(fused)} fused chunks → {len(ncts)} unique trials")
+        print("Top trials:", [t["nct_id"] for t in top_trials])
+        print("Num fused chunks:", len(fused_chunks))
+        print("Num trials after aggregation:", len(trial_ranked))
 
     return {
         "hypothetical_doc": hypo_doc,
         "query_used":       query_text,
         "ann_results":      ann_hits,
         "bm25_results":     bm25_hits,
-        "fused_results":    fused,
+        "fused_results": [chunk for trial in top_trials for chunk in trial["chunks"]],
+        "top_trials": top_trials,
     }
-
 
 # ══════════════════════════════════════════════════════════════════════════════
 # Agent eligibility loop
@@ -332,6 +391,7 @@ EVAL_SYSTEM = """You are a clinical trial eligibility specialist.
 
 Given a patient profile and retrieved eligibility criteria chunks for a trial,
 evaluate whether the patient meets each criterion.
+Include logistical fit (location/remote) and compensation fit in your reasoning when data is available.
 
 Return a JSON object with EXACTLY this structure:
 {
@@ -354,6 +414,116 @@ Return a JSON object with EXACTLY this structure:
 
 REWRITE_SYSTEM = """Rewrite this clinical trial search query to be more specific.
 Return JSON: {"rewritten_query": "..."}"""
+
+CHAT_RETRIEVAL_SYSTEM = """You rewrite user chat into a clinical trial retrieval query.
+
+Return JSON only:
+{
+  "search_query": "... concise query for trial retrieval ..."
+}
+
+Focus on:
+- condition or healthy volunteer intent
+- age/sex if present
+- location constraints if present
+- preferences (paid, remote, travel distance) if present
+"""
+
+CHAT_RESPONSE_SYSTEM = """You are a clinical trial matching assistant.
+
+You are given retrieved trial chunks and a user's message.
+Rules:
+- Use only provided retrieved trial evidence.
+- If evidence is insufficient, say so and ask a concise follow-up.
+- Prefer plain conversational language.
+- Do not claim guaranteed eligibility.
+- Mention NCT IDs when recommending studies.
+"""
+
+
+def retrieve_from_query(
+    query_text: str,
+    top_k: int = TOP_K,
+    final_k: int = FINAL_K,
+    use_bm25: bool = True,
+    verbose: bool = False,
+) -> dict:
+    """
+    Conversational retrieval path (no required patient JSON schema).
+    """
+    query_emb = embed(query_text)
+    ann_hits = filter_active_results(retrieve_ann(query_emb, top_k=top_k))
+    if use_bm25:
+        bm25_hits = filter_active_results(retrieve_bm25(query_text, top_k=top_k))
+    else:
+        bm25_hits = []
+
+    lists_to_fuse = [ann_hits]
+    if bm25_hits:
+        lists_to_fuse.append(bm25_hits)
+    fused_chunks = reciprocal_rank_fusion(lists_to_fuse)
+    trial_ranked = aggregate_by_trial(fused_chunks)
+    top_trials = trial_ranked[:final_k]
+
+    if verbose:
+        print("Chat retrieval top trials:", [t["nct_id"] for t in top_trials])
+
+    return {
+        "query_used": query_text,
+        "ann_results": ann_hits,
+        "bm25_results": bm25_hits,
+        "fused_results": [chunk for trial in top_trials for chunk in trial["chunks"]],
+        "top_trials": top_trials,
+    }
+
+
+def chat_search_and_answer(
+    user_message: str,
+    conversation_context: str = "",
+    top_k: int = TOP_K,
+    final_k: int = FINAL_K,
+) -> dict:
+    """
+    End-to-end conversational RAG:
+      user chat -> retrieval query rewrite -> hybrid retrieval -> grounded response
+    """
+    rw = client.chat.completions.create(
+        model=AGENT_MODEL,
+        response_format={"type": "json_object"},
+        messages=[
+            {"role": "system", "content": CHAT_RETRIEVAL_SYSTEM},
+            {"role": "user", "content": json.dumps({
+                "conversation_context": conversation_context,
+                "user_message": user_message,
+            }, indent=2)},
+        ],
+        temperature=0,
+    )
+    search_query = json.loads(rw.choices[0].message.content).get("search_query", user_message)
+    retrieved = retrieve_from_query(search_query, top_k=top_k, final_k=final_k, use_bm25=True, verbose=False)
+
+    evidence_chunks = retrieved.get("fused_results", [])[:20]
+    chunk_text = "\n\n---\n\n".join(
+        f"[{c.get('id','')}]\n{c.get('text','')}" for c in evidence_chunks
+    )
+
+    resp = client.chat.completions.create(
+        model=AGENT_MODEL,
+        messages=[
+            {"role": "system", "content": CHAT_RESPONSE_SYSTEM},
+            {"role": "user", "content":
+                f"User message:\n{user_message}\n\n"
+                f"Retrieved evidence:\n{chunk_text}\n\n"
+                f"Top trial IDs: {[t.get('nct_id') for t in retrieved.get('top_trials', [])]}"},
+        ],
+        temperature=0.2,
+    )
+    answer = resp.choices[0].message.content.strip()
+    return {
+        "answer": answer,
+        "search_query": search_query,
+        "retrieval": retrieved,
+    }
 
 
 def evaluate_trial(patient: dict, nct_id: str, title: str, chunks: list[dict]) -> dict:
