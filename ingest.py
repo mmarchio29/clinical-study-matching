@@ -21,6 +21,8 @@ from openai import OpenAI
 from rank_bm25 import BM25Okapi
 
 # ── Config ────────────────────────────────────────────────────────────────────
+from dotenv import load_dotenv
+load_dotenv()
 
 OPENAI_API_KEY   = os.getenv("OPENAI_API_KEY")
 CT_API_BASE      = "https://clinicaltrials.gov/api/v2/studies"

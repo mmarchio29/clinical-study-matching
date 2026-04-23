@@ -36,9 +36,10 @@ from collections import defaultdict
 import chromadb
 from openai import OpenAI
 import chromadb
-print("Chroma version:", chromadb.__version__)
 
 # ── Config ────────────────────────────────────────────────────────────────────
+from dotenv import load_dotenv
+load_dotenv()
 
 OPENAI_API_KEY  = os.getenv("OPENAI_API_KEY")
 CHROMA_PATH     = "./data/chroma_db"
@@ -108,7 +109,6 @@ def embed(text: str) -> list[float]:
 # ══════════════════════════════════════════════════════════════════════════════
 # TECHNIQUE 1 — HyDE (Hypothetical Document Embeddings)
 # ══════════════════════════════════════════════════════════════════════════════
-
 HYDE_SYSTEM = """Write concise clinical trial eligibility criteria (max 80 words).
 
 Focus only on:
@@ -119,6 +119,50 @@ Focus only on:
 - compensation expectations if relevant
 
 Use bullet points. No narrative. No explanation."""
+
+HYDE_SYSTEM = """You are a clinical trial eligibility criteria writer.
+
+Given a patient profile, write what the ideal matching trial's eligibility
+criteria would look like. Be specific — include condition names, severity
+levels, age ranges, and key exclusion factors.
+Write 80-120 words minimum. Use bullet points. No narrative. No explanation.
+
+Do not include location criteria — all trials are in Boston, MA.
+
+Example format:
+- Diagnosis of [condition] confirmed by [standard]
+- Age [X]-[Y] years
+- [Key lab or severity threshold]
+- No history of [key exclusion]
+- Willing to attend [X] visits"""
+
+DIAGNOSIS_EXPAND_SYSTEM = """You are a clinical terminology expert.
+Given a lay description of a health condition, return a JSON list of
+formal clinical terms that should be used to search for matching trials.
+Return JSON only: {"terms": ["term1", "term2", ...]}
+Include: formal diagnosis names, ICD-10 descriptors, related conditions,
+and any common trial search terms. Max 6 terms."""
+
+def expand_diagnosis(diagnosis: str) -> str:
+    """
+    Expand lay terms to clinical terminology before HyDE generation.
+    'anxiety' -> 'generalized anxiety disorder, GAD, social anxiety disorder,
+                  panic disorder, anxiety NOS, DSM-5 anxiety'
+    """
+    if not diagnosis or diagnosis == "Healthy volunteer":
+        return diagnosis
+    resp = client.chat.completions.create(
+        model=AGENT_MODEL,
+        response_format={"type": "json_object"},
+        messages=[
+            {"role": "system", "content": DIAGNOSIS_EXPAND_SYSTEM},
+            {"role": "user", "content": diagnosis},
+        ],
+        temperature=0,
+    )
+    terms = json.loads(resp.choices[0].message.content).get("terms", [diagnosis])
+    expanded = ", ".join(terms)
+    return expanded
 
 def generate_hypothetical_doc(patient: dict) -> str:
     """
@@ -146,11 +190,42 @@ def generate_hypothetical_doc(patient: dict) -> str:
 # ══════════════════════════════════════════════════════════════════════════════
 # TECHNIQUE 2 — ANN via HNSW (ChromaDB)
 # ══════════════════════════════════════════════════════════════════════════════
+def build_chroma_where_filter(extracted: dict) -> dict | None:
+    filters = []
+    sex = extracted.get("sex")
+    if sex:
+        normalized = sex.upper()
+        filters.append({"$or": [
+            {"sex": {"$eq": normalized}},
+            {"sex": {"$eq": "ALL"}},
+        ]})
+    if not filters:
+        return None
+    if len(filters) == 1:
+        return filters[0]
+    return {"$and": filters}
+
+
+def age_filter(results: list[dict], age: int | None) -> list[dict]:
+    if not age:
+        return results
+    filtered = []
+    for r in results:
+        meta = r.get("metadata", {})
+        min_age = _age_to_years(meta.get("min_age"))
+        max_age = _age_to_years(meta.get("max_age"))
+        if min_age is not None and age < min_age:
+            continue
+        if max_age is not None and age > max_age:
+            continue
+        filtered.append(r)
+    return filtered
 
 def retrieve_ann(
     query_embedding: list[float],
     top_k: int = TOP_K,
     chunk_type: str | None = None,
+    where_filter: dict | None = None,
 ) -> list[dict]:
     """
     Approximate Nearest Neighbor search using ChromaDB's HNSW index.
@@ -164,7 +239,13 @@ def retrieve_ann(
     We expose ef_search so eval.py can sweep it and plot recall vs latency.
     """
     collection = get_collection()
-    where = {"type": chunk_type} if chunk_type else None
+
+    if chunk_type and where_filter:
+        where = {"$and": [{"type": {"$eq": chunk_type}}, where_filter]}
+    elif chunk_type:
+        where = {"type": chunk_type}
+    else:
+        where = where_filter
 
     results = collection.query(
         query_embeddings = [query_embedding],
@@ -387,11 +468,27 @@ def retrieve(
 # Agent eligibility loop
 # ══════════════════════════════════════════════════════════════════════════════
 
-EVAL_SYSTEM = """You are a clinical trial eligibility specialist.
+EVAL_SYSTEM = """You are a clinical trial eligibility pre-screener for a patient-facing tool.
 
-Given a patient profile and retrieved eligibility criteria chunks for a trial,
-evaluate whether the patient meets each criterion.
-Include logistical fit (location/remote) and compensation fit in your reasoning when data is available.
+Your job is to identify trials a patient is LIKELY eligible for based on self-reported information.
+You are NOT a clinical gatekeeper — the trial's research team will do formal screening later.
+
+Core rules:
+- If a patient says they have a diagnosis, treat it as confirmed. Do not require SCID, DSM-5 
+  confirmation, or clinical assessment scores — those happen at the trial screening visit.
+- Only mark NOT_ELIGIBLE if the patient clearly and definitively fails a hard criterion:
+    • Age outside the stated range
+    • Wrong sex when the trial specifies one
+    • An explicitly excluded condition or medication they confirmed they have
+    • A required prior treatment history they confirmed they don't have
+- Mark ELIGIBLE if the patient plausibly meets the main inclusion criteria based on 
+  what they've shared, even if some clinical details are unconfirmed.
+- Mark UNCERTAIN only if there is a specific hard criterion you genuinely cannot assess
+  from the information given — and list only that criterion in missing_information.
+- Do not ask about clinical scores (LSAS, HAM-A, SCID, HDRS, MINI, etc) — these are 
+  collected at the screening visit, not by the patient.
+- Do not evaluate location, willingness to attend, or consent — assume both.
+- All trials are in Boston, MA — do not factor in location.
 
 Return a JSON object with EXACTLY this structure:
 {
@@ -404,12 +501,11 @@ Return a JSON object with EXACTLY this structure:
       "criterion": "brief criterion description",
       "patient_value": "what the patient has",
       "result": "meets" | "does_not_meet" | "uncertain",
-      "reasoning": "1-2 sentences",
-      "cited_chunk_id": "chunk ID or null"
+      "reasoning": "1-2 sentences"
     }
   ],
-  "missing_information": ["list of gaps"],
-  "summary": "2-3 sentence plain English verdict"
+  "missing_information": ["only genuine hard blockers the patient can answer"],
+  "summary": "2-3 sentence plain English explanation for the patient"
 }"""
 
 REWRITE_SYSTEM = """Rewrite this clinical trial search query to be more specific.
@@ -555,9 +651,11 @@ def run_agent(patient: dict, verbose: bool = True) -> dict:
         print(f"Diagnosis: {patient.get('primary_diagnosis')}")
 
     # ── Retrieval ────────────────────────────────────────────────────────────
-    if verbose:
-        print("\n[Retrieval]")
-    ret = retrieve(patient, verbose=verbose)
+    expanded_patient = {
+    **patient,
+    "primary_diagnosis": expand_diagnosis(patient.get("primary_diagnosis", "")),
+    }
+    ret = retrieve(expanded_patient, verbose=verbose)
 
     # Group fused chunks by trial
     trial_chunks: dict[str, list[dict]] = defaultdict(list)
@@ -653,6 +751,44 @@ def run_agent(patient: dict, verbose: bool = True) -> dict:
 
 
 # ── Demo ──────────────────────────────────────────────────────────────────────
+# ── Structured extraction ─────────────────────────────────────────────────────
+EXTRACTION_SYSTEM = """Extract structured patient fields from the user message.
+Return JSON only, no preamble:
+{
+  "conditions": [],
+  "healthy_volunteer": null,
+  "age": null,
+  "sex": null,
+  "medications": [],
+  "prior_treatments": [],
+  "lab_values": {},
+  "location": null,
+  "preferences": {
+    "remote_only": false,
+    "max_travel_miles": null,
+    "paid_only": false
+  }
+}
+
+Rules:
+- If the person mentions no health conditions and says they are healthy, 
+  set healthy_volunteer to true and leave conditions empty.
+- If they mention specific conditions, populate conditions normally.
+- Return null for any field not mentioned."""
+
+
+def extract_patient_fields(user_message: str, conversation_context: str = "") -> dict:
+    resp = client.chat.completions.create(
+        model=AGENT_MODEL,
+        response_format={"type": "json_object"},
+        messages=[
+            {"role": "system", "content": EXTRACTION_SYSTEM},
+            {"role": "user", "content":
+                f"Conversation so far:\n{conversation_context}\n\nLatest message:\n{user_message}"},
+        ],
+        temperature=0,
+    )
+    return json.loads(resp.choices[0].message.content)
 
 DEMO_PATIENT = {
     "patient_id":        "DEMO_001",
