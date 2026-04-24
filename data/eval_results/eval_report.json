@@ -1,156 +1,84 @@
 {
+  "n_patients": 20,
+  "n_corpus_trials": 2641,
   "ablation": [
     {
-      "label": "A: HyDE+ANN+BM25+RRF",
-      "n_patients": 4,
-      "avg_latency_s": 3.503,
-      "recall@1": 0.05,
-      "mrr@1": 0.375,
-      "ndcg@1": 0.25,
-      "recall@3": 0.3,
-      "mrr@3": 0.375,
-      "ndcg@3": 0.275,
-      "recall@5": 0.3,
-      "mrr@5": 0.375,
-      "ndcg@5": 0.243,
-      "recall@10": 0.3,
-      "mrr@10": 0.375,
-      "ndcg@10": 0.243
+      "label": "A: HyDE+ANN+BM25+RRF (full)",
+      "n_patients": 15,
+      "avg_latency_s": 3.464,
+      "recall@1": 0.115,
+      "mrr@1": 0.597,
+      "ndcg@1": 0.467,
+      "recall@3": 0.322,
+      "mrr@3": 0.597,
+      "ndcg@3": 0.397,
+      "recall@5": 0.434,
+      "mrr@5": 0.597,
+      "ndcg@5": 0.424,
+      "recall@10": 0.574,
+      "mrr@10": 0.597,
+      "ndcg@10": 0.487
     },
     {
-      "label": "B: direct+ANN only",
-      "n_patients": 4,
-      "avg_latency_s": 0.201,
-      "recall@1": 0.3,
-      "mrr@1": 0.661,
-      "ndcg@1": 0.5,
-      "recall@3": 0.55,
-      "mrr@3": 0.661,
-      "ndcg@3": 0.541,
+      "label": "B: Direct+ANN only",
+      "n_patients": 15,
+      "avg_latency_s": 0.706,
+      "recall@1": 0.19,
+      "mrr@1": 0.713,
+      "ndcg@1": 0.6,
+      "recall@3": 0.418,
+      "mrr@3": 0.713,
+      "ndcg@3": 0.565,
       "recall@5": 0.55,
-      "mrr@5": 0.661,
-      "ndcg@5": 0.508,
-      "recall@10": 0.85,
-      "mrr@10": 0.661,
-      "ndcg@10": 0.622
+      "mrr@5": 0.713,
+      "ndcg@5": 0.577,
+      "recall@10": 0.765,
+      "mrr@10": 0.713,
+      "ndcg@10": 0.655
     },
     {
       "label": "C: BM25 only",
-      "n_patients": 4,
-      "avg_latency_s": 0.215,
-      "recall@1": 0.5,
-      "mrr@1": 0.708,
-      "ndcg@1": 0.5,
-      "recall@3": 0.675,
-      "mrr@3": 0.708,
-      "ndcg@3": 0.651,
-      "recall@5": 0.8,
-      "mrr@5": 0.708,
-      "ndcg@5": 0.689,
-      "recall@10": 0.8,
-      "mrr@10": 0.708,
-      "ndcg@10": 0.689
+      "n_patients": 15,
+      "avg_latency_s": 0.737,
+      "recall@1": 0.123,
+      "mrr@1": 0.702,
+      "ndcg@1": 0.533,
+      "recall@3": 0.472,
+      "mrr@3": 0.702,
+      "ndcg@3": 0.543,
+      "recall@5": 0.582,
+      "mrr@5": 0.702,
+      "ndcg@5": 0.55,
+      "recall@10": 0.713,
+      "mrr@10": 0.702,
+      "ndcg@10": 0.601
     },
     {
       "label": "D: HyDE+ANN only",
-      "n_patients": 4,
-      "avg_latency_s": 3.249,
-      "recall@1": 0.25,
-      "mrr@1": 0.375,
-      "ndcg@1": 0.25,
-      "recall@3": 0.3,
-      "mrr@3": 0.375,
-      "ndcg@3": 0.324,
-      "recall@5": 0.3,
-      "mrr@5": 0.375,
-      "ndcg@5": 0.303,
-      "recall@10": 0.3,
-      "mrr@10": 0.375,
-      "ndcg@10": 0.303
-    }
-  ],
-  "ef_sweep": [
-    {
-      "label": "ef=10",
-      "n_patients": 3,
-      "avg_latency_s": 3.242,
-      "recall@5": 0.4,
-      "mrr@5": 0.5,
-      "ndcg@5": 0.405,
-      "ef_search": 10
-    },
-    {
-      "label": "ef=20",
-      "n_patients": 3,
-      "avg_latency_s": 3.563,
-      "recall@5": 0.4,
-      "mrr@5": 0.5,
-      "ndcg@5": 0.405,
-      "ef_search": 20
-    },
-    {
-      "label": "ef=40",
-      "n_patients": 3,
-      "avg_latency_s": 3.665,
-      "recall@5": 0.4,
-      "mrr@5": 0.667,
-      "ndcg@5": 0.446,
-      "ef_search": 40
-    },
-    {
-      "label": "ef=60",
-      "n_patients": 3,
-      "avg_latency_s": 3.041,
-      "recall@5": 0.4,
-      "mrr@5": 0.667,
-      "ndcg@5": 0.446,
-      "ef_search": 60
-    },
-    {
-      "label": "ef=100",
-      "n_patients": 3,
-      "avg_latency_s": 3.11,
-      "recall@5": 0.633,
-      "mrr@5": 0.583,
-      "ndcg@5": 0.46,
-      "ef_search": 100
-    },
-    {
-      "label": "ef=150",
-      "n_patients": 3,
-      "avg_latency_s": 3.007,
-      "recall@5": 0.4,
-      "mrr@5": 0.5,
-      "ndcg@5": 0.405,
-      "ef_search": 150
-    },
-    {
-      "label": "ef=200",
-      "n_patients": 3,
-      "avg_latency_s": 2.811,
-      "recall@5": 0.4,
-      "mrr@5": 0.667,
-      "ndcg@5": 0.446,
-      "ef_search": 200
-    },
-    {
-      "label": "ef=300",
-      "n_patients": 3,
-      "avg_latency_s": 3.181,
-      "recall@5": 0.4,
-      "mrr@5": 0.667,
-      "ndcg@5": 0.446,
-      "ef_search": 300
+      "n_patients": 15,
+      "avg_latency_s": 2.931,
+      "recall@1": 0.146,
+      "mrr@1": 0.582,
+      "ndcg@1": 0.4,
+      "recall@3": 0.379,
+      "mrr@3": 0.582,
+      "ndcg@3": 0.46,
+      "recall@5": 0.523,
+      "mrr@5": 0.582,
+      "ndcg@5": 0.485,
+      "recall@10": 0.64,
+      "mrr@10": 0.582,
+      "ndcg@10": 0.539
     }
   ],
   "verdict_agent": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1": 0.0,
-    "tp": 0,
-    "fp": 0,
-    "fn": 2,
-    "tn": 6
+    "precision": 0.933,
+    "recall": 0.636,
+    "f1": 0.757,
+    "tp": 14,
+    "fp": 1,
+    "fn": 8,
+    "tn": 17
   },
   "verdict_baseline": {
     "precision": 0.0,
@@ -162,18 +90,23 @@
     "tn": 0
   },
   "hallucination": {
-    "total_citations": 80,
-    "hallucinated": 80,
-    "rate": 1.0
+    "total_citations": 63,
+    "hallucinated": 62,
+    "rate": 0.984
   },
   "citation_grounding": {
-    "total_checks": 557,
-    "grounded": 557,
-    "rate": 1.0
+    "total_checks": 398,
+    "grounded": 0,
+    "rate": 0.0
   },
   "retrieval_loop": {
-    "total_evaluations": 98,
-    "re_retrievals": 6,
-    "rate": 0.061
+    "total_evaluations": 100,
+    "re_retrievals": 0,
+    "rate": 0.0
+  },
+  "uncertain_resolution": {
+    "triggered": 0,
+    "resolved": 0,
+    "resolution_rate": 0.0
   }
 }

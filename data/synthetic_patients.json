@@ -1,212 +1,556 @@
 [
   {
-    "patient_id": "P001",
-    "primary_diagnosis": "Type 2 Diabetes",
-    "age": 67,
-    "sex": "female",
-    "lab_values": {"HbA1c": 8.4, "eGFR": 58}
-  },
-  {
-    "patient_id": "P002",
-    "primary_diagnosis": "Type 2 Diabetes",
-    "age": 52,
-    "sex": "male",
-    "lab_values": {"HbA1c": 7.2, "eGFR": 90}
-  },
-  {
-    "patient_id": "P003",
-    "primary_diagnosis": "Chronic Kidney Disease",
-    "age": 71,
-    "sex": "male",
-    "lab_values": {"eGFR": 32}
-  },
-  {
-    "patient_id": "P004",
-    "primary_diagnosis": "Chronic Kidney Disease",
-    "age": 60,
-    "sex": "female",
-    "lab_values": {"eGFR": 45}
-  },
-  {
-    "patient_id": "P005",
-    "primary_diagnosis": "Asthma",
-    "age": 29,
-    "sex": "female",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P006",
-    "primary_diagnosis": "Asthma",
-    "age": 41,
-    "sex": "male",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P007",
-    "primary_diagnosis": "Breast Cancer",
-    "age": 55,
-    "sex": "female",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P008",
-    "primary_diagnosis": "Breast Cancer",
-    "age": 63,
-    "sex": "female",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P009",
-    "primary_diagnosis": "Lung Cancer",
-    "age": 68,
-    "sex": "male",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P010",
-    "primary_diagnosis": "Lung Cancer",
-    "age": 59,
-    "sex": "female",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P011",
-    "primary_diagnosis": "Hypertension",
-    "age": 64,
-    "sex": "male",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P012",
-    "primary_diagnosis": "Hypertension",
-    "age": 50,
-    "sex": "female",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P013",
-    "primary_diagnosis": "Type 1 Diabetes",
-    "age": 25,
-    "sex": "female",
-    "lab_values": {"HbA1c": 9.1}
-  },
-  {
-    "patient_id": "P014",
-    "primary_diagnosis": "Type 1 Diabetes",
-    "age": 34,
-    "sex": "male",
-    "lab_values": {"HbA1c": 7.8}
-  },
-  {
-    "patient_id": "P015",
-    "primary_diagnosis": "Obesity",
-    "age": 46,
-    "sex": "female",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P016",
-    "primary_diagnosis": "Obesity",
-    "age": 38,
-    "sex": "male",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P017",
-    "primary_diagnosis": "Alzheimer's Disease",
-    "age": 74,
-    "sex": "female",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P018",
-    "primary_diagnosis": "Alzheimer's Disease",
-    "age": 79,
-    "sex": "male",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P019",
-    "primary_diagnosis": "Rheumatoid Arthritis",
-    "age": 57,
-    "sex": "female",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P020",
-    "primary_diagnosis": "Rheumatoid Arthritis",
-    "age": 62,
-    "sex": "male",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P021",
-    "primary_diagnosis": "Chronic Obstructive Pulmonary Disease",
-    "age": 70,
-    "sex": "male",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P022",
-    "primary_diagnosis": "Chronic Obstructive Pulmonary Disease",
-    "age": 66,
-    "sex": "female",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P023",
-    "primary_diagnosis": "Depression",
-    "age": 31,
-    "sex": "female",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P024",
-    "primary_diagnosis": "Depression",
+    "patient_id": "SYNTH_001",
     "age": 45,
-    "sex": "male",
-    "lab_values": {}
+    "sex": "Female",
+    "primary_diagnosis": "Generalized Anxiety Disorder",
+    "lab_values": {},
+    "current_medications": [
+      "sertraline 50mg daily"
+    ],
+    "prior_treatments": [
+      "CBT (completed)"
+    ],
+    "comorbidities": [
+      "mild depression"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": false,
+      "remote_only": false
+    }
   },
   {
-    "patient_id": "P025",
+    "patient_id": "SYNTH_002",
+    "age": 52,
+    "sex": "Male",
+    "primary_diagnosis": "Major Depressive Disorder",
+    "lab_values": {
+      "TSH": "2.1 mIU/L",
+      "Vitamin D": "24 ng/mL",
+      "Hemoglobin": "14.5 g/dL"
+    },
+    "current_medications": [
+      "escitalopram 10mg daily",
+      "bupropion 150mg daily"
+    ],
+    "prior_treatments": [
+      "Psychodynamic therapy (completed)",
+      "CBT (completed)"
+    ],
+    "comorbidities": [
+      "hypertension"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_003",
+    "age": 28,
+    "sex": "Male",
+    "primary_diagnosis": "Attention-Deficit/Hyperactivity Disorder",
+    "lab_values": {},
+    "current_medications": [
+      "methylphenidate 20mg twice daily"
+    ],
+    "prior_treatments": [
+      "behavioral therapy"
+    ],
+    "comorbidities": [
+      "anxiety disorder"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": false,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_004",
+    "age": 60,
+    "sex": "Male",
+    "primary_diagnosis": "Type 2 Diabetes",
+    "lab_values": {
+      "HbA1c": "8.1%",
+      "Fasting Blood Glucose": "150 mg/dL",
+      "Cholesterol": "220 mg/dL"
+    },
+    "current_medications": [
+      "metformin 1000mg twice daily",
+      "atorvastatin 20mg daily"
+    ],
+    "prior_treatments": [
+      "lifestyle modification (ongoing)"
+    ],
+    "comorbidities": [
+      "hypertension"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": false,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_005",
+    "age": 52,
+    "sex": "Female",
+    "primary_diagnosis": "Breast Cancer",
+    "lab_values": {
+      "CA 15-3": 35,
+      "HER2 status": "positive",
+      "ER status": "positive",
+      "PR status": "negative"
+    },
+    "current_medications": [
+      "letrozole 2.5mg daily"
+    ],
+    "prior_treatments": [
+      "lumpectomy",
+      "radiation therapy"
+    ],
+    "comorbidities": [
+      "hypertension"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_006",
+    "age": 37,
+    "sex": "Male",
+    "primary_diagnosis": "Multiple Sclerosis",
+    "lab_values": {
+      "MRI_scan": "Lesions in brain and spinal cord",
+      "CSF_oligoclonal_bands": "Positive",
+      "Vitamin_D_level": "Low"
+    },
+    "current_medications": [
+      "interferon beta-1a 44mcg subcutaneous three times per week"
+    ],
+    "prior_treatments": [
+      "glatiramer acetate (discontinued due to side effects)"
+    ],
+    "comorbidities": [
+      "hypertension"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_007",
+    "age": 62,
+    "sex": "Male",
     "primary_diagnosis": "Parkinson's Disease",
-    "age": 72,
-    "sex": "male",
-    "lab_values": {}
+    "lab_values": {
+      "UPDRS": 32,
+      "Levodopa level": 1.1
+    },
+    "current_medications": [
+      "levodopa/carbidopa 100mg/25mg three times daily"
+    ],
+    "prior_treatments": [
+      "deep brain stimulation (recommended, not yet performed)"
+    ],
+    "comorbidities": [
+      "hypertension"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
   },
   {
-    "patient_id": "P026",
-    "primary_diagnosis": "Parkinson's Disease",
-    "age": 69,
-    "sex": "female",
-    "lab_values": {}
-  },
-  {
-    "patient_id": "P027",
-    "primary_diagnosis": "Heart Failure",
-    "age": 75,
-    "sex": "male",
-    "lab_values": {"eGFR": 40}
-  },
-  {
-    "patient_id": "P028",
-    "primary_diagnosis": "Heart Failure",
+    "patient_id": "SYNTH_008",
     "age": 68,
-    "sex": "female",
-    "lab_values": {"eGFR": 52}
+    "sex": "Male",
+    "primary_diagnosis": "Heart Failure",
+    "lab_values": {
+      "ejection_fraction": "35%",
+      "BNP": "450 pg/mL",
+      "creatinine": "1.6 mg/dL"
+    },
+    "current_medications": [
+      "furosemide 40mg daily",
+      "lisinopril 10mg daily",
+      "carvedilol 12.5mg twice daily"
+    ],
+    "prior_treatments": [
+      "ACE inhibitor therapy (ongoing)",
+      "diuretic therapy (ongoing)"
+    ],
+    "comorbidities": [
+      "Hypertension",
+      "Type 2 Diabetes"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": false,
+      "remote_only": false
+    }
   },
   {
-    "patient_id": "P029",
-    "primary_diagnosis": "Colorectal Cancer",
-    "age": 61,
-    "sex": "male",
-    "lab_values": {}
+    "patient_id": "SYNTH_009",
+    "age": 68,
+    "sex": "Male",
+    "primary_diagnosis": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "lab_values": {
+      "FEV1": "55%",
+      "Oxygen Saturation": "92%",
+      "Blood Pressure": "130/85 mmHg"
+    },
+    "current_medications": [
+      "tiotropium 18mcg once daily",
+      "albuterol inhaler as needed"
+    ],
+    "prior_treatments": [
+      "pulmonary rehabilitation (completed)",
+      "fluticasone/salmeterol inhaler"
+    ],
+    "comorbidities": [
+      "hypertension",
+      "type 2 diabetes"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
   },
   {
-    "patient_id": "P030",
-    "primary_diagnosis": "Colorectal Cancer",
-    "age": 58,
-    "sex": "female",
-    "lab_values": {}
+    "patient_id": "SYNTH_010",
+    "age": 29,
+    "sex": "Male",
+    "primary_diagnosis": "Social Anxiety Disorder",
+    "lab_values": {},
+    "current_medications": [
+      "escitalopram 10mg daily"
+    ],
+    "prior_treatments": [
+      "Exposure Therapy (completed)"
+    ],
+    "comorbidities": [
+      "mild depression"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": false,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_011",
+    "age": 38,
+    "sex": "Male",
+    "primary_diagnosis": "Post-Traumatic Stress Disorder",
+    "lab_values": {},
+    "current_medications": [
+      "paroxetine 20mg daily"
+    ],
+    "prior_treatments": [
+      "EMDR (completed)",
+      "Cognitive Processing Therapy (CPT, completed)"
+    ],
+    "comorbidities": [
+      "insomnia"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_012",
+    "age": 37,
+    "sex": "Male",
+    "primary_diagnosis": "Bipolar Disorder",
+    "lab_values": {
+      "lithium_level": "0.8 mmol/L",
+      "TSH": "2.5 uIU/mL"
+    },
+    "current_medications": [
+      "lithium 300mg twice daily",
+      "lamotrigine 100mg daily"
+    ],
+    "prior_treatments": [
+      "valproate (discontinued)"
+    ],
+    "comorbidities": [
+      "hypertension"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_013",
+    "age": 34,
+    "sex": "Male",
+    "primary_diagnosis": "Schizophrenia",
+    "lab_values": {
+      "WBC": "6.2",
+      "RBC": "4.7",
+      "Hemoglobin": "13.5",
+      "Platelets": "250"
+    },
+    "current_medications": [
+      "risperidone 2mg twice daily"
+    ],
+    "prior_treatments": [
+      "Cognitive Behavioral Therapy (CBT)"
+    ],
+    "comorbidities": [
+      "type 2 diabetes"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": false,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_014",
+    "age": 29,
+    "sex": "Male",
+    "primary_diagnosis": "Healthy Volunteer",
+    "lab_values": {},
+    "current_medications": [],
+    "prior_treatments": [],
+    "comorbidities": [],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": false
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_015",
+    "age": 52,
+    "sex": "Male",
+    "primary_diagnosis": "Obesity",
+    "lab_values": {
+      "BMI": 35.2,
+      "cholesterol": 220,
+      "blood_pressure": "140/90"
+    },
+    "current_medications": [
+      "metformin 500mg twice daily"
+    ],
+    "prior_treatments": [
+      "dietary counseling",
+      "physical therapy"
+    ],
+    "comorbidities": [
+      "type 2 diabetes",
+      "hypertension"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_016",
+    "age": 60,
+    "sex": "Male",
+    "primary_diagnosis": "Hypertension",
+    "lab_values": {
+      "blood_pressure": "150/95 mmHg",
+      "cholesterol": "210 mg/dL"
+    },
+    "current_medications": [
+      "lisinopril 20mg daily"
+    ],
+    "prior_treatments": [
+      "low-sodium diet"
+    ],
+    "comorbidities": [
+      "Type 2 Diabetes"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_017",
+    "age": 68,
+    "sex": "Male",
+    "primary_diagnosis": "Alzheimer's Disease",
+    "lab_values": {
+      "APOE genotype": "E3/E4",
+      "Mini-Mental State Examination (MMSE)": 22,
+      "Vitamin B12": 400,
+      "Thyroid Stimulating Hormone (TSH)": 1.5
+    },
+    "current_medications": [
+      "donepezil 10mg daily",
+      "memantine 5mg twice daily"
+    ],
+    "prior_treatments": [
+      "occupational therapy (ongoing)"
+    ],
+    "comorbidities": [
+      "hypertension",
+      "type 2 diabetes"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_018",
+    "age": 32,
+    "sex": "Female",
+    "primary_diagnosis": "Systemic Lupus Erythematosus",
+    "lab_values": {
+      "ANA": "positive",
+      "anti-dsDNA": "high",
+      "ESR": 28,
+      "CRP": 12
+    },
+    "current_medications": [
+      "hydroxychloroquine 200mg twice daily",
+      "prednisone 10mg daily"
+    ],
+    "prior_treatments": [
+      "NSAIDs",
+      "Methotrexate (discontinued due to side effects)"
+    ],
+    "comorbidities": [
+      "Raynaud's phenomenon"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_019",
+    "age": 34,
+    "sex": "Male",
+    "primary_diagnosis": "Crohn's Disease",
+    "lab_values": {
+      "C-reactive protein": "10.5 mg/L",
+      "Hemoglobin": "11.0 g/dL"
+    },
+    "current_medications": [
+      "infliximab 300mg IV every 8 weeks"
+    ],
+    "prior_treatments": [
+      "mesalamine (discontinued due to lack of efficacy)"
+    ],
+    "comorbidities": [
+      "anemia"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
+  },
+  {
+    "patient_id": "SYNTH_020",
+    "age": 68,
+    "sex": "Male",
+    "primary_diagnosis": "Atrial Fibrillation",
+    "lab_values": {
+      "INR": 2.5,
+      "creatinine": 1.1,
+      "hemoglobin": 13.5
+    },
+    "current_medications": [
+      "warfarin 5mg daily"
+    ],
+    "prior_treatments": [
+      "beta-blockers"
+    ],
+    "comorbidities": [
+      "hypertension",
+      "type 2 diabetes"
+    ],
+    "exclusion_flags": {
+      "pregnant": false,
+      "formally_diagnosed": true
+    },
+    "preferences": {
+      "paid_only": true,
+      "remote_only": false
+    }
   }
 ]

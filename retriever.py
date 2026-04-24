@@ -52,7 +52,7 @@ TOP_K             = 40   # candidates per retriever before fusion
 FINAL_K           = 5    # top results after RRF fusion to pass to agent
 RRF_K             = 60   # RRF constant (standard value)
 EF_SEARCH         = 100  # HNSW ef at query time — sweep this in eval.py
-CONFIDENCE_THRESH = 0.55 # below this → re-retrieve (max 2 retries)
+CONFIDENCE_THRESH = 0.75 # below this → re-retrieve (max 2 retries)
 MAX_RETRIES       = 2
 
 client = OpenAI(api_key=OPENAI_API_KEY)
@@ -109,16 +109,6 @@ def embed(text: str) -> list[float]:
 # ══════════════════════════════════════════════════════════════════════════════
 # TECHNIQUE 1 — HyDE (Hypothetical Document Embeddings)
 # ══════════════════════════════════════════════════════════════════════════════
-HYDE_SYSTEM = """Write concise clinical trial eligibility criteria (max 80 words).
-
-Focus only on:
-- condition
-- key lab thresholds (HbA1c, eGFR, BMI)
-- key inclusion/exclusion factors
-- location feasibility (city/state/country or remote participation)
-- compensation expectations if relevant
-
-Use bullet points. No narrative. No explanation."""
 
 HYDE_SYSTEM = """You are a clinical trial eligibility criteria writer.
 
@@ -181,7 +171,7 @@ def generate_hypothetical_doc(patient: dict) -> str:
             {"role": "system", "content": HYDE_SYSTEM},
             {"role": "user",   "content": json.dumps(patient, indent=2)},
         ],
-        temperature=0.3,   # slight temperature for natural criteria language
+        temperature=0.1,   # slight temperature for natural criteria language
         max_tokens=400,
     )
     return resp.choices[0].message.content.strip()
@@ -468,27 +458,28 @@ def retrieve(
 # Agent eligibility loop
 # ══════════════════════════════════════════════════════════════════════════════
 
-EVAL_SYSTEM = """You are a clinical trial eligibility pre-screener for a patient-facing tool.
+EVAL_SYSTEM = """You are a clinical trial eligibility specialist.
 
-Your job is to identify trials a patient is LIKELY eligible for based on self-reported information.
-You are NOT a clinical gatekeeper — the trial's research team will do formal screening later.
+Given a patient profile and retrieved eligibility criteria chunks for a trial,
+evaluate whether the patient meets each criterion.
 
-Core rules:
-- If a patient says they have a diagnosis, treat it as confirmed. Do not require SCID, DSM-5 
-  confirmation, or clinical assessment scores — those happen at the trial screening visit.
-- Only mark NOT_ELIGIBLE if the patient clearly and definitively fails a hard criterion:
-    • Age outside the stated range
-    • Wrong sex when the trial specifies one
-    • An explicitly excluded condition or medication they confirmed they have
-    • A required prior treatment history they confirmed they don't have
-- Mark ELIGIBLE if the patient plausibly meets the main inclusion criteria based on 
-  what they've shared, even if some clinical details are unconfirmed.
-- Mark UNCERTAIN only if there is a specific hard criterion you genuinely cannot assess
-  from the information given — and list only that criterion in missing_information.
-- Do not ask about clinical scores (LSAS, HAM-A, SCID, HDRS, MINI, etc) — these are 
-  collected at the screening visit, not by the patient.
-- Do not evaluate location, willingness to attend, or consent — assume both.
-- All trials are in Boston, MA — do not factor in location.
+Each chunk is labeled with a CHUNK_ID. You MUST cite the CHUNK_ID that supports
+each criterion check in the cited_chunk_id field. If a criterion is not covered
+by any chunk, set cited_chunk_id to null — but this should be rare.
+
+Important: Patient profiles from self-reported intake may lack formal clinical
+confirmation. In these cases mark criteria as 'uncertain' rather than
+'does_not_meet' — the patient may meet the criterion but hasn't provided
+clinical documentation.
+
+Only mark 'not_eligible' when the patient clearly and definitively fails a
+criterion (wrong age range, explicitly excluded condition, disqualifying
+medication).
+
+All trials are in Boston, MA — do not evaluate location as a criterion.
+Do not evaluate willingness to attend or visit frequency.
+If exclusion_flags contains explicit true/false values, treat them as
+confirmed facts — do not mark these as uncertain.
 
 Return a JSON object with EXACTLY this structure:
 {
@@ -499,13 +490,14 @@ Return a JSON object with EXACTLY this structure:
   "criteria_checks": [
     {
       "criterion": "brief criterion description",
-      "patient_value": "what the patient has",
+      "patient_value": "what the patient has or reported",
       "result": "meets" | "does_not_meet" | "uncertain",
-      "reasoning": "1-2 sentences"
+      "reasoning": "1-2 sentences citing the evidence",
+      "cited_chunk_id": "the CHUNK_ID this criterion came from, or null"
     }
   ],
-  "missing_information": ["only genuine hard blockers the patient can answer"],
-  "summary": "2-3 sentence plain English explanation for the patient"
+  "missing_information": ["list of gaps that prevented a definitive verdict"],
+  "summary": "2-3 sentence plain English verdict"
 }"""
 
 REWRITE_SYSTEM = """Rewrite this clinical trial search query to be more specific.
@@ -624,7 +616,7 @@ def chat_search_and_answer(
 
 def evaluate_trial(patient: dict, nct_id: str, title: str, chunks: list[dict]) -> dict:
     chunk_text = "\n\n---\n\n".join(
-        f"[{c['id']}]\n{c['text']}" for c in chunks
+        f"CHUNK_ID: {c['id']}\n{c['text']}" for c in chunks
     )
     resp = client.chat.completions.create(
         model=AGENT_MODEL,
@@ -634,12 +626,21 @@ def evaluate_trial(patient: dict, nct_id: str, title: str, chunks: list[dict]) -
             {"role": "user", "content":
                 f"Patient:\n{json.dumps(patient, indent=2)}\n\n"
                 f"Trial: {title} ({nct_id})\n\n"
-                f"Retrieved criteria:\n{chunk_text}"},
+                f"Retrieved criteria chunks — cite the CHUNK_ID when using a chunk:\n\n"
+                f"{chunk_text}"},
         ],
-        temperature=0,
+        temperature=0, # set temp to 0 for deterministic output 
     )
-    return json.loads(resp.choices[0].message.content)
+    result = json.loads(resp.choices[0].message.content)
 
+    # Validate cited_chunk_ids are real
+    valid_ids = {c["id"] for c in chunks}
+    for check in result.get("criteria_checks", []):
+        cited = check.get("cited_chunk_id")
+        if cited and cited not in valid_ids:
+            check["cited_chunk_id"] = None  # reject invalid citations
+
+    return result
 
 def run_agent(patient: dict, verbose: bool = True) -> dict:
     """
@@ -683,8 +684,10 @@ def run_agent(patient: dict, verbose: bool = True) -> dict:
                 "confidence": conf,
                 "verdict":  verdict.get("verdict"),
             }
-
-            if conf >= CONFIDENCE_THRESH or attempt >= MAX_RETRIES:
+            
+            missing = verdict.get("missing_information", [])
+            needs_retry = (conf < CONFIDENCE_THRESH or len(missing) >= 3)
+            if not needs_retry or attempt >= MAX_RETRIES:
                 verdicts.append(verdict)
                 log_entry["accepted"] = True
                 retrieval_log.append(log_entry)
