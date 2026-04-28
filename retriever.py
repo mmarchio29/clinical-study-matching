@@ -49,7 +49,7 @@ EMBED_MODEL     = "text-embedding-3-small"
 AGENT_MODEL     = "gpt-4o"
 
 TOP_K             = 40   # candidates per retriever before fusion
-FINAL_K           = 5    # top results after RRF fusion to pass to agent
+FINAL_K           = 10    # top results after RRF fusion to pass to agent
 RRF_K             = 60   # RRF constant (standard value)
 EF_SEARCH         = 100  # HNSW ef at query time — sweep this in eval.py
 CONFIDENCE_THRESH = 0.75 # below this → re-retrieve (max 2 retries)
@@ -172,7 +172,7 @@ def generate_hypothetical_doc(patient: dict) -> str:
             {"role": "user",   "content": json.dumps(patient, indent=2)},
         ],
         temperature=0.1,   # slight temperature for natural criteria language
-        max_tokens=400,
+        max_tokens=1000,
     )
     return resp.choices[0].message.content.strip()
 
@@ -686,7 +686,7 @@ def run_agent(patient: dict, verbose: bool = True) -> dict:
             }
             
             missing = verdict.get("missing_information", [])
-            needs_retry = (conf < CONFIDENCE_THRESH or len(missing) >= 3)
+            needs_retry = conf < CONFIDENCE_THRESH 
             if not needs_retry or attempt >= MAX_RETRIES:
                 verdicts.append(verdict)
                 log_entry["accepted"] = True

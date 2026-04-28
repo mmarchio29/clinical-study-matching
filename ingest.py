@@ -330,7 +330,7 @@ def split_criteria(text: str) -> tuple[str, str]:
             inc_header_start = i
             inc_idx = i + len(m)
             break
-    for m in ["exclusion criteria:", "exclusion criteria\n"]:
+    for m in ["exclusion criteria:", "exclusion criteria\n"]: #remove this part 
         i = lower.find(m)
         if i != -1:
             exc_header_start = i
