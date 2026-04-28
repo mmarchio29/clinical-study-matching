@@ -1,0 +1,6 @@
+openai
+chromadb
+python-dotenv
+rank_bm25
+requests
+tiktoken
