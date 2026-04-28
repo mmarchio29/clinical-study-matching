@@ -169,7 +169,7 @@ when in doubt.
 Return ONLY JSON: {"relevant": true | false, "reason": "one sentence"}"""
 
 
-def build_ground_truth(patients: list[dict], trials_per_patient: int = 8) -> dict:
+def build_ground_truth(patients: list[dict], trials_per_patient: int = 15) -> dict:
     """
     For each patient, retrieve a broad candidate set then use GPT-4o
     to label each (patient, trial) pair as relevant or not.
@@ -192,7 +192,7 @@ def build_ground_truth(patients: list[dict], trials_per_patient: int = 8) -> dic
         emb     = embed(summary)
         results = collection.query(
             query_embeddings=[emb],
-            n_results=trials_per_patient * 3,
+            n_results=trials_per_patient * 5,
             where={"type": "inclusion"},
             include=["documents", "metadatas"],
         )
