@@ -203,5 +203,4 @@ When the eligibility agent returns `confidence < 0.75` for a trial, it rewrites 
 ## Notes
 
 - All trials are assumed to be in Boston, MA — location is not evaluated as an eligibility criterion.
-- Self-reported patient data is treated as unconfirmed; the agent marks criteria as `uncertain` rather than `does_not_meet` when clinical documentation is absent.
-- The system never guarantees eligibility — results should be verified with a physician or study coordinator.
+- All trials are in the "Recruiting" stage
